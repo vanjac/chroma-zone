@@ -1,3 +1,8 @@
+// Disable scrolling. From: http://stackoverflow.com/a/10739042
+document.body.addEventListener('touchstart', function(e){
+    e.preventDefault();
+});
+
 //  Fix for links in web apps from http://stackoverflow.com/a/7390672
 var a=document.getElementsByTagName("a");
 for(var i=0;i<a.length;i++) {

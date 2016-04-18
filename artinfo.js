@@ -32,10 +32,10 @@ var phraseD = ["our human weakness", "our persuit of meaning",
 // phraseE: same as phraseC
 var phraseF = ["the nature of", "the inner workings of",
 	       "the deeper meaning of", "the beauty within", "the reality of",
-	       "the meaning of", "the truth about"];
-var phraseG = phraseD.concat(["life", "the universe", "humanity",
-			      "human nature", "the world", "nature",
-			      "nothingness", "reality"]);
+	       "the meaning of", "the truth of"];
+var phraseG = ["life", "the universe", "humanity",
+	       "human nature", "the world", "nature",
+	       "nothingness", "reality"]; // will be concatenated with phraseD
 
 // generate title
 var titleElement = document.getElementById("artTitle");
@@ -44,10 +44,13 @@ titleElement.innerHTML = "Untitled #" + randomInt(1000);
 
 // generate caption
 var captionElement = document.getElementById("artCaption");
-captionElement.innerHTML = "This " + randomItem(phraseA) + " "
+var captionString = "This " + randomItem(phraseA) + " "
     + randomItem(phraseB) + " " + randomItem(phraseC) + " "
-    + randomItem(phraseD) + " and " + randomItem(phraseC) + " "
-    + randomItem(phraseF) + " " + randomItem(phraseG) + ".";
+    + randomItem(phraseD) + ", and " + randomItem(phraseC) + " "
+    + randomItem(phraseF) + " ";
+phraseG = phraseG.concat(phraseD);
+captionString = captionString + randomItem(phraseG) + ".";
+captionElement.innerHTML = captionString;
 
 
 // generate critical review
