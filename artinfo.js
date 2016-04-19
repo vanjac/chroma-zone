@@ -16,26 +16,35 @@ function addCommas(numberString) {
     return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// caption phrases
-var phraseA = ["revolutionary", "thought-provoking", "intellectual",
-	       "visionary", "profound", "ground-breaking"];
+// phrases
+var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
+	       "visionary", "profound", "ground-breaking", "inspiring",
+	       "awe-inspiring", "breathtaking", "facinating", "beautiful",
+	       "experimental"];
 var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
-	       "portrait", "landscape piece"];
+	       "portrait", "picture", "landscape piece", "drawing", "sketch",
+	       "watercolor piece", "print", "illustration", "artwork",
+	       "photograph"];
 var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "reflects", "depicts", "explores", "analyzes", "evidences",
-	       "raises questions about", "makes a statement about"];
+	       "raises questions about", "makes a statement about", "uncovers",
+	       "considers"];
 var phraseD = ["our human weakness", "our persuit of meaning",
 	       "our persuit of greatness", "our persuit of happiness",
-	       "our society", "our place in society",
+	       "our place in society", "our modern society",
 	       "our place in the universe", "our culture",
 	       "our cultural values", "our cultural norms"];
 // phraseE: same as phraseC
-var phraseF = ["the nature of", "the inner workings of",
+var phraseF = ["", "the nature of", "the inner workings of", "the idea of",
 	       "the deeper meaning of", "the beauty within", "the reality of",
-	       "the meaning of", "the truth of"];
-var phraseG = ["life", "the universe", "humanity",
-	       "human nature", "the world", "nature",
-	       "nothingness", "reality"]; // will be concatenated with phraseD
+	       "the meaning of", "the truth of", "the cultural meaning of"];
+// will be concatenated with phraseD
+var phraseG = ["life", "the universe", "humanity", "human nature", "the world",
+	       "nature", "nothingness", "reality", "truth", "consciousness"];
+var reviews = ["nature is amazing", "a real work of art", "10/10",
+	       "the pinnacle of human accomplishment",
+	       "an emotional roller coaster",
+	       "a tasteful addition for any d&eacute;cor"];
 
 // generate title
 var titleElement = document.getElementById("artTitle");
@@ -55,10 +64,25 @@ captionElement.innerHTML = captionString;
 
 // generate critical review
 var reviewElement = document.getElementById("artReview");
-var reviews = ["Nature is amazing.", "A real work of art.", "10/10.",
-	       "Inspiring.", "The pinnacle of human accomplishment.",
-	       "An emotional roller coaster."];
-reviewElement.innerHTML = randomItem(reviews);
+var reviewString;
+if(Math.random() < .5) {
+    reviewString = randomItem(reviews);
+} else {
+    reviewString = randomItem(phraseA);
+    if(reviewString.length == 0)
+	reviewString = randomItem(phraseA);
+
+    if(Math.random() < .5) {
+	var reviewString2 = randomItem(phraseA);
+	if(reviewString2.length == 0)
+	    reviewString2 = randomItem(phraseA);
+	reviewString = reviewString + " and " + reviewString2;
+    }
+}
+//make the first letter uppercase, and add a period
+reviewString = reviewString.substring(0, 1).toUpperCase()
+    + reviewString.substring(1) + ".";
+reviewElement.innerHTML = reviewString;
 
 
 // generate price
