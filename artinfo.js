@@ -45,6 +45,8 @@ var reviews = ["nature is amazing", "a real work of art", "10/10",
 	       "the pinnacle of human accomplishment",
 	       "an emotional roller coaster",
 	       "a tasteful addition for any d&eacute;cor"];
+var prices = ["Priceless.", "Your soul.", "Five.", "All of the money.",
+	      "A human sacrifice."];
 
 // generate title
 var titleElement = document.getElementById("artTitle");
@@ -87,4 +89,8 @@ reviewElement.innerHTML = reviewString;
 
 // generate price
 var priceElement = document.getElementById("artPrice");
-artPrice.innerHTML = "$" + addCommas((randomInt(10000) + 1) + "00000");
+if(Math.random() < .15) {
+    artPrice.innerHTML = randomItem(prices);
+} else {
+    artPrice.innerHTML = "$" + addCommas((randomInt(10000) + 1) + "00000");
+}
