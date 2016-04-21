@@ -28,16 +28,27 @@ var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
 var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
 	       "portrait", "picture", "landscape piece", "drawing", "sketch",
 	       "watercolor piece", "print", "illustration", "artwork",
-	       "photograph", "artistic journey", "mixed-media piece"];
+	       "photograph", "artistic journey", "mixed-media piece",
+	       "collaborative art piece"];
+var phraseBDetails = ["by a renowned artist", "drawn while blindfolded",
+		      "by an anonymous artist",
+		      "created over the course of a year", "painted yesterday",
+		      "sent from the future", "found in a time capsule"];
 var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "reflects", "depicts", "explores", "analyzes", "evidences",
 	       "raises questions about", "makes a statement about", "uncovers",
 	       "considers", "showcases", "expresses", "interprets",
-	       "reconsiders", "upends our understanding of"];
+	       "reconsiders", "upends our understanding of",
+	       //duplicates:
+	       "is a reflection of", "is a depiction of",
+	       "is an exploration of", "is an analyzation of",
+	       "is an interpretation of"];
 var phraseD = ["our human weakness", "our persuit of meaning",
 	       "our persuit of happiness", "our place in society",
 	       "our modern society", "our place in the universe",
-	       "our culture", "our cultural values", "our cultural norms"];
+	       "our culture", "our cultural values", "our cultural norms",
+	       "our generation", "what it means to be alive",
+	       "what it means to be human"];
 // phraseE: same as phraseC
 var phraseF = ["the nature of", "the inner workings of", "the idea of",
 	       "the deeper meaning of", "the beauty within", "the reality of",
@@ -74,9 +85,16 @@ titleElement.innerHTML = randomItem(artName) + " #" + randomInt(1000);
 // generate caption
 var captionElement = document.getElementById("artCaption");
 var captionString = "This " + randomItem(phraseA) + " "
-    + randomItem(phraseB) + " " + randomItem(phraseC) + " "
-    + makeAMeaningfulNounPhrase() + ", and " + randomItem(phraseC) + " "
+    + randomItem(phraseB) + " " ;
+if(Math.random() < .35)
+    captionString += randomItem(phraseBDetails) + " ";
+captionString = captionString + randomItem(phraseC) + " "
+    + makeAMeaningfulNounPhrase()
+if(Math.random() < .8)
+    captionString = captionString + ", and " + randomItem(phraseC) + " "
     + makeAMeaningfulNounPhrase() + ".";
+else
+    captionString = captionString + ".";
 captionElement.innerHTML = captionString;
 
 
