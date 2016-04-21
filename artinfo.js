@@ -17,50 +17,66 @@ function addCommas(numberString) {
 }
 
 // phrases
+var artName = ["Untitled", "Experiment", "Sketch"];
 var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
 	       "visionary", "profound", "ground-breaking", "inspiring",
-	       "awe-inspiring", "breathtaking", "facinating", "beautiful",
-	       "experimental"];
+	       "awe-inspiring", "breathtaking", "fascinating", "beautiful",
+	       "experimental", "enlightening", "outstanding", "exciting",
+	       "dramatic", "sensational", "remarkable", "phenomenal",
+	       "captivating", "riveting", "compelling", "thrilling",
+	       "creative", "controversial"];
 var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
 	       "portrait", "picture", "landscape piece", "drawing", "sketch",
 	       "watercolor piece", "print", "illustration", "artwork",
-	       "photograph"];
+	       "photograph", "artistic journey", "mixed-media piece"];
 var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "reflects", "depicts", "explores", "analyzes", "evidences",
 	       "raises questions about", "makes a statement about", "uncovers",
-	       "considers"];
+	       "considers", "showcases", "expresses", "interprets",
+	       "reconsiders", "upends our understanding of"];
 var phraseD = ["our human weakness", "our persuit of meaning",
-	       "our persuit of greatness", "our persuit of happiness",
-	       "our place in society", "our modern society",
-	       "our place in the universe", "our culture",
-	       "our cultural values", "our cultural norms"];
+	       "our persuit of happiness", "our place in society",
+	       "our modern society", "our place in the universe",
+	       "our culture", "our cultural values", "our cultural norms"];
 // phraseE: same as phraseC
-var phraseF = ["", "the nature of", "the inner workings of", "the idea of",
+var phraseF = ["the nature of", "the inner workings of", "the idea of",
 	       "the deeper meaning of", "the beauty within", "the reality of",
 	       "the meaning of", "the truth of", "the cultural meaning of"];
-// will be concatenated with phraseD
 var phraseG = ["life", "the universe", "humanity", "human nature", "the world",
-	       "nature", "nothingness", "reality", "truth", "consciousness"];
+	       "nature", "nothingness", "reality", "truth", "consciousness",
+	       "the present", "now", "us"];
 var reviews = ["nature is amazing", "a real work of art", "10/10",
 	       "the pinnacle of human accomplishment",
 	       "an emotional roller coaster",
-	       "a tasteful addition for any d&eacute;cor"];
+	       "a tasteful addition to any d&eacute;cor", "wow",
+	       "this made me reconsider my purpose in life"];
 var prices = ["Priceless.", "Your soul.", "Five.", "All of the money.",
-	      "A human sacrifice."];
+	      "A human sacrifice.", "A small country."];
+
+function makeAMeaningfulNounPhrase() {
+    var totalPhrases = phraseG.length + phraseD.length;
+    
+    if(Math.random() < phraseG.length / totalPhrases) {
+	if(Math.random() < .75)
+	    return randomItem(phraseF) + " " + randomItem(phraseG);
+	else
+	    return randomItem(phraseG);
+    } else {
+	return randomItem(phraseD);
+    }
+}
 
 // generate title
 var titleElement = document.getElementById("artTitle");
-titleElement.innerHTML = "Untitled #" + randomInt(1000);
+titleElement.innerHTML = randomItem(artName) + " #" + randomInt(1000);
 
 
 // generate caption
 var captionElement = document.getElementById("artCaption");
 var captionString = "This " + randomItem(phraseA) + " "
     + randomItem(phraseB) + " " + randomItem(phraseC) + " "
-    + randomItem(phraseD) + ", and " + randomItem(phraseC) + " "
-    + randomItem(phraseF) + " ";
-phraseG = phraseG.concat(phraseD);
-captionString = captionString + randomItem(phraseG) + ".";
+    + makeAMeaningfulNounPhrase() + ", and " + randomItem(phraseC) + " "
+    + makeAMeaningfulNounPhrase() + ".";
 captionElement.innerHTML = captionString;
 
 
@@ -89,7 +105,7 @@ reviewElement.innerHTML = reviewString;
 
 // generate price
 var priceElement = document.getElementById("artPrice");
-if(Math.random() < .15) {
+if(Math.random() < .2) {
     artPrice.innerHTML = randomItem(prices);
 } else {
     artPrice.innerHTML = "$" + addCommas((randomInt(10000) + 1) + "00000");

@@ -196,7 +196,7 @@ function randomStroke() {
 
 // draw objects...
 
-var numObjects = Math.floor(Math.random() * 3);
+var numObjects = Math.floor(Math.random() * 5);
 console.log(numObjects + " objects");
 
 for(var i = 0; i < numObjects; i++) {
