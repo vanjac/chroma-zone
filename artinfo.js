@@ -24,7 +24,8 @@ var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
 	       "experimental", "enlightening", "outstanding", "exciting",
 	       "dramatic", "sensational", "remarkable", "phenomenal",
 	       "captivating", "riveting", "compelling", "thrilling",
-	       "creative", "controversial"];
+	       "creative", "controversial", "mind-boggling", "enthralling",
+	       "new, yet familiar"];
 var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
 	       "portrait", "picture", "landscape piece", "drawing", "sketch",
 	       "watercolor piece", "print", "illustration", "artwork",
@@ -33,7 +34,8 @@ var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
 var phraseBDetails = ["by a renowned artist", "drawn while blindfolded",
 		      "by an anonymous artist",
 		      "created over the course of a year", "painted yesterday",
-		      "sent from the future", "found in a time capsule"];
+		      "sent from the future", "found in a time capsule",
+		      "created by all of us"];
 var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "reflects", "depicts", "explores", "analyzes", "evidences",
 	       "raises questions about", "makes a statement about", "uncovers",
@@ -52,7 +54,8 @@ var phraseD = ["our human weakness", "our persuit of meaning",
 // phraseE: same as phraseC
 var phraseF = ["the nature of", "the inner workings of", "the idea of",
 	       "the deeper meaning of", "the beauty within", "the reality of",
-	       "the meaning of", "the truth of", "the cultural meaning of"];
+	       "the meaning of", "the truth of", "the cultural meaning of",
+	       "the concept of"];
 var phraseG = ["life", "the universe", "humanity", "human nature", "the world",
 	       "nature", "nothingness", "reality", "truth", "consciousness",
 	       "the present", "now", "us"];
@@ -86,8 +89,11 @@ titleElement.innerHTML = randomItem(artName) + " #" + randomInt(1000);
 var captionElement = document.getElementById("artCaption");
 var captionString = "This " + randomItem(phraseA) + " "
     + randomItem(phraseB) + " " ;
-if(Math.random() < .35)
+var random = Math.random();
+if(random < .3)
     captionString += randomItem(phraseBDetails) + " ";
+else if(random < .35)
+    captionString += "inspired by " + randomItem(phraseG) + " ";
 captionString = captionString + randomItem(phraseC) + " "
     + makeAMeaningfulNounPhrase()
 if(Math.random() < .8)
