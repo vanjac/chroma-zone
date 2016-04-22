@@ -3,7 +3,7 @@ function randomInt(max) {
     return Math.floor((Math.random() * max));
 }
 
-// after choosing a random item, removes it
+// after choosing a random item, removes it so it won't be used again
 function randomItem(array) {
     var index = randomInt(array.length);
     var item = array[index];
@@ -19,13 +19,13 @@ function addCommas(numberString) {
 // phrases
 var artName = ["Untitled", "Experiment", "Sketch"];
 var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
-	       "visionary", "profound", "ground-breaking", "inspiring",
+	       "visionary", "profound", "ground-breaking", "inspirational",
 	       "awe-inspiring", "breathtaking", "fascinating", "beautiful",
 	       "experimental", "enlightening", "outstanding", "exciting",
 	       "dramatic", "sensational", "remarkable", "phenomenal",
 	       "captivating", "riveting", "compelling", "thrilling",
 	       "creative", "controversial", "mind-boggling", "enthralling",
-	       "new, yet familiar"];
+	       "minimalistic", "unbelievable", "powerful"];
 var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
 	       "portrait", "picture", "landscape piece", "drawing", "sketch",
 	       "watercolor piece", "print", "illustration", "artwork",
@@ -35,16 +35,16 @@ var phraseBDetails = ["by a renowned artist", "drawn while blindfolded",
 		      "by an anonymous artist",
 		      "created over the course of a year", "painted yesterday",
 		      "sent from the future", "found in a time capsule",
-		      "created by all of us"];
+		      "created by humanity", "drawn by a five-year-old"];
 var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "reflects", "depicts", "explores", "analyzes", "evidences",
 	       "raises questions about", "makes a statement about", "uncovers",
 	       "considers", "showcases", "expresses", "interprets",
-	       "reconsiders", "upends our understanding of",
-	       //duplicates:
+	       "reconsiders", "upends our understanding of", "is", "transcends",
+	       //contains some duplicates:
 	       "is a reflection of", "is a depiction of",
 	       "is an exploration of", "is an analyzation of",
-	       "is an interpretation of"];
+	       "is an interpretation of", "is a relization of"];
 var phraseD = ["our human weakness", "our persuit of meaning",
 	       "our persuit of happiness", "our place in society",
 	       "our modern society", "our place in the universe",
@@ -58,15 +58,17 @@ var phraseF = ["the nature of", "the inner workings of", "the idea of",
 	       "the concept of"];
 var phraseG = ["life", "the universe", "humanity", "human nature", "the world",
 	       "nature", "nothingness", "reality", "truth", "consciousness",
-	       "the present", "now", "us"];
+	       "the present", "now", "us", "art", "beauty"];
 var reviews = ["nature is amazing", "a real work of art", "10/10",
 	       "the pinnacle of human accomplishment",
-	       "an emotional roller coaster",
-	       "a tasteful addition to any d&eacute;cor", "wow",
-	       "this made me reconsider my purpose in life"];
+	       "an emotional roller coaster", "wow",
+	       "a tasteful addition for any d&eacute;cor", "yes", "indeed",
+	       "this made me reconsider my purpose in life",
+	       "life is a gift", "new, yet familiar", "worth every penny"];
 var prices = ["Priceless.", "Your soul.", "Five.", "All of the money.",
 	      "A human sacrifice.", "A small country."];
 
+// examples include "the deeper meaning of life", or "what it means to be human"
 function makeAMeaningfulNounPhrase() {
     var totalPhrases = phraseG.length + phraseD.length;
     
@@ -118,7 +120,10 @@ if(Math.random() < .5) {
 	var reviewString2 = randomItem(phraseA);
 	if(reviewString2.length == 0)
 	    reviewString2 = randomItem(phraseA);
-	reviewString = reviewString + " and " + reviewString2;
+	if(Math.random() < .25)
+	    reviewString = reviewString + ", yet " + reviewString2;
+	else
+	    reviewString = reviewString + " and " + reviewString2;
     }
 }
 //make the first letter uppercase, and add a period
