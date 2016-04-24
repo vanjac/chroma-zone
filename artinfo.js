@@ -75,8 +75,8 @@ var prices = ["Priceless.", "Your soul.", "Five.", "All of the money.",
 function makeAMeaningfulNounPhrase() {
     var totalPhrases = phraseG.length + phraseD.length;
     
-    if(Math.random() < phraseG.length / totalPhrases) {
-	if(Math.random() < .75)
+    if(random() < phraseG.length / totalPhrases) {
+	if(random() < .75)
 	    return randomItem(phraseF) + " " + randomItem(phraseG);
 	else
 	    return randomItem(phraseG);
@@ -94,14 +94,14 @@ titleElement.innerHTML = randomItem(artName) + " #" + randomInt(1000);
 var captionElement = document.getElementById("artCaption");
 var captionString = "This " + randomItem(phraseA) + " "
     + randomItem(phraseB) + " " ;
-var randomNum = Math.random();
+var randomNum = random();
 if(randomNum < .3)
     captionString += randomItem(phraseBDetails) + " ";
 else if(randomNum < .35)
     captionString += "inspired by " + randomItem(phraseG) + " ";
 captionString = captionString + randomItem(phraseC) + " "
     + makeAMeaningfulNounPhrase()
-if(Math.random() < .8)
+if(random() < .8)
     captionString = captionString + ", and " + randomItem(phraseC) + " "
     + makeAMeaningfulNounPhrase() + ".";
 else
@@ -112,18 +112,18 @@ captionElement.innerHTML = captionString;
 // generate critical review
 var reviewElement = document.getElementById("artReview");
 var reviewString;
-if(Math.random() < .5) {
+if(random() < .5) {
     reviewString = randomItem(reviews);
 } else {
     reviewString = randomItem(phraseA);
     if(reviewString.length == 0)
 	reviewString = randomItem(phraseA);
 
-    if(Math.random() < .5) {
+    if(random() < .5) {
 	var reviewString2 = randomItem(phraseA);
 	if(reviewString2.length == 0)
 	    reviewString2 = randomItem(phraseA);
-	if(Math.random() < .25)
+	if(random() < .25)
 	    reviewString = reviewString + ", yet " + reviewString2;
 	else
 	    reviewString = reviewString + " and " + reviewString2;
@@ -137,7 +137,7 @@ reviewElement.innerHTML = reviewString;
 
 // generate price
 var priceElement = document.getElementById("artPrice");
-if(Math.random() < .2) {
+if(random() < .2) {
     artPrice.innerHTML = randomItem(prices);
 } else {
     artPrice.innerHTML = "$" + addCommas((randomInt(10000) + 1) + "00000");
