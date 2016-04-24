@@ -13,8 +13,8 @@ var drawBackground = function() {
 
 var drawHorizFill = function() {
     console.log("horiz fill");
-    var y = Math.random() * height;
-    if(Math.random() < .5) {
+    var y = random() * height;
+    if(random() < .5) {
 	ctx.fillRect(0, 0, width, y);
     } else {
 	ctx.fillRect(0, y, width, height - y);
@@ -23,8 +23,8 @@ var drawHorizFill = function() {
 
 var drawVertFill = function() {
     console.log("vert fill");
-    var x = Math.random() * width;
-    if(Math.random() < .5) {
+    var x = random() * width;
+    if(random() < .5) {
 	ctx.fillRect(0, 0, x, height);
     } else {
 	ctx.fillRect(x, 0, width - x, height);
@@ -33,7 +33,7 @@ var drawVertFill = function() {
 
 var drawHorizLine = function() {
     console.log("horiz line");
-    var y = Math.random() * height;
+    var y = random() * height;
     ctx.beginPath();
     ctx.lineCap="butt";
     ctx.moveTo(0, y);
@@ -43,7 +43,7 @@ var drawHorizLine = function() {
 
 var drawVertLine = function() {
     console.log("vert line");
-    var x = Math.random() * width;
+    var x = random() * width;
     ctx.beginPath();
     ctx.lineCap="butt";
     ctx.moveTo(x, 0);
@@ -53,10 +53,10 @@ var drawVertLine = function() {
 
 var drawLine = function() {
     console.log("line");
-    var x1 = Math.random() * width;
-    var x2 = Math.random() * width;
-    var y1 = Math.random() * height;
-    var y2 = Math.random() * height;
+    var x1 = random() * width;
+    var x2 = random() * width;
+    var y1 = random() * height;
+    var y2 = random() * height;
     ctx.beginPath();
     ctx.lineCap="round";
     ctx.moveTo(x1, y1);
@@ -66,19 +66,19 @@ var drawLine = function() {
 
 var drawRect = function() {
     console.log("rect");
-    var x = Math.random() * width;
-    var rWidth = Math.random() * (width - x);
-    var y = Math.random() * height;
-    var rHeight = Math.random() * (height - y);
+    var x = random() * width;
+    var rWidth = random() * (width - x);
+    var y = random() * height;
+    var rHeight = random() * (height - y);
 
     ctx.fillRect(x, y, rWidth, rHeight);
 }
 
 var drawCircleFilled = function() {
     console.log("filled circle");
-    var x = Math.random() * width;
-    var y = Math.random() * height;
-    var radius = Math.random() * width;
+    var x = random() * width;
+    var y = random() * height;
+    var radius = random() * width;
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, 2*Math.PI);
     ctx.fill();
@@ -86,9 +86,9 @@ var drawCircleFilled = function() {
 
 var drawCircleStroke = function() {
     console.log("circle stroke");
-    var x = Math.random() * width;
-    var y = Math.random() * height;
-    var radius = Math.random() * width / 2;
+    var x = random() * width;
+    var y = random() * height;
+    var radius = random() * width / 2;
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, 2*Math.PI);
     ctx.stroke();
@@ -96,15 +96,15 @@ var drawCircleStroke = function() {
 
 var drawScribble = function() {
     console.log("scribble");
-    var x = Math.random() * width;
-    var y = Math.random() * height;
-    var numSegments = Math.floor(Math.random() * 128);
+    var x = random() * width;
+    var y = random() * height;
+    var numSegments = randomInt(128);
     ctx.beginPath();
     ctx.lineCap="round";
     ctx.moveTo(x, y);
     for(var i = 0; i < numSegments; i++) {
-	x += Math.random() * 16 - 8;
-	y += Math.random() * 16 - 8;
+	x += random() * 16 - 8;
+	y += random() * 16 - 8;
 	ctx.lineTo(x, y);
     }
     ctx.stroke();
@@ -112,28 +112,27 @@ var drawScribble = function() {
 
 var drawCrookedLine = function() {
     console.log("crooked line");
-    var x = Math.random() * width;
-    var y = Math.random() * height;
-    var xChange = Math.random() * 64 - 32;
-    var yChange = Math.random() * 64 - 32;
-    var numSegments = Math.floor(Math.random() * 10);
+    var x = random() * width;
+    var y = random() * height;
+    var xChange = random() * 64 - 32;
+    var yChange = random() * 64 - 32;
+    var numSegments = randomInt(10);
     ctx.beginPath();
     ctx.lineCap="round";
     ctx.moveTo(x, y);
     for(var i = 0; i < numSegments; i++) {
 	x += xChange;
 	y += yChange;
-	xChange += Math.random() * 16 - 8;
-	yChange += Math.random() * 16 - 8;
+	xChange += random() * 16 - 8;
+	yChange += random() * 16 - 8;
 	ctx.lineTo(x, y);
     }
     ctx.stroke();
 }
 
 var drawFunctions = [ 
-    drawBackground, drawHorizFill, drawVertFill,
-    drawHorizLine, drawVertLine, drawLine, drawRect,
-    drawCircleFilled, drawCircleStroke, drawScribble,
+    drawBackground, drawHorizFill, drawVertFill, drawHorizLine, drawVertLine,
+    drawLine, drawRect, drawCircleFilled, drawCircleStroke, drawScribble,
     drawCrookedLine
 ];
 
@@ -184,30 +183,30 @@ function hsbToColorString(h, s, v) {
 }
 
 function randomStyle() {
-    if(Math.random() < .5) {
+    if(random() < .5) {
 	//gradient
-	var h1 = Math.floor(Math.random() * 256);
-	var s1 = Math.floor(Math.random() * 256);
-	var b1 = Math.floor(Math.random() * 256);
+	var h1 = randomInt(256);
+	var s1 = randomInt(256);
+	var b1 = randomInt(256);
 
-	var h2 = h1 + (Math.random() * 64 - 32);
+	var h2 = h1 + (random() * 64 - 32);
 	if(h2 < 0)
 	    h2 += 256;
 	if(h2 >= 256)
 	    h2 -= 256;
-	var s2 = s1 + (Math.random() * 64 - 32);
+	var s2 = s1 + (random() * 64 - 32);
 	if(s2 < 0)
 	    s2 = 0;
 	if(s2 >= 256)
 	    s2 = 255;
-	var b2 = b1 + (Math.random() * 64 - 32);
+	var b2 = b1 + (random() * 64 - 32);
 	if(b2 < 0)
 	    b2 = 0;
 	if(b2 >= 256)
 	    b2 = 255;
 	
 	var gradient;
-	if(Math.random() < .5) {
+	if(random() < .5) {
 	    gradient = ctx.createLinearGradient(0, height/2, width, height/2);
 	} else {
 	    gradient = ctx.createLinearGradient(width/2, 0, width/2, height);
@@ -217,9 +216,9 @@ function randomStyle() {
 	return gradient;
     } else {
 	//solid
-	var r = Math.floor(Math.random() * 256);
-	var g = Math.floor(Math.random() * 256);
-	var b = Math.floor(Math.random() * 256);
+	var r = randomInt(256);
+	var g = randomInt(256);
+	var b = randomInt(256);
 	return rgbToColorString(r, g, b);
     }
 }
@@ -230,18 +229,17 @@ function randomFill() {
 
 function randomStroke() {
     ctx.strokeStyle = randomStyle();
-    ctx.lineWidth = Math.random() * 8;
+    ctx.lineWidth = random() * 8;
 }
 
 // draw objects...
 
-var numObjects = Math.floor(Math.random() * 5);
+var numObjects = randomInt(5);
 console.log(numObjects + " objects");
 
 for(var i = 0; i < numObjects; i++) {
     randomFill();
     randomStroke();
-    var drawFunction = drawFunctions[
-	Math.floor((Math.random() * drawFunctions.length)) ];
+    var drawFunction = drawFunctions[ randomInt(drawFunctions.length) ];
     drawFunction();
 }

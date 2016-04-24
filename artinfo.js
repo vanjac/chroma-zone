@@ -1,16 +1,3 @@
-// max is exclusive
-function randomInt(max) {
-    return Math.floor((Math.random() * max));
-}
-
-// after choosing a random item, removes it so it won't be used again
-function randomItem(array) {
-    var index = randomInt(array.length);
-    var item = array[index];
-    array.splice(index, 1);
-    return item;
-}
-
 // from: http://stackoverflow.com/a/2901298
 function addCommas(numberString) {
     return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -48,12 +35,12 @@ var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "raises questions about", "makes a statement about", "uncovers",
 	       "considers", "showcases", "expresses", "interprets",
 	       "reconsiders", "upends our understanding of", "is", "transcends",
-	       "provides thoughts on", "reinerprets", "ponders",
+	       "provides thoughts on", "reinerprets", "ponders", "represents",
 	       //contains some duplicates:
 	       "is a reflection of", "is a depiction of",
 	       "is an exploration of", "is an analyzation of",
 	       "is an interpretation of", "is a realization of",
-	       "is a reinterpretation of"];
+	       "is a reinterpretation of", "is a representation of"];
 var phraseD = ["our human weakness", "our persuit of meaning",
 	       "our persuit of happiness", "our place in society",
 	       "our modern society", "our place in the universe",
@@ -107,10 +94,10 @@ titleElement.innerHTML = randomItem(artName) + " #" + randomInt(1000);
 var captionElement = document.getElementById("artCaption");
 var captionString = "This " + randomItem(phraseA) + " "
     + randomItem(phraseB) + " " ;
-var random = Math.random();
-if(random < .3)
+var randomNum = Math.random();
+if(randomNum < .3)
     captionString += randomItem(phraseBDetails) + " ";
-else if(random < .35)
+else if(randomNum < .35)
     captionString += "inspired by " + randomItem(phraseG) + " ";
 captionString = captionString + randomItem(phraseC) + " "
     + makeAMeaningfulNounPhrase()
