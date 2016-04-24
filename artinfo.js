@@ -29,7 +29,9 @@ var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
 	       "minimalistic", "unbelievable", "powerful", "philisophical",
 	       "poignant", "avant-garde", "overwhelming", "collaborative",
 	       "contemporary", "modern", "gluten-free", "vegan", "delicate",
-	       "gender neutral", "abstract", "cutting edge", "spectacular"];
+	       "gender neutral", "abstract", "cutting edge", "spectacular",
+	       "moving", "stunning", "compelling", "miraculous", "vivid",
+	       "impressive", "extraordinary", "resonating"];
 var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
 	       "portrait", "picture", "landscape piece", "drawing", "sketch",
 	       "watercolor piece", "print", "illustration", "artwork",
@@ -62,7 +64,8 @@ var phraseD = ["our human weakness", "our persuit of meaning",
 var phraseF = ["the nature of", "the inner workings of", "the idea of",
 	       "the deeper meaning of", "the beauty within", "the reality of",
 	       "the meaning of", "the truth of", "the cultural meaning of",
-	       "the concept of", "the futility of", "the fallacy of"];
+	       "the concept of", "the futility of", "the fallacy of",
+	       "the consequences of"];
 var phraseG = ["life", "the universe", "humanity", "human nature", "the world",
 	       "nature", "nothingness", "reality", "truth", "consciousness",
 	       "the present", "now", "us", "art", "beauty", "human endeavor",

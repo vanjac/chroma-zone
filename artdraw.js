@@ -94,9 +94,25 @@ var drawCircleStroke = function() {
     ctx.stroke();
 }
 
+var drawScribble = function() {
+    console.log("scribble");
+    var x = Math.random() * width;
+    var y = Math.random() * height;
+    var numSegments = Math.floor(Math.random() * 128);
+    ctx.beginPath();
+    ctx.lineCap="round";
+    ctx.moveTo(x, y);
+    for(var i = 0; i < numSegments; i++) {
+	x += Math.random() * 16 - 8;
+	y += Math.random() * 16 - 8;
+	ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+}
+
 var drawFunctions = [ drawBackground, drawHorizFill, drawVertFill,
 		      drawHorizLine, drawVertLine, drawLine, drawRect,
-		      drawCircleFilled, drawCircleStroke ];
+		      drawCircleFilled, drawCircleStroke, drawScribble ];
 
 
 // color utilities
