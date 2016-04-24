@@ -17,7 +17,8 @@ function addCommas(numberString) {
 }
 
 // phrases
-var artName = ["Untitled", "Experiment", "Sketch"];
+var artName = ["Untitled", "Experiment", "Sketch", "Idea", "Inspiration",
+	       "Thought", "Epiphany"];
 var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
 	       "visionary", "profound", "ground-breaking", "inspirational",
 	       "awe-inspiring", "breathtaking", "fascinating", "beautiful",
@@ -25,14 +26,18 @@ var phraseA = ["", "revolutionary", "thought-provoking", "intellectual",
 	       "dramatic", "sensational", "remarkable", "phenomenal",
 	       "captivating", "riveting", "compelling", "thrilling",
 	       "creative", "controversial", "mind-boggling", "enthralling",
-	       "minimalistic", "unbelievable", "powerful"];
+	       "minimalistic", "unbelievable", "powerful", "philisophical",
+	       "poignant", "avant-garde", "overwhelming", "collaborative",
+	       "contemporary", "modern", "gluten-free", "vegan", "delicate",
+	       "gender neutral", "abstract", "cutting edge", "spectacular"];
 var phraseB = ["masterpiece", "artistic breakthrough", "piece", "painting",
 	       "portrait", "picture", "landscape piece", "drawing", "sketch",
 	       "watercolor piece", "print", "illustration", "artwork",
 	       "photograph", "artistic journey", "mixed-media piece",
-	       "collaborative art piece"];
+	       "recycled art piece", "sculpture", "two-dimensional sculpture",
+	       "still art", "forgery", "self-portrait", "oil painting"];
 var phraseBDetails = ["by a renowned artist", "drawn while blindfolded",
-		      "by an anonymous artist",
+		      "by an anonymous artist", "by a convicted criminal",
 		      "created over the course of a year", "painted yesterday",
 		      "sent from the future", "found in a time capsule",
 		      "created by humanity", "drawn by a five-year-old"];
@@ -41,32 +46,40 @@ var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "raises questions about", "makes a statement about", "uncovers",
 	       "considers", "showcases", "expresses", "interprets",
 	       "reconsiders", "upends our understanding of", "is", "transcends",
+	       "provides thoughts on", "reinerprets", "ponders",
 	       //contains some duplicates:
 	       "is a reflection of", "is a depiction of",
 	       "is an exploration of", "is an analyzation of",
-	       "is an interpretation of", "is a relization of"];
+	       "is an interpretation of", "is a realization of",
+	       "is a reinterpretation of"];
 var phraseD = ["our human weakness", "our persuit of meaning",
 	       "our persuit of happiness", "our place in society",
 	       "our modern society", "our place in the universe",
 	       "our culture", "our cultural values", "our cultural norms",
 	       "our generation", "what it means to be alive",
-	       "what it means to be human"];
+	       "what it means to be human", "the human condition"];
 // phraseE: same as phraseC
 var phraseF = ["the nature of", "the inner workings of", "the idea of",
 	       "the deeper meaning of", "the beauty within", "the reality of",
 	       "the meaning of", "the truth of", "the cultural meaning of",
-	       "the concept of"];
+	       "the concept of", "the futility of", "the fallacy of"];
 var phraseG = ["life", "the universe", "humanity", "human nature", "the world",
 	       "nature", "nothingness", "reality", "truth", "consciousness",
-	       "the present", "now", "us", "art", "beauty"];
+	       "the present", "now", "us", "art", "beauty", "human endeavor",
+	       "religion", "technology", "sorrow", "existence", "darkness",
+	       "the environment", "consumerism", "the subconscious", "dreams"];
 var reviews = ["nature is amazing", "a real work of art", "10/10",
 	       "the pinnacle of human accomplishment",
 	       "an emotional roller coaster", "wow",
 	       "a tasteful addition for any d&eacute;cor", "yes", "indeed",
 	       "this made me reconsider my purpose in life",
-	       "life is a gift", "new, yet familiar", "worth every penny"];
+	       "life is a gift", "new, yet familiar", "worth every penny",
+	       "the massive scope hurts my brain",
+	       "this reminds me of my late aunt Stephine", "amateur",
+	       "garbage", "trump 2016"];
 var prices = ["Priceless.", "Your soul.", "Five.", "All of the money.",
-	      "A human sacrifice.", "A small country."];
+	      "A human sacrifice.", "A small country.",
+	      "50% off at selected stores."];
 
 // examples include "the deeper meaning of life", or "what it means to be human"
 function makeAMeaningfulNounPhrase() {
