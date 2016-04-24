@@ -110,9 +110,32 @@ var drawScribble = function() {
     ctx.stroke();
 }
 
-var drawFunctions = [ drawBackground, drawHorizFill, drawVertFill,
-		      drawHorizLine, drawVertLine, drawLine, drawRect,
-		      drawCircleFilled, drawCircleStroke, drawScribble ];
+var drawCrookedLine = function() {
+    console.log("crooked line");
+    var x = Math.random() * width;
+    var y = Math.random() * height;
+    var xChange = Math.random() * 64 - 32;
+    var yChange = Math.random() * 64 - 32;
+    var numSegments = Math.floor(Math.random() * 10);
+    ctx.beginPath();
+    ctx.lineCap="round";
+    ctx.moveTo(x, y);
+    for(var i = 0; i < numSegments; i++) {
+	x += xChange;
+	y += yChange;
+	xChange += Math.random() * 16 - 8;
+	yChange += Math.random() * 16 - 8;
+	ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+}
+
+var drawFunctions = [ 
+    drawBackground, drawHorizFill, drawVertFill,
+    drawHorizLine, drawVertLine, drawLine, drawRect,
+    drawCircleFilled, drawCircleStroke, drawScribble,
+    drawCrookedLine
+];
 
 
 // color utilities
