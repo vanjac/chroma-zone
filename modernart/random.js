@@ -17,7 +17,6 @@ function random() {
 	r = Math.random();
 	randomView.setFloat32((randomCount++) * 4, r);
     } else {
-	console.log("Read random");
 	r = randomView.getFloat32((randomCount++) * 4); 
     }
     return r;
@@ -38,7 +37,6 @@ function loadRandomBase64(base64String) {
     // +s are replaced with spaces in query strings
     // replace all
     base64String = base64String.split(" ").join("+");
-    console.log(base64String);
     var dataString = atob(base64String);
     for(var i = 0; i < dataString.length; i++) {
 	randomView.setUint8(i, dataString.charCodeAt(i));
