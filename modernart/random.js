@@ -1,28 +1,26 @@
-const FLOAT_SIZE = 4; //number of bytes in a float
-const MAX_RANDOM_NUMBERS = 1024;
+// seedrandom.min.js by David Bau.
+// github.com/davidbau/seedrandom
 
-var randomCount = 0;
-var randomView = new DataView(new ArrayBuffer(MAX_RANDOM_NUMBERS * FLOAT_SIZE));
-// if false, write random numbers to randomView
-// if true, read random numbers from randomView
-var readRandom = false;
+const SEED_LENGTH = 16;
+var seed;
 
 //check for permalink query string
 if(getParameterByName("b") !=null) {
     console.log("Permalink!");
     loadRandomBase64(getParameterByName("b"));
+} else {
+    seed = randomSeed();
 }
 
+function randomSeed() {
+    var s = "";
+    for(var i = 0; i < SEED_LENGTH; i++)
+	s += String.fromCharCode(randomInt(256));
+    return s;
+}
 
 function random() {
-    var r;
-    if(readRandom) {
-	r = randomView.getFloat32((randomCount++) * FLOAT_SIZE);
-    } else {
-	r = Math.random();
-	randomView.setFloat32((randomCount++) * FLOAT_SIZE, r);
-    }
-    return r;
+    return Math.random();
 }
 
 // max is exclusive
@@ -38,6 +36,20 @@ function randomItem(array) {
     return item;
 }
 
+function getRandomBase64() {
+    var base64String = btoa(seed);
+    
+    return base64String;
+}
+
+function loadRandomBase64(base64String) {
+    // +s are replaced with spaces in query strings
+    // replace all
+    base64String = base64String.split(" ").join("+");
+    seed  = atob(base64String);
+    Math.seedrandom(seed);
+}
+
 
 // from: http://stackoverflow.com/a/901144
 function getParameterByName(name, url) {
@@ -48,26 +60,4 @@ function getParameterByName(name, url) {
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-
-function getRandomBase64() {
-    var dataString = "";
-    for(var i = 0; i < randomCount * FLOAT_SIZE; i++) {
-	dataString += String.fromCharCode(randomView.getUint8(i));
-    }
-    var base64String = btoa(dataString);
-    
-    return base64String;
-}
-
-function loadRandomBase64(base64String) {
-    readRandom = true;
-    // +s are replaced with spaces in query strings
-    // replace all
-    base64String = base64String.split(" ").join("+");
-    var dataString = atob(base64String);
-    for(var i = 0; i < dataString.length; i++) {
-	randomView.setUint8(i, dataString.charCodeAt(i));
-    }
 }
