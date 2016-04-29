@@ -36,6 +36,7 @@ var phraseC = ["exposes", "reveals", "comments on", "sparks conversation on",
 	       "considers", "showcases", "expresses", "interprets",
 	       "reconsiders", "upends our understanding of", "is", "transcends",
 	       "provides thoughts on", "reinerprets", "ponders", "represents",
+	       "contemplates",
 	       //contains some duplicates:
 	       "is a reflection of", "is a depiction of",
 	       "is an exploration of", "is an analyzation of",
