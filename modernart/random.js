@@ -5,12 +5,23 @@ const SEED_LENGTH = 16;
 var seed;
 
 //check for permalink query string
-if(getParameterByName("b") !=null) {
+if(getParameterByName("b") !=null) { //use specified seed
     console.log("Permalink!");
-    loadRandomBase64(getParameterByName("b"));
-} else {
+    var base64String = getParameterByName("b");
+    // +s are replaced with spaces in query strings
+    // replace all
+    base64String = base64String.split(" ").join("+");
+    seed = atob(base64String);
+} else { //generate a new seed
     seed = randomSeed();
 }
+Math.seedrandom(seed);
+
+//set the permalink
+var base64String = btoa(seed);
+var permalink = window.location.href.split('?')[0] + "?v=0&b=" + base64String;
+document.getElementById("permalink").setAttribute("href", permalink);
+
 
 function randomSeed() {
     var s = "";
@@ -34,20 +45,6 @@ function randomItem(array) {
     var item = array[index];
     array.splice(index, 1);
     return item;
-}
-
-function getRandomBase64() {
-    var base64String = btoa(seed);
-    
-    return base64String;
-}
-
-function loadRandomBase64(base64String) {
-    // +s are replaced with spaces in query strings
-    // replace all
-    base64String = base64String.split(" ").join("+");
-    seed  = atob(base64String);
-    Math.seedrandom(seed);
 }
 
 
