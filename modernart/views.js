@@ -10,6 +10,19 @@ if(views == 50)
     alert("You have visited this page 50 times in a row."
 	  + "\nMaybe you should take a break --"
 	  + " art is meant to be savored and contemplated.");
+if(views == 100)
+    alert("You have visited this page 100 times in a row."
+	  + "\nI'm impressed. You've found a way to binge-watch art.");
+if(views == 150)
+    alert("You have visited this page 150 times in a row."
+	  + "\nPlease stop. Your friends are starting to worry.");
+if(views == 200) {
+    alert("You have visited this page 200 times in a row."
+	  + "\nI can't let you continue like this."
+	  + " I'm blocking you from accessing this page.");
+    while(true)
+	alert("Go away.");
+}
 
 // cookie code based on: http://www.w3schools.com/js/js_cookies.asp
 
