@@ -26,7 +26,7 @@ if(views == 200) {
 var today = new Date();
 var date = today.getDate();
 var month = today.getMonth()+1;
-if(views == 3 && date == 2 && month == 5) {
+if(views == 3 && date == 3 && month == 5) {
 	reviewElement.innerHTML = "Happy Birthday Adrian!";
 }
 
