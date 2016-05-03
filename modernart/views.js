@@ -23,6 +23,12 @@ if(views == 200) {
     while(true)
 	alert("Go away.");
 }
+var today = new Date();
+var date = today.getDate();
+var month = today.getMonth()+1;
+if(views == 3 && date == 2 && month == 5) {
+	reviewElement.innerHTML = "Happy Birthday Adrian!";
+}
 
 // cookie code based on: http://www.w3schools.com/js/js_cookies.asp
 
