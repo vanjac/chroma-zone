@@ -1,9 +1,19 @@
 // go to repository
 if(getParameterByName("r") != null) {
-	repository = getParameterByName("r")
-	window.location.href = "https://github.com/vanjac/" + repository + "/"
-} else {
-	window.location.href = "https://github.com/vanjac/"
+	var repository = getParameterByName("r")
+	window.location.href = "https://github.com/vanjac/" + repository
+}
+// special codes
+else if(getParameterByName("c") != null) {
+	var code = getParameterByName("c")
+	var repository = ""
+	if(code == "b")
+		repository = "Betsy"
+	if(code == "m")
+		repository = "Minus"
+	if(code == "t")
+		repository = "three"
+	window.location.href = "https://github.com/vanjac/" + repository
 }
 
 // from: http://stackoverflow.com/a/901144
