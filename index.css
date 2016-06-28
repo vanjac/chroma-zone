@@ -1,12 +1,40 @@
 h1 {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 16pt;
+    margin-right: 0pt;
+    margin-bottom: 0pt;
+    margin-left: 0pt;
 }
 
 p {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
 }
 
 a {
-	color: inherit;
+    color: inherit;
+}
+
+body {
+    width: 384pt;
+    margin: auto;
+}
+
+.block-group, .block-group-left, .block-group-right {
+    border: 1px solid gray;
+    border-radius: 12pt;
+    padding-top: 4pt;
+    padding-right: 96pt;
+    padding-bottom: 4pt;
+    padding-left: 96pt;
+    margin: 8pt;
+}
+
+.block-group-right {
+    text-align: right;
 }
