@@ -16,6 +16,10 @@ else if(getParameterByName("c") != null) {
 			repository = "Minus"
 		if(code == "t")
 			repository = "three"
+		if(code == "g")
+			repository = "MusicGenerator"
+		if(code == "k")
+			repository = "HexKey"
 		window.location.href = "https://github.com/vanjac/" + repository
 	}
 }
