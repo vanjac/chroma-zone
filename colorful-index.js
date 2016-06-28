@@ -13,7 +13,7 @@ for(i = 0; i < projectGroupsRight.length; i++) {
 function randomColor() {
     var r = Math.floor(Math.random() * 192 + 64)
     var g = Math.floor(Math.random() * 96 + 160)
-    var b = Math.floor(Math.random() * 96 + 160)
+    var b = Math.floor(Math.random() * 192 + 64)
     return rgbToColorString(r,g,b)
 }
 
