@@ -11,7 +11,7 @@
   
   <body>
     
-    <h1>Hello</h1>
+    <h1><a id="hello-a">Hello</a></h1>
     
     <div class="block-group-right">
       <p class="project-name">
@@ -39,7 +39,7 @@
 	<a href="https://github.com/vanjac/three">
 	  three &gt;&gt; </a></p>
       <p class="project-description">
-	A 3d game thing that doesn't work.
+	An unfinished 3d game thing.
       </p>
     </div>
 
@@ -70,24 +70,52 @@
 	Based on HexASound.
       </p>
     </div>
-    
+
     <div class="block-group-right">
       <p class="project-name">
-	<a href="https://github.com/vanjac/MusicGenerator">
-	  MusicGenerator &gt;&gt; </a></p>
+	<a href="https://github.com/vanjac/SeatingChartGenerator">
+	  SeatingChartGenerator &gt;&gt; </a></p>
       <p class="project-description">
-	An infinite random music generator.
+	Tools for generating seating charts.
       </p>
     </div>
     
     <div class="block-group-left">
       <p class="project-name">
+	<a href="https://github.com/vanjac/MusicGenerator">
+	  &lt;&lt; MusicGenerator </a></p>
+      <p class="project-description">
+	An infinite random music generator.
+      </p>
+    </div>
+    
+    <div class="block-group-right">
+      <p class="project-name">
 	<a href="https://github.com/vanjac/TerrainGenerator">
-	  &lt;&lt; TerrainGenerator </a></p>
+	  TerrainGenerator &gt;&gt; </a></p>
       <p class="project-description">
 	A 3d randomized terrain generator.
       </p>
     </div>
+
+    <p id="where-p"> <em> <a id="where-a"> where am i? </a> </em> </p>
+    <script type="text/javascript">
+      window.onload = function() {
+
+      document.getElementById("where-a").onclick = function() {
+      document.getElementById("where-p").innerHTML += "right here";
+      return false;
+      }
+
+      addToHello = function() {
+      document.getElementById("hello-a").innerHTML += "!";
+      document.getElementById("hello-a").onclick = addToHello;
+      return true;
+      }
+      document.getElementById("hello-a").onclick = addToHello;
+      
+      }
+    </script>
 
     <script type="text/javascript" src="colorful-index.js"></script>
     <script type="text/javascript" src="g/redirect.js"></script>
