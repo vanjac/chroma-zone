@@ -52,6 +52,14 @@ body {
     text-align: right;
 }
 
+.block-group-left > p > a::before {
+    content: "<<";
+}
+
+.block-group-right > p > a::after {
+    content: ">>";
+}
+
 .linkbutton {
     border: 1px solid gray;
     border-radius: 8pt;
