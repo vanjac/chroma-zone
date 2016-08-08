@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  <title>Editor</title>
+
+  <head>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+
+    <script type="text/javascript" src="editorActions.js"></script>
+
+    <button>New</button>
+    <button>Open</button>
+    <button>Delete</button>
+    <button>Save</button>
+    <button>Save As</button>
+    <br>
+    <input id="titlebox" type="text" style="width:100%">
+    <button onclick="cursorLeft();">&lt;-</button>
+    <button onclick="cursorRight();">-&gt;</button>
+    <button>&lt;--|</button>
+    <button>--&gt;|</button>
+    <button>Indent</button>
+    <br>
+    <button onclick="setMark();">Mark</button>
+    <button onclick="select();">Select</button>
+    <button>Cut</button>
+    <button>Copy</button>
+    <button>Paste</button>
+    <textarea id="textbox" style="width:100%; height:200pt;"></textarea>
+    
+    <script type="text/javascript" src="editor.js"></script>
+
+  </body>
+
+</html>
