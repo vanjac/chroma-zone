@@ -6,16 +6,6 @@ function focusBox() {
     box.focus();
 }
 
-function cursorLeft() {
-    focusBox();
-    setCaretPosition(box, getCaretPosition(box) - 1);
-}
-
-function cursorRight() {
-    focusBox();
-    setCaretPosition(box, getCaretPosition(box) + 1);
-}
-
 function setMark() {
     focusBox();
     mark = getCaretPosition(box);
