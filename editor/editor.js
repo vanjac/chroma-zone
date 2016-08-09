@@ -2,30 +2,40 @@ var box = document.getElementById("textbox");
 var mark = 0;
 var clipboard = "";
 
+function focusBox() {
+    box.focus();
+}
+
 function cursorLeft() {
+    focusBox();
     setCaretPosition(box, getCaretPosition(box) - 1);
 }
 
 function cursorRight() {
+    focusBox();
     setCaretPosition(box, getCaretPosition(box) + 1);
 }
 
 function setMark() {
+    focusBox();
     mark = getCaretPosition(box);
     console.log("Mark set to " + mark);
 }
 
 function select() {
+    focusBox();
     setSelection(box, mark, getCaretPosition(box));
 }
 
 function copy() {
+    focusBox();
     clipboard = box.value.substring(getSelectionStart(box),
 				    getSelectionEnd(box));
     console.log("Copied " + clipboard);
 }
 
 function cut() {
+    focusBox();
     copy();
     var start = getSelectionStart(box);
     var end = getSelectionEnd(box);
@@ -34,6 +44,7 @@ function cut() {
 }
 
 function paste() {
+    focusBox();
     var caret = getCaretPosition(box);
     box.value = box.value.substring(0, caret) + clipboard
 	+ box.value.substring(caret, box.value.length);
