@@ -16,6 +16,7 @@
     <button>Delete</button>
     <button>Save</button>
     <button>Save As</button>
+    <button>Backup</button>
     <br>
     <input id="titlebox" type="text" style="width:100%">
     <button onclick="cursorLeft();">&lt;-</button>
@@ -26,10 +27,10 @@
     <br>
     <button onclick="setMark();">Mark</button>
     <button onclick="select();">Select</button>
-    <button>Cut</button>
-    <button>Copy</button>
-    <button>Paste</button>
-    <textarea id="textbox" style="width:100%; height:200pt;"></textarea>
+    <button onclick="cut();">Cut</button>
+    <button onclick="copy();">Copy</button>
+    <button onclick="paste();">Paste</button>
+    <textarea id="textbox" style="width:100%; height:64pt;"></textarea>
     
     <script type="text/javascript" src="editor.js"></script>
 

@@ -19,6 +19,26 @@ function select() {
     setSelection(box, mark, getCaretPosition(box));
 }
 
+function copy() {
+    clipboard = box.value.substring(getSelectionStart(box),
+				    getSelectionEnd(box));
+    console.log("Copied " + clipboard);
+}
+
+function cut() {
+    copy();
+    var start = getSelectionStart(box);
+    var end = getSelectionEnd(box);
+    box.value = box.value.substring(0, start)
+	+ box.value.substring(end, box.value.length);
+}
+
+function paste() {
+    var caret = getCaretPosition(box);
+    box.value = box.value.substring(0, caret) + clipboard
+	+ box.value.substring(caret, box.value.length);
+}
+
 
 // from: http://stackoverflow.com/questions/512528/set-cursor-position-in-html-textbox
 function setCaretPosition(elem, caretPos) {
