@@ -6,15 +6,12 @@ function focusBox() {
     box.focus();
 }
 
-function setMark() {
-    focusBox();
-    mark = getCaretPosition(box);
-    console.log("Mark set to " + mark);
-}
-
 function select() {
     focusBox();
-    setSelection(box, mark, getCaretPosition(box));
+    var newMark = getCaretPosition(box);
+    setSelection(box, mark, newMark);
+    mark = newMark;
+    console.log("Mark set to " + mark);
 }
 
 function copy() {
