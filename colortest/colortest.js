@@ -24,6 +24,8 @@ function buttonClicked() {
     // 0 to 1
     accuracy = 1 -
 	(Math.abs(testR - r) + Math.abs(testG - g) + Math.abs(testB - b)) / 48;
-    document.getElementById("answer").innerHTML = "Correct answer: " + colorHex
-	+ "<br>" + (Math.round(accuracy * 100)) + "%";
+    document.getElementById("answer").innerHTML = 
+	(Math.round(accuracy * 100)) + "%";
+
+    document.getElementById("colorrect").style.backgroundColor = "#" + testHex;
 }
