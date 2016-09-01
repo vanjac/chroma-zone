@@ -9,12 +9,14 @@
     <link href="index.css" rel="stylesheet" type="text/css" media="screen">
   </head>
   
-  <body>
+  <body style="margin: auto; width: 256pt;">
 
-    <p id="answer">Enter 3 digit hex code.</p>
+    <p><strong id="answer">Enter 3 digit hex code.</strong></p>
 
-    <input type="text" id="colorbox"></input>
-    <button onclick="buttonClicked()">Check</button>
+    <form action="#" onsubmit="buttonClicked()" style="display: inline;">
+      <input type="text" id="colorbox"></input>
+      <input type="submit" value="Check"></input>
+    </form>
     <button onclick="location.reload()">Next</button>
 
     <div id="colorrect" style="width: 256pt; height: 256pt; border: 1px solid gray;"></div>
