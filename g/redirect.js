@@ -12,18 +12,20 @@ else if(getParameterByName("c") != null) {
 	var repository = ""
 	if(code == "b" || code == "bet")
 	    repository = "Betsy";
-	if(code == "min")
-	    repository = "Minus";
-	if(code == "thr")
+    if(code == "thr")
 	    repository = "three";
-	if(code == "mus")
-	    repository = "MusicGenerator";
-	if(code == "hex")
-	    repository = "HexKey";
 	if(code == "igs")
 	    repository = "IGSim";
+	if(code == "min")
+	    repository = "Minus";
+    if(code == "chr")
+        repository = "ChristmasEngine";
+	if(code == "hex")
+	    repository = "HexKey";
 	if(code == "sea")
 	    repository = "SeatingChartGenerator";
+	if(code == "mus")
+	    repository = "MusicGenerator";
 	if(code == "ter")
 	    repository = "TerrainGenerator";
 	
