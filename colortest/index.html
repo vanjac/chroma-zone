@@ -11,13 +11,17 @@
   
   <body style="margin: auto; width: 256pt;">
 
-    <p><strong id="answer">Enter 3 digit hex code.</strong></p>
+    <p><strong id="answer">Enter 3 digit hex code!</strong></p>
 
-    <form action="#" onsubmit="buttonClicked()" style="display: inline;">
-      <input type="text" id="colorbox"></input>
+    <form action="#" onsubmit="buttonClicked()">
+      <input type="text" id="colorbox" size="5" maxlength="3"></input>
       <input type="submit" value="Check"></input>
+      <button onclick="location.reload()">Next</button>
+      <button onclick="window.location.href = &quot;../webapps.html&quot;">
+        Bye </button>
     </form>
-    <button onclick="location.reload()">Next</button>
+    
+    
 
     <div id="colorrect" style="width: 256pt; height: 256pt; border: 1px solid gray;"></div>
 
