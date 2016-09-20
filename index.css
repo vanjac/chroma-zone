@@ -46,10 +46,41 @@ body {
     padding-bottom: 4pt;
     padding-left: 96pt;
     margin: 8pt;
+    
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.block-group-left {
+    animation-name: leftBlockKeyframes;
+}
+
+@keyframes leftBlockKeyframes {
+    0% {
+        opacity: 0;
+        transform: translate3d(25%, 0, 0);
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 .block-group-right {
     text-align: right;
+    animation-name: rightBlockKeyframes;
+}
+
+@keyframes rightBlockKeyframes {
+    0% {
+        opacity: 0;
+        transform: translate3d(-25%, 0, 0);
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 .block-group-left > p > a::before {

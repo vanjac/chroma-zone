@@ -1,12 +1,18 @@
-projectGroupsLeft = document.getElementsByClassName("block-group-left")
-projectGroupsRight = document.getElementsByClassName("block-group-right")
+var projectGroupsLeft = document.getElementsByClassName("block-group-left")
+var projectGroupsRight = document.getElementsByClassName("block-group-right")
 
+var delay = 0.0;
 for(i = 0; i < projectGroupsLeft.length; i++) {
     projectGroupsLeft[i].style.backgroundColor = randomColor();
+    projectGroupsLeft[i].style.animationDelay = delay + "s";
+    delay += 0.1;
 }
 
+var delay = 0.0;
 for(i = 0; i < projectGroupsRight.length; i++) {
     projectGroupsRight[i].style.backgroundColor = randomColor();
+    projectGroupsRight[i].style.animationDelay = delay + "s";
+    delay += 0.1;
 }
 
 
