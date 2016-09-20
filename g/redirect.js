@@ -7,29 +7,31 @@
 else if(getParameterByName("c") != null) {
     var code = getParameterByName("c");
     if(code == "art")
-	window.location.href = "http://vanjac.github.io/modernart/";
+	    window.location.href = "http://vanjac.github.io/modernart/";
+	if(code == "ard")
+	    window.location.href = "https://github.com/Seamonsters-2605/Ardroid";
     else {
-	var repository = ""
-	if(code == "b" || code == "bet")
-	    repository = "Betsy";
-    if(code == "thr")
-	    repository = "three";
-	if(code == "igs")
-	    repository = "IGSim";
-	if(code == "min")
-	    repository = "Minus";
-    if(code == "chr")
-        repository = "ChristmasEngine";
-	if(code == "hex")
-	    repository = "HexKey";
-	if(code == "sea")
-	    repository = "SeatingChartGenerator";
-	if(code == "mus")
-	    repository = "MusicGenerator";
-	if(code == "ter")
-	    repository = "TerrainGenerator";
+	    var repository = ""
+	    if(code == "b" || code == "bet")
+	        repository = "Betsy";
+        if(code == "thr")
+	        repository = "three";
+	    if(code == "igs")
+	        repository = "IGSim";
+	    if(code == "min")
+	        repository = "Minus";
+        if(code == "chr")
+            repository = "ChristmasEngine";
+	    if(code == "hex")
+	        repository = "HexKey";
+	    if(code == "sea")
+	        repository = "SeatingChartGenerator";
+	    if(code == "mus")
+	        repository = "MusicGenerator";
+	    if(code == "ter")
+	        repository = "TerrainGenerator";
 	
-	window.location.href = "https://github.com/vanjac/" + repository;
+	    window.location.href = "https://github.com/vanjac/" + repository;
     }
 }
 
