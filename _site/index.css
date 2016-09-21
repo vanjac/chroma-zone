@@ -1,0 +1,118 @@
+html {
+    /* technically invalid css - forces the vertical scrollbar to be shown.
+       fixes horizontal jumps when moving from short pages to long pages.
+       taken from:
+       https://css-tricks.com/snippets/css/force-vertical-scrollbar/ */
+   overflow-y: scroll;
+   overflow: -moz-scrollbars-vertical;
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    width: 384pt;
+    margin: auto;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 16pt;
+    margin-right: 0pt;
+    margin-bottom: 0pt;
+    margin-left: 0pt;
+}
+
+.project-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-top: 8pt;
+    margin-right: 0pt;
+    margin-bottom: 8pt;
+    margin-left: 0pt;
+}
+
+.project-description {
+    font-style: italic;
+    font-size: .8em;
+    margin-top: 0pt;
+    margin-right: 0pt;
+    margin-bottom: 8pt;
+    margin-left: 0pt;
+}
+
+.block-group, .block-group-left, .block-group-right {
+    border: 1px solid gray;
+    border-radius: 12pt;
+    padding-top: 4pt;
+    padding-right: 96pt;
+    padding-bottom: 4pt;
+    padding-left: 96pt;
+    margin: 8pt;
+    
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.block-group-left {
+    animation-name: leftBlockKeyframes;
+}
+
+@keyframes leftBlockKeyframes {
+    0% {
+        opacity: 0;
+        transform: translate3d(25%, 0, 0);
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+.block-group-right {
+    text-align: right;
+    animation-name: rightBlockKeyframes;
+}
+
+@keyframes rightBlockKeyframes {
+    0% {
+        opacity: 0;
+        transform: translate3d(-25%, 0, 0);
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+.block-group-left > p > a::before {
+    content: "<<";
+}
+
+.block-group-right > p > a::after {
+    content: ">>";
+}
+
+.linkbutton, .linkbutton-selected {
+    border: 1px solid gray;
+    border-radius: 8pt;
+    background-color: #DDD;
+    padding: 6pt;
+    margin: 4pt;
+}
+
+.linkbutton-selected {
+    background-color: #AAA;
+}
+
+.linksection {
+    margin: 4pt;
+    padding-bottom: 6pt;
+}
