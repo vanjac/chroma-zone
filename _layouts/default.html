@@ -9,7 +9,7 @@
   </head>
   
   <body>
-    <script type="text/javascript" src="g/redirect.js"></script>
+    <script type="text/javascript" src="/g/redirect.js"></script>
   
     <h1>{{ page.title }}</h1>
     
@@ -36,6 +36,14 @@
       {% else %}
         <a href="/webapps/index.html"> <span class="linkbutton">
         Web Apps </span> </a>
+      {% endif %}
+      
+      {% if page.title == 'Other' %}
+        <span class="linkbutton-selected">
+        {{ page.title }} </span></a>
+      {% else %}
+        <a href="/other/index.html"> <span class="linkbutton">
+        Other </span> </a>
       {% endif %}
       
       <a href="http://github.com/vanjac"><span class="linkbutton">
