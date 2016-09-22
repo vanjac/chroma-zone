@@ -11,6 +11,35 @@
   <body>
     <h1>{{ page.title }}</h1>
     
+    <div class="linksection">
+      {% if page.title == 'About' %}
+        <span class="linkbutton-selected">
+        {{ page.title }} </span></a>
+      {% else %}
+        <a href="/about/index.html"> <span class="linkbutton">
+        About </span> </a>
+      {% endif %}
+      
+      {% if page.title == 'Projects' %}
+        <span class="linkbutton-selected">
+        {{ page.title }} </span></a>
+      {% else %}
+        <a href="/index.html"> <span class="linkbutton">
+        Projects </span> </a>
+      {% endif %}
+      
+      {% if page.title == 'Web Apps' %}
+        <span class="linkbutton-selected">
+        {{ page.title }} </span></a>
+      {% else %}
+        <a href="/webapps/index.html"> <span class="linkbutton">
+        Web Apps </span> </a>
+      {% endif %}
+      
+      <a href="http://github.com/vanjac"><span class="linkbutton">
+      GitHub </span></a>
+    </div>
+    
     {{ content }}
     
     <script type="text/javascript" src="/colorful-index.js"></script>
