@@ -53,6 +53,7 @@
     {{ content }}
     
     {% assign isRightBlock = false %}
+    {% assign animationDelay = 0.0 %}
     
     {% assign blocks = page.blocks | split: ";" %}
     {% for block in blocks %}
@@ -61,10 +62,12 @@
       <a href="{{ blockData[2] }}">
       
         {% if isRightBlock %}
-        <div class="block-group-right">
+        <div class="block-group-right"
+          style="animation-delay: {{animationDelay}}s;">
         {% assign isRightBlock = false %}
         {% else %}
-        <div class="block-group-left">
+        <div class="block-group-left"
+          style="animation-delay: {{animationDelay}}s;">
         {% assign isRightBlock = true %}
         {% endif %}
           <p class="project-name"> {{ blockData[0] }} </p>
@@ -74,6 +77,8 @@
         </div>
       
       </a>
+      
+      {% assign animationDelay = animationDelay | plus: 0.1 %}
     {% endfor %}
     
     <script type="text/javascript" src="/colorful-index.js"></script>
