@@ -58,20 +58,22 @@
     {% for block in blocks %}
       {% assign blockData = block | split: "," %}
       
-      {% if isRightBlock %}
-      <div class="block-group-right">
-      {% assign isRightBlock = false %}
-      {% else %}
-      <div class="block-group-left">
-      {% assign isRightBlock = true %}
-      {% endif %}
-        <p class="project-name">
-          <a href="{{ blockData[2] }}"> 
-            {{ blockData[0] }} </a></p>
-        <p class="project-description">
-          {{ blockData[1] }}
-        </p>
-      </div>
+      <a href="{{ blockData[2] }}">
+      
+        {% if isRightBlock %}
+        <div class="block-group-right">
+        {% assign isRightBlock = false %}
+        {% else %}
+        <div class="block-group-left">
+        {% assign isRightBlock = true %}
+        {% endif %}
+          <p class="project-name"> {{ blockData[0] }} </p>
+          <p class="project-description">
+            {{ blockData[1] }}
+          </p>
+        </div>
+      
+      </a>
     {% endfor %}
     
     <script type="text/javascript" src="/colorful-index.js"></script>
