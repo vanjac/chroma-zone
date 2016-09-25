@@ -1,5 +1,5 @@
-var projectGroupsLeft = document.getElementsByClassName("block-group-left")
-var projectGroupsRight = document.getElementsByClassName("block-group-right")
+var projectGroupsLeft = document.getElementsByClassName("block-group-left");
+var projectGroupsRight = document.getElementsByClassName("block-group-right");
 
 for(i = 0; i < projectGroupsLeft.length; i++) {
     projectGroupsLeft[i].style.backgroundColor = randomColor();
