@@ -79,9 +79,8 @@ void keyPressed() {
       lastKeyPressed = key;
   }
   
-  switch(int(key)) {
-    case CODED:
-      switch(keyCode) {
+  if(int(key) == CODED) {
+    switch(keyCode) {
         case UP:
           addVelocities(driveTrain.forwardWheelSpins());
           break;
@@ -95,57 +94,58 @@ void keyPressed() {
           addVelocities(driveTrain.rightWheelSpins());
           break;
       }
-      break;
-    
-    case 'a':
-      subtractVelocities(driveTrain.turnRightWheelSpins());
-      break;
-    case 'd':
-      addVelocities(driveTrain.turnRightWheelSpins());
-      break;
-    case '1':
-      moveWheel(0, 1.0);
-      break;
-    case '2':
-      moveWheel(0, -1.0);
-      break;
-    case '3':
-      moveWheel(1, 1.0);
-      break;
-    case '4':
-      moveWheel(1, -1.0);
-      break;
-    case '5':
-      moveWheel(2, 1.0);
-      break;
-    case '6':
-      moveWheel(2, -1.0);
-      break;
-    case '7':
-      moveWheel(3, 1.0);
-      break;
-    case '8':
-      moveWheel(3, -1.0);
-      break;
-    
-    case 'r':
-      robotRot = (robotRot + PI) % (PI*2) - PI;
-      targetPosEnabled = true;
-      targetX = width/2;
-      targetY = height/2;
-      targetRot = 0;
-      break;
-    case 't':
-      if(driveTrain instanceof MecanumDriveTrain) {
-        setupDriveTrain(new TankDriveTrain());
-      } else {
-        setupDriveTrain(new MecanumDriveTrain());
-      }
-      targetX = robotX;
-      targetY = robotY;
-      targetRot = robotRot + PI*2;
-      targetPosEnabled = true;
-      break;
+  } else {
+    switch(key) {
+      case 'a':
+        subtractVelocities(driveTrain.turnRightWheelSpins());
+        break;
+      case 'd':
+        addVelocities(driveTrain.turnRightWheelSpins());
+        break;
+      case '1':
+        moveWheel(0, 1.0);
+        break;
+      case '2':
+        moveWheel(0, -1.0);
+        break;
+      case '3':
+        moveWheel(1, 1.0);
+        break;
+      case '4':
+        moveWheel(1, -1.0);
+        break;
+      case '5':
+        moveWheel(2, 1.0);
+        break;
+      case '6':
+        moveWheel(2, -1.0);
+        break;
+      case '7':
+        moveWheel(3, 1.0);
+        break;
+      case '8':
+        moveWheel(3, -1.0);
+        break;
+      
+      case 'r':
+        robotRot = (robotRot + PI) % (PI*2) - PI;
+        targetPosEnabled = true;
+        targetX = width/2;
+        targetY = height/2;
+        targetRot = 0;
+        break;
+      case 't':
+        if(driveTrain instanceof MecanumDriveTrain) {
+          setupDriveTrain(new TankDriveTrain());
+        } else {
+          setupDriveTrain(new MecanumDriveTrain());
+        }
+        targetX = robotX;
+        targetY = robotY;
+        targetRot = robotRot + PI*2;
+        targetPosEnabled = true;
+        break;
+    }
   }
 }
 
@@ -153,9 +153,8 @@ void keyReleased() {
   lastKeyPressed = 0;
   lastKeyCodePressed = 0;
   
-  switch(int(key)) {
-    case CODED:
-      switch(keyCode) {
+  if(int(key) == CODED) {
+    switch(keyCode) {
         case UP:
           subtractVelocities(driveTrain.forwardWheelSpins());
           break;
@@ -169,38 +168,39 @@ void keyReleased() {
           subtractVelocities(driveTrain.rightWheelSpins());
           break;
       }
-      break;
-    
-    case 'a':
-      addVelocities(driveTrain.turnRightWheelSpins());
-      break;
-    case 'd':
-      subtractVelocities(driveTrain.turnRightWheelSpins());
-      break;
-    case '1':
-      moveWheel(0, -1.0);
-      break;
-    case '2':
-      moveWheel(0, 1.0);
-      break;
-    case '3':
-      moveWheel(1, -1.0);
-      break;
-    case '4':
-      moveWheel(1, 1.0);
-      break;
-    case '5':
-      moveWheel(2, -1.0);
-      break;
-    case '6':
-      moveWheel(2, 1.0);
-      break;
-    case '7':
-      moveWheel(3, -1.0);
-      break;
-    case '8':
-      moveWheel(3, 1.0);
-      break;
+  } else {
+    switch(key) {
+      case 'a':
+        addVelocities(driveTrain.turnRightWheelSpins());
+        break;
+      case 'd':
+        subtractVelocities(driveTrain.turnRightWheelSpins());
+        break;
+      case '1':
+        moveWheel(0, -1.0);
+        break;
+      case '2':
+        moveWheel(0, 1.0);
+        break;
+      case '3':
+        moveWheel(1, -1.0);
+        break;
+      case '4':
+        moveWheel(1, 1.0);
+        break;
+      case '5':
+        moveWheel(2, -1.0);
+        break;
+      case '6':
+        moveWheel(2, 1.0);
+        break;
+      case '7':
+        moveWheel(3, -1.0);
+        break;
+      case '8':
+        moveWheel(3, 1.0);
+        break;
+    }
   }
 }
 
