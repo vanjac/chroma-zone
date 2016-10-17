@@ -8,45 +8,45 @@ class TankDriveTrain implements DriveTrain {
   final float[] right = {0.0, 0.0};
   final float[] turnRight = {1.0, 1.0};
   
-  @Override
+  
   String getDriveTrainName() {
     return "Tank Drive";
   }
   
-  @Override
+  
   int numWheels() {
     // left, right
     return 2;
   }
   
-  @Override
+  
   float[] forwardWheelSpins() {
     return forward;
   }
   
-  @Override
+  
   float[] rightWheelSpins() {
     return right;
   }
   
-  @Override
+  
   float[] turnRightWheelSpins() {
     return turnRight;
   }
   
-  @Override
+  
   PVector getRobotTranslation(float[] velocities) {
     float forwardMovement = (velocities[0] - velocities[1]) * 2;
     PVector movement = new PVector(0.0, -forwardMovement);
     return movement;
   }
   
-  @Override
+  
   float getRobotRotation(float[] velocities) {
     return (velocities[0] + velocities[1]) * .012;
   }
   
-  @Override
+  
   void drawWheels(float[] wheelSpins, float[] velocities) {
     // left
     pushMatrix();

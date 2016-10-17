@@ -9,33 +9,33 @@ class MecanumDriveTrain implements DriveTrain {
   final float[] right = {1.0, 1.0, -1.0, -1.0};
   final float[] turnRight = {1.0, 1.0, 1.0, 1.0};
   
-  @Override
+  
   String getDriveTrainName() {
     return "Mecanum Drive";
   }
   
-  @Override
+  
   int numWheels() {
     // front left, front right, back left, back right
     return 4;
   }
   
-  @Override
+  
   float[] forwardWheelSpins() {
     return forward;
   }
   
-  @Override
+  
   float[] rightWheelSpins() {
     return right;
   }
   
-  @Override
+  
   float[] turnRightWheelSpins() {
     return turnRight;
   }
   
-  @Override
+  
   PVector getRobotTranslation(float[] velocities) {
     float forwardMovement = (velocities[0] + velocities[2] - velocities[1] - velocities[3]) / sqrt(2.0);
     float rightMovement = (velocities[0] + velocities[1] - velocities[2] - velocities[3]) / sqrt(2.0);
@@ -43,12 +43,12 @@ class MecanumDriveTrain implements DriveTrain {
     return movement;
   }
   
-  @Override
+  
   float getRobotRotation(float[] velocities) {
     return (velocities[0] + velocities[2] + velocities[1] + velocities[3]) * .006;
   }
   
-  @Override
+  
   void drawWheels(float[] wheelSpins, float[] velocities) {
     // front left
     pushMatrix();
