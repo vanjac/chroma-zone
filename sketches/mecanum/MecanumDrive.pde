@@ -10,7 +10,7 @@ class MecanumDriveTrain implements DriveTrain {
   final float[] turnRight = {1.0, 1.0, 1.0, 1.0};
   
   @Override
-  String getName() {
+  String getDriveTrainName() {
     return "Mecanum Drive";
   }
   

@@ -1,4 +1,4 @@
-char lastKeyPressed = 0;
+int lastKeyPressed = 0; // processing.js doesn't like char's
 int lastKeyCodePressed = 0;
 
 float[] inputVelocities;
@@ -24,7 +24,7 @@ void draw() {
   textAlign(CENTER, TOP);
   textSize(64);
   fill(0);
-  text(driveTrain.getName(), width/2, 8);
+  text(driveTrain.getDriveTrainName(), width/2, 8);
   textAlign(LEFT, BASELINE);
   
   float maxVelocity = 0.0;
@@ -79,7 +79,7 @@ void keyPressed() {
       lastKeyPressed = key;
   }
   
-  switch(key) {
+  switch(int(key)) {
     case CODED:
       switch(keyCode) {
         case UP:
@@ -153,7 +153,7 @@ void keyReleased() {
   lastKeyPressed = 0;
   lastKeyCodePressed = 0;
   
-  switch(key) {
+  switch(int(key)) {
     case CODED:
       switch(keyCode) {
         case UP:

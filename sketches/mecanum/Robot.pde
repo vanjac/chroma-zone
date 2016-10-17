@@ -7,7 +7,7 @@ float[] wheelSpins;
 DriveTrain driveTrain;
 
 interface DriveTrain {
-  String getName();
+  String getDriveTrainName();
   
   int numWheels();
   float[] forwardWheelSpins();
