@@ -9,33 +9,33 @@ class MecanumDriveTrain implements DriveTrain {
   final float[] right = {1.0, 1.0, -1.0, -1.0};
   final float[] turnRight = {1.0, 1.0, 1.0, 1.0};
   
-  @Override
+  
   String getDriveTrainName() {
     return "Mecanum Drive";
   }
   
-  @Override
+  
   int numWheels() {
     // front left, front right, back left, back right
     return 4;
   }
   
-  @Override
+  
   float[] forwardWheelSpins() {
     return forward;
   }
   
-  @Override
+  
   float[] rightWheelSpins() {
     return right;
   }
   
-  @Override
+  
   float[] turnRightWheelSpins() {
     return turnRight;
   }
   
-  @Override
+  
   PVector getRobotTranslation(float[] velocities) {
     float forwardMovement = (velocities[0] + velocities[2] - velocities[1] - velocities[3]) / sqrt(2.0);
     float rightMovement = (velocities[0] + velocities[1] - velocities[2] - velocities[3]) / sqrt(2.0);
@@ -43,12 +43,12 @@ class MecanumDriveTrain implements DriveTrain {
     return movement;
   }
   
-  @Override
+  
   float getRobotRotation(float[] velocities) {
     return (velocities[0] + velocities[2] + velocities[1] + velocities[3]) * .006;
   }
   
-  @Override
+  
   void drawWheels(float[] wheelSpins, float[] velocities) {
     // front left
     pushMatrix();
@@ -81,6 +81,8 @@ class MecanumDriveTrain implements DriveTrain {
 
 void drawMecanumWheel(float wheelSpin, float wheelVelocity) {
   wheelSpin *= 2;
+  if(wheelSpin < 0)
+    wheelSpin += mecanumRollerSpacing * ceil(-wheelSpin/mecanumRollerSpacing);
   
   rectMode(CENTER);
   imageMode(CENTER);
@@ -103,14 +105,21 @@ void drawMecanumWheel(float wheelSpin, float wheelVelocity) {
   fill(127, 127, 127);
   
   rect(0, 0, mecanumWheelWidth, mecanumWheelHeight);
-  clip(0, 0, mecanumWheelWidth, mecanumWheelHeight);
-  float diagY = -mecanumWheelHeight / 2 - (wheelSpin % mecanumRollerSpacing);
+  // processing.js doesn't support clip(), which is why I have to have so much ugly code here
+  //clip(0, 0, mecanumWheelWidth, mecanumWheelHeight);
+  float diagY = -mecanumWheelHeight / 2 - (wheelSpin % mecanumRollerSpacing) + mecanumRollerSpacing;
   while(diagY < mecanumWheelHeight / 2 + mecanumWheelWidth) {
-    line(-mecanumWheelWidth / 2, diagY, mecanumWheelWidth / 2, diagY - mecanumWheelWidth);
+    float diagEndOffset = 0;
+    if(diagY > mecanumWheelHeight / 2)
+      diagEndOffset = diagY - mecanumWheelHeight / 2;
+    float diagStartOffset = 0;
+    if(diagY - mecanumWheelWidth < -mecanumWheelHeight / 2)
+      diagStartOffset = diagY - mecanumWheelWidth + mecanumWheelHeight / 2;
+    line(-mecanumWheelWidth / 2 + diagEndOffset, diagY - diagEndOffset, mecanumWheelWidth / 2 + diagStartOffset, diagY - mecanumWheelWidth - diagStartOffset);
     diagY += mecanumRollerSpacing;
   }
   
-  noClip();
+  //noClip();
   strokeWeight(1);
   rectMode(CORNER);
   imageMode(CORNER);

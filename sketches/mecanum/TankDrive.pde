@@ -5,48 +5,47 @@ final float tankTreadLineSpacing = 27.0;
 
 class TankDriveTrain implements DriveTrain {
   final float[] forward = {1.0, -1.0};
-  final float[] right = {0.0, 0.0};
   final float[] turnRight = {1.0, 1.0};
   
-  @Override
+  
   String getDriveTrainName() {
     return "Tank Drive";
   }
   
-  @Override
+  
   int numWheels() {
     // left, right
     return 2;
   }
   
-  @Override
+  
   float[] forwardWheelSpins() {
     return forward;
   }
   
-  @Override
+  
   float[] rightWheelSpins() {
-    return right;
+    return turnRight;
   }
   
-  @Override
+  
   float[] turnRightWheelSpins() {
     return turnRight;
   }
   
-  @Override
+  
   PVector getRobotTranslation(float[] velocities) {
     float forwardMovement = (velocities[0] - velocities[1]) * 2;
     PVector movement = new PVector(0.0, -forwardMovement);
     return movement;
   }
   
-  @Override
+  
   float getRobotRotation(float[] velocities) {
     return (velocities[0] + velocities[1]) * .012;
   }
   
-  @Override
+  
   void drawWheels(float[] wheelSpins, float[] velocities) {
     // left
     pushMatrix();
@@ -65,6 +64,8 @@ class TankDriveTrain implements DriveTrain {
 
 void drawTankTread(float spin) {
   spin *= 2;
+  if(spin < 0)
+    spin += tankTreadLineSpacing * ceil(-spin/tankTreadLineSpacing);
   
   rectMode(CENTER);
   imageMode(CENTER);
@@ -73,14 +74,14 @@ void drawTankTread(float spin) {
   fill(127, 127, 127);
   
   rect(0, 0, tankTreadWidth, tankTreadHeight);
-  clip(0, 0, tankTreadWidth, tankTreadHeight);
-  float diagY = -tankTreadHeight / 2 - (spin % tankTreadLineSpacing);
-  while(diagY < tankTreadHeight / 2 + tankTreadWidth) {
-    line(-tankTreadWidth / 2, diagY, tankTreadWidth / 2, diagY - tankTreadWidth);
-    diagY += tankTreadLineSpacing;
+  //clip(0, 0, tankTreadWidth, tankTreadHeight);
+  float lineY = -tankTreadHeight / 2 - (spin % tankTreadLineSpacing) + tankTreadLineSpacing;
+  while(lineY < tankTreadHeight / 2) {
+    line(-tankTreadWidth / 2, lineY, tankTreadWidth / 2, lineY);
+    lineY += tankTreadLineSpacing;
   }
   
-  noClip();
+  //noClip();
   strokeWeight(1);
   rectMode(CORNER);
   imageMode(CORNER);
