@@ -75,16 +75,10 @@ void drawTankTread(float spin) {
   
   rect(0, 0, tankTreadWidth, tankTreadHeight);
   //clip(0, 0, tankTreadWidth, tankTreadHeight);
-  float diagY = -tankTreadHeight / 2 - (spin % tankTreadLineSpacing) + tankTreadLineSpacing;
-  while(diagY < tankTreadHeight / 2 + tankTreadWidth) {
-    float diagEndOffset = 0;
-    if(diagY > tankTreadHeight / 2)
-      diagEndOffset = diagY - tankTreadHeight / 2;
-    float diagStartOffset = 0;
-    if(diagY - tankTreadWidth < -tankTreadHeight / 2)
-      diagStartOffset = diagY - tankTreadWidth + tankTreadHeight / 2;
-    line(-tankTreadWidth / 2 + diagEndOffset, diagY - diagEndOffset, tankTreadWidth / 2 + diagStartOffset, diagY - tankTreadWidth - diagStartOffset);
-    diagY += tankTreadLineSpacing;
+  float lineY = -tankTreadHeight / 2 - (spin % tankTreadLineSpacing) + tankTreadLineSpacing;
+  while(lineY < tankTreadHeight / 2) {
+    line(-tankTreadWidth / 2, lineY, tankTreadWidth / 2, lineY);
+    lineY += tankTreadLineSpacing;
   }
   
   //noClip();
