@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <title>Modern Art</title>
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="modernart.css" rel="stylesheet" type="text/css" media="screen">
+  </head>
+  
+  <body>
+    
+    <h1>Modern Art Gallery</h1>
+    <h2 id="artTitle"></h2>
+    <canvas id="artCanvas" width="256" height="192"></canvas>
+    <p id="artCaption"></p>
+    <h3>Critics say:</h3>
+    <p><q id="artReview"></q></p>
+    <h3>Price:</h3>
+    <p><strong id="artPrice"></strong></p>
+    
+    <p><a id="permalink"> Permalink </a></p>
+
+    <p style="text-align:right">
+      <a href=".">
+	<img border="0" src="nextButton.png" width="134" height="44">
+    </p>
+    
+    <script type="text/javascript" src="seedrandom.min.js"></script>
+    <script type="text/javascript" src="random.js"></script>
+    <script type="text/javascript" src="artinfo.js"></script>
+    <script type="text/javascript" src="artdraw.js"></script>
+    <script type="text/javascript" src="../webappfix.js"></script>
+    <script type="text/javascript" src="views.js"></script>
+    
+  </body>
+</html>

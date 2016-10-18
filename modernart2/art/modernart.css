@@ -1,0 +1,19 @@
+body {
+	margin: 0;
+	padding: 1%;
+}
+
+q {
+	font-style: italic;
+}
+
+canvas {
+	border-style: groove;
+	border-width: 15px;
+	border-color: gray;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
