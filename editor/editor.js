@@ -6,6 +6,43 @@ function focusBox() {
     box.focus();
 }
 
+function indent() {
+    var pos = getCaretPosition(box);
+    var text = box.value;
+    var currentLinePos = text.substring(0, pos).lastIndexOf('\n') + 1;
+    if(currentLinePos != 0) {
+        // it's okay if the newline isn't found
+        // 1 will be added and the value will be 0
+        // so the indent at the beginning of the file will be checked
+        var prevLinePos = text.substring(0, currentLinePos - 1)
+            .lastIndexOf('\n') + 1;
+        
+        var currentIndent = indentAt(currentLinePos);
+        var targetIndent = indentAt(prevLinePos);
+        
+        if(currentIndent < targetIndent) {
+            box.value = text.substring(0, currentLinePos)
+                + Array(targetIndent - currentIndent + 1).join(' ')
+                + text.substring(currentLinePos);
+        } else if(currentIndent > targetIndent) {
+            box.value = text.substring(0, currentLinePos)
+                + text.substring(
+                    currentLinePos + currentIndent - targetIndent)
+        }
+    }
+}
+
+function indentAt(pos) {
+    if(box.value[pos] == ' ') {
+        var indentLength = 0;
+        while(box.value[pos + indentLength] == ' ')
+            indentLength++;
+        return indentLength;
+    } else {
+        return 0;
+    }
+}
+
 function select() {
     focusBox();
     var newMark = getCaretPosition(box);
