@@ -67,7 +67,7 @@ void draw() {
 }
 
 void keyPressed() {
-  if(key == CODED) {
+  if(int(key) == CODED) {
     if(keyCode == lastKeyCodePressed)
       return;
     else
