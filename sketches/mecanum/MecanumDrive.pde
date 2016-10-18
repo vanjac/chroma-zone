@@ -8,7 +8,9 @@ class MecanumDriveTrain implements DriveTrain {
   final float[] forward = {1.0, -1.0, 1.0, -1.0};
   final float[] right = {1.0, 1.0, -1.0, -1.0};
   final float[] turnRight = {1.0, 1.0, 1.0, 1.0};
+  
   boolean omniWheel = false;
+  float wheelRotation = 0.0;
   
   void omniWheelMode() {
     omniWheel = true;
@@ -82,15 +84,23 @@ class MecanumDriveTrain implements DriveTrain {
   }
   
   void drawWheel(float wheelSpin, float wheelVelocity) {
+    pushMatrix();
+    rotate(wheelRotation);
+    
     wheelSpin *= 2;
     // make wheel spin positive
     if(wheelSpin < 0)
       wheelSpin += mecanumRollerSpacing * ceil(-wheelSpin/mecanumRollerSpacing);
       
-    if(omniWheel)
+    if(omniWheel) {
       drawOmniWheel(wheelSpin);
-    else
+      wheelRotation += (-PI/4 - wheelRotation) / 10.0;
+    } else {
       drawMecanumWheel(wheelSpin, wheelVelocity);
+      wheelRotation += (-wheelRotation) / 10.0;
+    }
+    
+    popMatrix();
   }
 }
 
@@ -140,9 +150,6 @@ void drawMecanumWheel(float wheelSpin, float wheelVelocity) {
 }
 
 void drawOmniWheel(float wheelSpin) {
-  pushMatrix();
-  rotate(-PI/4);
-  
   rectMode(CENTER);
   imageMode(CENTER);
   strokeWeight(3);
@@ -163,6 +170,4 @@ void drawOmniWheel(float wheelSpin) {
   strokeWeight(1);
   rectMode(CORNER);
   imageMode(CORNER);
-  
-  popMatrix();
 }

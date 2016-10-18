@@ -60,7 +60,7 @@ void draw() {
   textAlign(LEFT, BOTTOM);
   fill(0);
   textSize(20);
-  text("Arrows to move, A/D to turn, 1-8 to move individual wheels, T to switch drive trains, R to reset.", 8, height - 8);
+  text("Arrows to move, A/D to turn, 1-" + driveTrain.numWheels() * 2 + " to move individual wheels, M/O/T to switch drive trains, R to reset.", 8, height - 8);
   textAlign(RIGHT, BOTTOM);
   text("Jacob van't Hoog", width - 8, height - 8);
   textAlign(LEFT, BASELINE);
@@ -136,17 +136,29 @@ void keyPressed() {
         targetRot = 0;
         break;
       case 't':
-        if(driveTrain instanceof MecanumDriveTrain) {
+        if(!(driveTrain instanceof TankDriveTrain)) {
           setupDriveTrain(new TankDriveTrain());
+          spinRobot();
+        }
+        break;
+      case 'm':
+        if(driveTrain instanceof MecanumDriveTrain) {
+          ((MecanumDriveTrain)driveTrain).mecanumMode();
         } else {
           setupDriveTrain(new MecanumDriveTrain());
+          spinRobot();
         }
-        // robot spins in a circle
-        targetX = robotX;
-        targetY = robotY;
-        targetRot = robotRot + PI*2;
-        targetPosEnabled = true;
         break;
+      case 'o':
+        if(driveTrain instanceof MecanumDriveTrain) {
+          ((MecanumDriveTrain)driveTrain).omniWheelMode();
+        } else {
+          setupDriveTrain(new MecanumDriveTrain());
+          ((MecanumDriveTrain)driveTrain).omniWheelMode();
+          spinRobot();
+        }
+        break;
+      
     }
   }
 }
@@ -219,4 +231,12 @@ void subtractVelocities(float[] v) {
 void moveWheel(int number, float amount) {
   if(number < driveTrain.numWheels())
     inputVelocities[number] += amount;
+}
+
+void spinRobot() {
+  // robot spins in a circle
+  targetX = robotX;
+  targetY = robotY;
+  targetRot = robotRot + PI*2;
+  targetPosEnabled = true;
 }
