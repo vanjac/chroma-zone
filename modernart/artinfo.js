@@ -67,7 +67,7 @@ var reviews = ["nature is amazing", "a real work of art", "10/10",
 	       "life is a gift", "new, yet familiar", "worth every penny",
 	       "the massive scope hurts my brain",
 	       "this reminds me of my late aunt Stephine", "amateur",
-	       "garbage", "trump 2016"];
+	       "garbage", "..."];
 var prices = ["Priceless.", "Your soul.", "Five.", "All of the money.",
 	      "A human sacrifice.", "A small country.",
 	      "50% off at selected stores."];
