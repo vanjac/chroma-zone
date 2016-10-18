@@ -39,10 +39,10 @@ void moveWheels(float[] velocities) {
     wheelSpins[i] += velocities[i];
   
   float rotation = driveTrain.getRobotRotation(velocities);
-  robotRot += rotation;
+  robotRot += rotation / 2.0;
   
   PVector movement = driveTrain.getRobotTranslation(velocities);
   movement.rotate(robotRot);
-  robotX += movement.x;
-  robotY += movement.y;
+  robotX += movement.x / 2.0;
+  robotY += movement.y / 2.0;
 }

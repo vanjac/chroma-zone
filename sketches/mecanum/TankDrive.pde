@@ -5,7 +5,6 @@ final float tankTreadLineSpacing = 27.0;
 
 class TankDriveTrain implements DriveTrain {
   final float[] forward = {1.0, -1.0};
-  final float[] right = {0.0, 0.0};
   final float[] turnRight = {1.0, 1.0};
   
   
@@ -26,7 +25,7 @@ class TankDriveTrain implements DriveTrain {
   
   
   float[] rightWheelSpins() {
-    return right;
+    return turnRight;
   }
   
   
