@@ -6,6 +6,7 @@ float[] wheelSpins;
 
 DriveTrain driveTrain;
 
+// generic interface for a drive train that can be controlled by the user
 interface DriveTrain {
   String getDriveTrainName();
   
@@ -34,6 +35,7 @@ void setupDriveTrain(DriveTrain d) {
   wheelSpins = new float[driveTrain.numWheels()];
 }
 
+// move the wheels and the robot based on wheel velocities
 void moveWheels(float[] velocities) {
   for(int i = 0; i < driveTrain.numWheels(); i++)
     wheelSpins[i] += velocities[i];

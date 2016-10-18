@@ -67,6 +67,7 @@ void draw() {
 }
 
 void keyPressed() {
+  // prevent key repeat
   if(int(key) == CODED) {
     if(keyCode == lastKeyCodePressed)
       return;
@@ -140,6 +141,7 @@ void keyPressed() {
         } else {
           setupDriveTrain(new MecanumDriveTrain());
         }
+        // robot spins in a circle
         targetX = robotX;
         targetY = robotY;
         targetRot = robotRot + PI*2;

@@ -9,32 +9,26 @@ class MecanumDriveTrain implements DriveTrain {
   final float[] right = {1.0, 1.0, -1.0, -1.0};
   final float[] turnRight = {1.0, 1.0, 1.0, 1.0};
   
-  
   String getDriveTrainName() {
     return "Mecanum Drive";
   }
-  
   
   int numWheels() {
     // front left, front right, back left, back right
     return 4;
   }
   
-  
   float[] forwardWheelSpins() {
     return forward;
   }
-  
   
   float[] rightWheelSpins() {
     return right;
   }
   
-  
   float[] turnRightWheelSpins() {
     return turnRight;
   }
-  
   
   PVector getRobotTranslation(float[] velocities) {
     float forwardMovement = (velocities[0] + velocities[2] - velocities[1] - velocities[3]) / sqrt(2.0);
@@ -43,11 +37,9 @@ class MecanumDriveTrain implements DriveTrain {
     return movement;
   }
   
-  
   float getRobotRotation(float[] velocities) {
     return (velocities[0] + velocities[2] + velocities[1] + velocities[3]) * .006;
   }
-  
   
   void drawWheels(float[] wheelSpins, float[] velocities) {
     // front left
@@ -81,6 +73,7 @@ class MecanumDriveTrain implements DriveTrain {
 
 void drawMecanumWheel(float wheelSpin, float wheelVelocity) {
   wheelSpin *= 2;
+  // make wheel spin positive
   if(wheelSpin < 0)
     wheelSpin += mecanumRollerSpacing * ceil(-wheelSpin/mecanumRollerSpacing);
   
@@ -102,9 +95,11 @@ void drawMecanumWheel(float wheelSpin, float wheelVelocity) {
     -wheelVelocity * mecanumWheelArrowLength + arrowOffset, -wheelVelocity * mecanumWheelArrowLength);
   stroke(0, 0, 0);
   
+  // the wheel
   fill(127, 127, 127);
-  
   rect(0, 0, mecanumWheelWidth, mecanumWheelHeight);
+  
+  // wheel roller lines
   // processing.js doesn't support clip(), which is why I have to have so much ugly code here
   //clip(0, 0, mecanumWheelWidth, mecanumWheelHeight);
   float diagY = -mecanumWheelHeight / 2 - (wheelSpin % mecanumRollerSpacing) + mecanumRollerSpacing;

@@ -10,6 +10,7 @@ void drawRobot(float x, float y, float rot, float[] wheelSpins, float[] velociti
   translate(x, y);
   rotate(rot);
   
+  // the robot base
   strokeWeight(3);
   fill(255, 255, 255);
   stroke(0);
@@ -18,6 +19,7 @@ void drawRobot(float x, float y, float rot, float[] wheelSpins, float[] velociti
   strokeWeight(1);
   rectMode(CORNER);
   
+  // circle to show the front of the robot
   strokeWeight(3);
   fill(0);
   ellipse(0, -robotHeight/2 - robotBaseHeightMargin, 16, 16);

@@ -7,32 +7,26 @@ class TankDriveTrain implements DriveTrain {
   final float[] forward = {1.0, -1.0};
   final float[] turnRight = {1.0, 1.0};
   
-  
   String getDriveTrainName() {
     return "Tank Drive";
   }
-  
   
   int numWheels() {
     // left, right
     return 2;
   }
   
-  
   float[] forwardWheelSpins() {
     return forward;
   }
-  
   
   float[] rightWheelSpins() {
     return turnRight;
   }
   
-  
   float[] turnRightWheelSpins() {
     return turnRight;
   }
-  
   
   PVector getRobotTranslation(float[] velocities) {
     float forwardMovement = (velocities[0] - velocities[1]) * 2;
@@ -40,11 +34,9 @@ class TankDriveTrain implements DriveTrain {
     return movement;
   }
   
-  
   float getRobotRotation(float[] velocities) {
     return (velocities[0] + velocities[1]) * .012;
   }
-  
   
   void drawWheels(float[] wheelSpins, float[] velocities) {
     // left
@@ -64,6 +56,7 @@ class TankDriveTrain implements DriveTrain {
 
 void drawTankTread(float spin) {
   spin *= 2;
+  // make spin positive
   if(spin < 0)
     spin += tankTreadLineSpacing * ceil(-spin/tankTreadLineSpacing);
   
@@ -71,9 +64,11 @@ void drawTankTread(float spin) {
   imageMode(CENTER);
   strokeWeight(3);
   
+  // the tank tread
   fill(127, 127, 127);
-  
   rect(0, 0, tankTreadWidth, tankTreadHeight);
+  
+  // tank tread lines
   //clip(0, 0, tankTreadWidth, tankTreadHeight);
   float lineY = -tankTreadHeight / 2 - (spin % tankTreadLineSpacing) + tankTreadLineSpacing;
   while(lineY < tankTreadHeight / 2) {
