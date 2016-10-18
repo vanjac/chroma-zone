@@ -22,6 +22,7 @@ interface DriveTrain {
 
 void setupRobot() {
   setupDriveTrain(new MecanumDriveTrain());
+  //((MecanumDriveTrain)driveTrain).omniWheelMode();
   
   robotX = width/2;
   robotY = height + robotHeight;

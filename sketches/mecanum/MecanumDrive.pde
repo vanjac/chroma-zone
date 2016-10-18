@@ -8,9 +8,21 @@ class MecanumDriveTrain implements DriveTrain {
   final float[] forward = {1.0, -1.0, 1.0, -1.0};
   final float[] right = {1.0, 1.0, -1.0, -1.0};
   final float[] turnRight = {1.0, 1.0, 1.0, 1.0};
+  boolean omniWheel = false;
+  
+  void omniWheelMode() {
+    omniWheel = true;
+  }
+  
+  void mecanumMode() {
+    omniWheel = false;
+  }
   
   String getDriveTrainName() {
-    return "Mecanum Drive";
+    if(omniWheel)
+      return "Omni-wheel Drive";
+    else
+      return "Mecanum Drive";
   }
   
   int numWheels() {
@@ -46,37 +58,44 @@ class MecanumDriveTrain implements DriveTrain {
     pushMatrix();
     translate(-robotWidth / 2, -robotHeight / 2);
     scale(1, -1);
-    drawMecanumWheel(-wheelSpins[0], -velocities[0]);
+    drawWheel(-wheelSpins[0], -velocities[0]);
     popMatrix();
     
     // front right
     pushMatrix();
     translate(robotWidth / 2, -robotHeight / 2);
-    drawMecanumWheel(-wheelSpins[1], -velocities[1]);
+    drawWheel(-wheelSpins[1], -velocities[1]);
     popMatrix();
     
     // back left
     pushMatrix();
     translate(-robotWidth / 2, robotHeight / 2);
-    drawMecanumWheel(wheelSpins[2], velocities[2]);
+    drawWheel(wheelSpins[2], velocities[2]);
     popMatrix();
     
     // back right
     pushMatrix();
     translate(robotWidth / 2, robotHeight / 2);
     scale(1, -1);
-    drawMecanumWheel(wheelSpins[3], velocities[3]);
+    drawWheel(wheelSpins[3], velocities[3]);
     popMatrix();
+  }
+  
+  void drawWheel(float wheelSpin, float wheelVelocity) {
+    wheelSpin *= 2;
+    // make wheel spin positive
+    if(wheelSpin < 0)
+      wheelSpin += mecanumRollerSpacing * ceil(-wheelSpin/mecanumRollerSpacing);
+      
+    if(omniWheel)
+      drawOmniWheel(wheelSpin);
+    else
+      drawMecanumWheel(wheelSpin, wheelVelocity);
   }
 }
 
 
 void drawMecanumWheel(float wheelSpin, float wheelVelocity) {
-  wheelSpin *= 2;
-  // make wheel spin positive
-  if(wheelSpin < 0)
-    wheelSpin += mecanumRollerSpacing * ceil(-wheelSpin/mecanumRollerSpacing);
-  
   rectMode(CENTER);
   imageMode(CENTER);
   strokeWeight(3);
@@ -118,4 +137,32 @@ void drawMecanumWheel(float wheelSpin, float wheelVelocity) {
   strokeWeight(1);
   rectMode(CORNER);
   imageMode(CORNER);
+}
+
+void drawOmniWheel(float wheelSpin) {
+  pushMatrix();
+  rotate(-PI/4);
+  
+  rectMode(CENTER);
+  imageMode(CENTER);
+  strokeWeight(3);
+  
+  // the tank tread
+  fill(127, 127, 127);
+  rect(0, 0, mecanumWheelWidth, mecanumWheelHeight);
+  
+  // wheel lines
+  //clip(0, 0, tankTreadWidth, tankTreadHeight);
+  float lineY = -mecanumWheelHeight / 2 - (wheelSpin % mecanumRollerSpacing) + mecanumRollerSpacing;
+  while(lineY < mecanumWheelHeight / 2) {
+    line(-mecanumWheelWidth / 2, lineY, mecanumWheelWidth / 2, lineY);
+    lineY += mecanumRollerSpacing;
+  }
+  
+  //noClip();
+  strokeWeight(1);
+  rectMode(CORNER);
+  imageMode(CORNER);
+  
+  popMatrix();
 }
