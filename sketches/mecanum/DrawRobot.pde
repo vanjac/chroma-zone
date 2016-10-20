@@ -49,15 +49,34 @@ void drawRobot(float x, float y, float rot, float[] wheelSpins, float[] velociti
   if(abs(rotation) > .01) {
     float start = -PI/2;
     float end = -PI/2;
-    if(rotation > 0.0)
+    float arrowEnd = 0.0;
+    if(rotation > 0.0) {
       end += rotation;
-    if(rotation < 0.0)
+      arrowEnd = end;
+    }
+    if(rotation < 0.0) {
       start += rotation;
+      arrowEnd = start;
+    }
     float arcWidth = (robotHeight + robotBaseHeightMargin) * 2;
     noFill();
     arc(0, 0, arcWidth, arcWidth, start, end);
     arc(0, 0, arcWidth, arcWidth, start + PI, end + PI);
     fill(255,255,255);
+    
+    // arrowhead
+    PVector arrowStart = new PVector(arcWidth/2, 0.0);
+    arrowStart.rotate(arrowEnd);
+    PVector arrowEndOffset = new PVector(16.0, -16.0);
+    arrowEndOffset.rotate(arrowEnd);
+    if(rotation < 0.0) {
+      arrowEndOffset.rotate(PI);
+    }
+    line(arrowStart.x, arrowStart.y, arrowStart.x + arrowEndOffset.x, arrowStart.y + arrowEndOffset.y);
+    line(-arrowStart.x, -arrowStart.y, -arrowStart.x - arrowEndOffset.x, -arrowStart.y - arrowEndOffset.y);
+    arrowEndOffset.rotate(-PI/2);
+    line(arrowStart.x, arrowStart.y, arrowStart.x + arrowEndOffset.x, arrowStart.y + arrowEndOffset.y);
+    line(-arrowStart.x, -arrowStart.y, -arrowStart.x - arrowEndOffset.x, -arrowStart.y - arrowEndOffset.y);
   }
   
   strokeWeight(1);
