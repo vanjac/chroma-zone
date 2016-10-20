@@ -55,7 +55,6 @@ class TankDriveTrain implements DriveTrain {
 }
 
 void drawTankTread(float spin) {
-  spin *= 2;
   // make spin positive
   if(spin < 0)
     spin += tankTreadLineSpacing * ceil(-spin/tankTreadLineSpacing);

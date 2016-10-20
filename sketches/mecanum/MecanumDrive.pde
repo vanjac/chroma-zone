@@ -87,7 +87,6 @@ class MecanumDriveTrain implements DriveTrain {
     pushMatrix();
     rotate(wheelRotation);
     
-    wheelSpin *= 2;
     // make wheel spin positive
     if(wheelSpin < 0)
       wheelSpin += mecanumRollerSpacing * ceil(-wheelSpin/mecanumRollerSpacing);
