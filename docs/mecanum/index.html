@@ -13,6 +13,10 @@
     Most of this was taken from a document written by Dawson Bowhay.
     </p>
     
+    <p>
+    You'll need Javascript for some of this.
+    </p>
+    
     <h1> How a Mecanum Drive Works </h1>
     
     <img src="mecanum_wheel.jpg" alt="A mecanum wheel." style="float:right; width:300px; height:300px;">
@@ -42,7 +46,9 @@
     In addition to knowing which direction to go, you also have to determine how quickly to drive. For example, if you push the joystick slightly forward, the robot should drive forward slowly. But if you push the joystick forward as far as it can go, the robot should drive at top speed. This is the <em>magnitude</em> of the joystick.
     </p>
     
-    <p style="text-align:center;"><img src="triangle.png" alt="Magnitude and direction." style="width:222px; height:171px;"></p>
+    <div id="magnitude-direction-sketch"> </div>
+    <script language="javascript" type="text/javascript" src="magnitude_direction/libraries/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="magnitude_direction/magnitude_direction.js"></script>
     
     <p>
     So we have 2 factors for determining how the robot should move: Direction and Magnitude. wpilib has built-in methods of finding these for a joystick, but it's important to know how to calculate them yourself.
