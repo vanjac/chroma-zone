@@ -24,6 +24,8 @@ else if(getParameterByName("c") != null) {
 	    var repository = ""
 	    
 	    // projects
+	    if(code == "tim")
+	        repository = "InteractiveTimeline";
 	    if(code == "bet")
 	        repository = "Betsy";
         if(code == "thr")
