@@ -113,6 +113,14 @@ h2 {
     background-color: #AAA;
 }
 
+.linkbutton:hover {
+    background-color: #CCC;
+}
+
+.linkbutton:active {
+    background-color: #BBB;
+}
+
 .linksection {
     margin: 4pt;
     padding-bottom: 6pt;
