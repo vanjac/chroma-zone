@@ -3,10 +3,22 @@ title: About
 layout: default
 ---
 
-<p>
+<div id="post">
     {{ site.posts[0].excerpt }}
+</div>
+<p>
     <u><em><a href="{{ site.posts[0].url }}"> Posted at {{ site.posts[0].date }}
         </a></em></u> <br><br>
     
-    <u><a href="/posts/"> Archive </a></u>
+    <u><a href="/posts/"> Archive </a></u> &nbsp;&nbsp;
+    
+    <u><a href="javascript:void(0);" onclick="editPost()"> Edit </a></u>
+    <script type="text/javascript">
+    function editPost() {
+        console.log("editing2");
+        var post = document.getElementById("post");
+        post.contentEditable = true;
+        post.focus();
+    }
+    </script>
 </p>
