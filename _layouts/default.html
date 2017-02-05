@@ -20,12 +20,12 @@
     </script>
     
     <div class="linksection">
-      {% if page.title == 'About' %}
+      {% if page.title == 'All' %}
         <span class="linkbutton-selected">
         {{ page.title }} </span>
       {% else %}
-        <a href="/about/"> <span class="linkbutton">
-        About </span> </a>
+        <a href="/all/"> <span class="linkbutton">
+        All </span> </a>
       {% endif %}
       
       {% if page.title == 'Projects' %}
@@ -61,11 +61,24 @@
     {% assign isRightBlock = false %}
     {% assign animationDelay = 0.0 %}
     
-    {% assign blocks = page.blocks | split: ";" %}
-    {% for block in blocks %}
-      {% assign blockData = block | split: "," %}
+    {% for post in site.posts %}
       
-      <a href="{{ blockData[2] }}">
+      {% assign matchesFilter = true %}
+      {% for tag in page.filter %}
+        {% unless post.tags contains tag %}
+          {% assign matchesFilter = false %}
+        {% endunless %}
+      {% endfor %}
+      {% for tag in page.unfilter %}
+        {% if post.tags contains tag %}
+          {% assign matchesFilter = false %}
+        {% endif %}
+      {% endfor %}
+      {% if matchesFilter == false %}
+        {% continue %}
+      {% endif %}
+      
+      <a href="{{ post.link }}">
       
         {% if isRightBlock %}
         <div class="block-group-right"
@@ -76,9 +89,9 @@
           style="animation-delay: {{animationDelay}}s;">
         {% assign isRightBlock = true %}
         {% endif %}
-          <p class="project-name"> {{ blockData[0] }} </p>
+          <p class="project-name"> {{ post.title }} </p>
           <p class="project-description">
-            {{ blockData[1] }}
+            {{ post.excerpt }}
           </p>
         </div>
       
