@@ -1,0 +1,10 @@
+all: Complete
+wip: Work in progress
+
+projects: Code project
+
+good: High quality
+bad: Low quality
+
+webapp: Web app or sketch - availible online
+
