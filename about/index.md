@@ -2,6 +2,6 @@
 title: About
 layout: default
 ---
-[GitHub](https://github.com/vanjac/).
+<span style="text-decoration:underline;">[GitHub](https://github.com/vanjac/)</span>.
 
-[Report an issue or leave a comment](https://github.com/vanjac/vanjac.github.io/issues/new).
+<span style="text-decoration:underline;">[Report an issue or leave a comment](https://github.com/vanjac/vanjac.github.io/issues/new)</span>.
