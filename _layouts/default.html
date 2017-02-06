@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!--this file was generated with Jekyll/Liquid.-->
+<!--sorry about the whitespace-->
 <html>
   
   <head>
@@ -20,59 +22,44 @@
     
     <div class="linksection">
       {% for i in (1..5) %}
-        {% capture buttonTitle %}{% cycle 'All', 'Projects', 'Web Apps', 'Other', 'About' %}{% endcapture %}
-        {% capture buttonURL %}{% cycle '/all/', '/', '/webapps/', '/other/', '/about/' %}{% endcapture %}
-        {% if page.title == buttonTitle %}
-          <span class="linkbutton-selected">
-          {{ page.title }} </span>
+        {% capture linkName %}{% cycle 'All', 'Projects', 'Web Apps', 'Other', 'About' %}{% endcapture %}
+        {% capture linkURL %}{% cycle '/all/', '/', '/webapps/', '/other/', '/about/' %}{% endcapture %}
+        {% if page.title == linkName %}
+          <span class="linkbutton-selected">{{ linkName }}</span>
         {% else %}
-          <a href="{{ buttonURL }}"> <span class="linkbutton">
-          {{ buttonTitle }} </span> </a>
+          <a href="{{linkURL}}"><span class="linkbutton">{{linkName}}</span></a>
         {% endif %}
       {% endfor %}
     </div>
     
+    <!--start page content-->
     {{ content }}
+    <!--end page content-->
     
     {% assign isRightBlock = false %}
     {% assign animationDelay = 0.0 %}
     
-    {% for post in site.posts %}
-      
-      {% assign matchesFilter = true %}
+    {% for post in site.posts %} {% assign matchesFilter = true %}
       {% for tag in page.filter %}
-        {% unless post.tags contains tag %}
-          {% assign matchesFilter = false %}
+        {% unless post.tags contains tag %} {% assign matchesFilter = false %}
         {% endunless %}
       {% endfor %}
       {% for tag in page.unfilter %}
-        {% if post.tags contains tag %}
-          {% assign matchesFilter = false %}
+        {% if post.tags contains tag %} {% assign matchesFilter = false %}
         {% endif %}
       {% endfor %}
-      {% if matchesFilter == false %}
-        {% continue %}
-      {% endif %}
-      
+      {% if matchesFilter == false %} {% continue %} {% endif %}
       <a href="{{ post.link }}">
-      
-        {% if isRightBlock %}
-        <div class="block-group-right"
-          style="animation-delay: {{animationDelay}}s;">
-        {% assign isRightBlock = false %}
-        {% else %}
-        <div class="block-group-left"
-          style="animation-delay: {{animationDelay}}s;">
-        {% assign isRightBlock = true %}
+        {% if isRightBlock %} {% assign isRightBlock = false %}
+          <div class="block-group-right"
+        {% else %} {% assign isRightBlock = true %}
+          <div class="block-group-left"
         {% endif %}
-          <p class="project-name"> {{ post.title }} </p>
-          <p class="project-description">
-            {{ post.excerpt }}
-          </p>
+        style="animation-delay: {{animationDelay}}s;">
+        <p class="project-name">{{ post.title }}</p>
+        <p class="project-description">{{ post.excerpt | strip }}</p>
         </div>
-      
       </a>
-      
       {% assign animationDelay = animationDelay | plus: 0.1 %}
     {% endfor %}
     
