@@ -50,9 +50,14 @@
         <a href="/other/"> <span class="linkbutton">
         Other </span> </a>
       {% endif %}
-      
-      <a href="http://github.com/vanjac"><span class="linkbutton">
-      GitHub </span></a>
+
+      {% if page.title == 'About' %}
+        <span class="linkbutton-selected">
+        {{ page.title }} </span>
+      {% else %}
+        <a href="/about/"> <span class="linkbutton">
+        About </span> </a>
+      {% endif %}
     </div>
     
     {{ content }}
