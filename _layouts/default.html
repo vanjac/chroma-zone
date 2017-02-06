@@ -19,45 +19,17 @@
     </script>
     
     <div class="linksection">
-      {% if page.title == 'All' %}
-        <span class="linkbutton-selected">
-        {{ page.title }} </span>
-      {% else %}
-        <a href="/all/"> <span class="linkbutton">
-        All </span> </a>
-      {% endif %}
-      
-      {% if page.title == 'Projects' %}
-        <span class="linkbutton-selected">
-        {{ page.title }} </span>
-      {% else %}
-        <a href="/"> <span class="linkbutton">
-        Projects </span> </a>
-      {% endif %}
-      
-      {% if page.title == 'Web Apps' %}
-        <span class="linkbutton-selected">
-        {{ page.title }} </span>
-      {% else %}
-        <a href="/webapps/"> <span class="linkbutton">
-        Web Apps </span> </a>
-      {% endif %}
-      
-      {% if page.title == 'Other' %}
-        <span class="linkbutton-selected">
-        {{ page.title }} </span>
-      {% else %}
-        <a href="/other/"> <span class="linkbutton">
-        Other </span> </a>
-      {% endif %}
-
-      {% if page.title == 'About' %}
-        <span class="linkbutton-selected">
-        {{ page.title }} </span>
-      {% else %}
-        <a href="/about/"> <span class="linkbutton">
-        About </span> </a>
-      {% endif %}
+      {% for i in (1..5) %}
+        {% capture buttonTitle %}{% cycle 'All', 'Projects', 'Web Apps', 'Other', 'About' %}{% endcapture %}
+        {% capture buttonURL %}{% cycle '/all/', '/', '/webapps/', '/other/', '/about/' %}{% endcapture %}
+        {% if page.title == buttonTitle %}
+          <span class="linkbutton-selected">
+          {{ page.title }} </span>
+        {% else %}
+          <a href="{{ buttonURL }}"> <span class="linkbutton">
+          {{ buttonTitle }} </span> </a>
+        {% endif %}
+      {% endfor %}
     </div>
     
     {{ content }}
