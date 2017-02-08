@@ -68,7 +68,7 @@ void reset() {
 }
 
 void loadFile(String path) {
-  img = loadImage(path);
+  img = requestImage(path);
 }
 
 boolean fileReady() {
