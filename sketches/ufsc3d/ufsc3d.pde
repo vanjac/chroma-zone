@@ -50,6 +50,10 @@ void keyPressed() {
     chooseFile("MUL_composite.bmp");
   if(key == '9')
     chooseFile("LEE_composite.bmp");
+  if(key == '0')
+    chooseFile("POINT_composite.bmp");
+  if(key == '-')
+    chooseFile("MOTH_composite.bmp");
 }
 
 void chooseFile(String filePath) {
@@ -154,7 +158,9 @@ void draw() {
          "6: HARVEST (top left frame)\n" +
          "7: HARVEST (bottom frame)\n" +
          "8: MUL\n" +
-         "9: LEE\n",
+         "9: LEE\n" +
+         "0: POINT (still in progress)\n" +
+         "-: MOTH (still in progress)",
          32,height/2);
   } else if(path == null) {
     // wait...
