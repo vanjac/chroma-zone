@@ -7,8 +7,9 @@ int[][] points;
 float minValue, maxValue;
 float centerValue, valueRange;
 
+boolean hsbMode;
+
 // sequence:
-boolean firstDraw;
 String path;
 boolean loadingMessageDraw;
 boolean startedLoading;
@@ -30,6 +31,8 @@ void setup() {
 void keyPressed() {
   if(key == 'r')
     reset();
+  if(key == 'h')
+    hsbMode = !hsbMode;
   if(key == 'i' && img != null)
     drawImage = true;
   if(key == '1')
@@ -65,7 +68,11 @@ void chooseFile(String filePath) {
 void reset() {
   points = null;
   
-  firstDraw = false;
+  minValue = 127;
+  maxValue = 127;
+  centerValue = 127;
+  valueRange = 0;
+  
   path = null;
   loadingMessageDraw = false;
   startedLoading = false;
@@ -76,9 +83,6 @@ void reset() {
   
   mouseRotateX = 0;
   mouseRotateY = 0;
-  
-  minValue = 0;
-  maxValue = 0;
   
   drawImage = false;
 }
@@ -104,9 +108,15 @@ void readFile() {
   for(int i = 0; i < img.pixels.length; i++) {
     color pixel = img.pixels[i];
     int[] pointPos = new int[3];
-    pointPos[0] = int(red(pixel));
-    pointPos[1] = int(green(pixel));
-    pointPos[2] = int(blue(pixel));
+    if(hsbMode) {
+      pointPos[0] = int(hue(pixel));
+      pointPos[1] = int(saturation(pixel));
+      pointPos[2] = int(brightness(pixel));
+    } else {
+      pointPos[0] = int(red(pixel));
+      pointPos[1] = int(green(pixel));
+      pointPos[2] = int(blue(pixel));
+    }
     points[i] = pointPos;
     
     if(pointPos[0] > maxValue)
@@ -140,16 +150,15 @@ void mouseReleased() {
 }
 
 void draw() {
-  if(!firstDraw) {
-    firstDraw = true;
-    
+  if(path == null) {
     strokeWeight(RENDER_STROKE);
     fill(0,0,0);
     textSize(36);
     
     textAlign(LEFT, CENTER);
     background(255,255,255);
-    text("Type a number...\n" +
+    text("Type a number... " +
+         "(mode: " + (hsbMode ? "HSB" : "RGB") + ", press H to switch)\n" +
          "1: BREADTH\n" +
          "2: JALVINSACH\n" +
          "3: LOCUS\n" +
@@ -162,8 +171,6 @@ void draw() {
          "0: POINT (still in progress)\n" +
          "-: MOTH (still in progress)",
          32,height/2);
-  } else if(path == null) {
-    // wait...
   } else if (!loadingMessageDraw) {
     loadingMessageDraw = true;
     
@@ -215,6 +222,9 @@ void draw() {
     rotateY(mouseRotateX);
     
     int i = 0;
+    if(hsbMode) {
+      colorMode(HSB);
+    }
     while(millis() - startTime < drawTime) {
       int[] pointPos = points[int(random(points.length))];
       if(pointPos != null) {
@@ -223,6 +233,7 @@ void draw() {
       }
       i++;
     }
+    colorMode(RGB);
     
     noFill();
     strokeWeight(1);
