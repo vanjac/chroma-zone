@@ -18,6 +18,8 @@ boolean fileRead;
 boolean mouseWasReleased;
 float mouseRotateX, mouseRotateY;
 
+boolean drawImage;
+
 
 void setup() {
   size(1024, 768, P3D);
@@ -28,6 +30,8 @@ void setup() {
 void keyPressed() {
   if(key == 'r')
     reset();
+  if(key == 'i' && img != null)
+    drawImage = true;
   if(key == '1')
     chooseFile("BREADTH_composite.png");
   if(key == '2')
@@ -59,6 +63,8 @@ void reset() {
   
   minValue = 0;
   maxValue = 0;
+  
+  drawImage = false;
 }
 
 void loadFile(String path) {
@@ -82,9 +88,9 @@ void readFile() {
   for(int i = 0; i < img.pixels.length; i++) {
     color pixel = img.pixels[i];
     int[] pointPos = new int[3];
-    pointPos[0] = pixel >> 16 & 0xFF; // red
-    pointPos[1] = pixel >> 8 & 0xFF; // green
-    pointPos[2] = pixel & 0xFF; // blue
+    pointPos[0] = int(red(pixel));
+    pointPos[1] = int(green(pixel));
+    pointPos[2] = int(blue(pixel));
     points[i] = pointPos;
     
     if(pointPos[0] > maxValue)
@@ -145,6 +151,9 @@ void draw() {
     readFile();
   } else {
     float startTime = millis();
+    
+    if(drawImage)
+      image(img, 0, 0);
     
     int drawTime = 50;
     
