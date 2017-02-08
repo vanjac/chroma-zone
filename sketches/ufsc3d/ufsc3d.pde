@@ -12,6 +12,7 @@ float centerValue, valueRange;
 boolean hsbMode;
 
 // sequence:
+String uiChosenFile;
 String path;
 boolean loadingMessageDraw;
 boolean startedLoading;
@@ -27,6 +28,9 @@ String[] files = {
   "574016.bmp",
   "BREADTH.bmp",
   "BRILL_N.bmp",
+  "BRINE.bmp",
+  "FEND.bmp",
+  "FOND.bmp",
   "HARVEST_bottom.bmp",
   "HARVEST_top-left.bmp",
   "JALVINSACH.bmp",
@@ -53,6 +57,14 @@ void keyPressed() {
   }
   if(key == 'i' && img != null)
     drawImage = true;
+  if(key == 'f')
+    selectInput("Choose an image file", "chooseFileJava");
+}
+
+void chooseFileJava(File f) {
+  if(f == null)
+    return;
+  uiChosenFile = f.toString();
 }
 
 void chooseFile(String filePath) {
@@ -69,6 +81,7 @@ void reset() {
   centerValue = 127;
   valueRange = 0;
   
+  uiChosenFile = null;
   path = null;
   loadingMessageDraw = false;
   startedLoading = false;
@@ -146,6 +159,12 @@ void mouseReleased() {
 }
 
 void draw() {
+  if(uiChosenFile != null) {
+    println("Chose a file...");
+    chooseFile(uiChosenFile);
+    uiChosenFile = null;
+  }
+  
   if(path == null) {
     fill(0,0,0);
     textSize(32);
