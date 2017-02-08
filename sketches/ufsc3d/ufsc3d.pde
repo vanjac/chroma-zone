@@ -24,7 +24,7 @@ void setup() {
   fill(0,0,0);
   textSize(64);
   textAlign(CENTER, CENTER);
-  text("Loading!\n(click and drag to pan)",width/2,height/2);
+  text("Loading!\n(click and drag to rotate)",width/2,height/2);
   
   loadPoints();
 }
@@ -98,7 +98,7 @@ void draw() {
       mouseWasReleased = false;
       background(255,255,255);
       strokeWeight(RENDER_STROKE);
-      drawTime = 150;
+      drawTime = 250;
     } else if(mousePressed) {
       background(255,255,255);
       strokeWeight(PAN_STROKE);
