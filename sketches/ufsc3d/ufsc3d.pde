@@ -31,8 +31,10 @@ void setup() {
 void keyPressed() {
   if(key == 'r')
     reset();
-  if(key == 'h')
+  if(key == 'h') {
     hsbMode = !hsbMode;
+    chooseFile(path);
+  }
   if(key == 'i' && img != null)
     drawImage = true;
   if(key == '1')
