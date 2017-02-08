@@ -162,14 +162,17 @@ void draw() {
     
     int drawTime = 50;
     
+    if(mousePressed) {
+      strokeWeight(PAN_STROKE);
+      background(255,255,255);
+    } else {
+      strokeWeight(RENDER_STROKE);
+    }
+    
     if(mouseWasReleased) {
       mouseWasReleased = false;
       background(255,255,255);
-      strokeWeight(RENDER_STROKE);
       drawTime = 250;
-    } else if(mousePressed) {
-      background(255,255,255);
-      strokeWeight(PAN_STROKE);
     }
     
     float fov = radians(60);
@@ -189,5 +192,13 @@ void draw() {
       }
       i++;
     }
+    
+    noFill();
+    strokeWeight(1);
+    stroke(0);
+    pushMatrix();
+    translate(centerValue - 127, centerValue - 127, centerValue - 127);
+    box(256);
+    popMatrix();
   }
 }
