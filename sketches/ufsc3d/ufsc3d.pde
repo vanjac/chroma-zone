@@ -152,8 +152,13 @@ void draw() {
   } else {
     float startTime = millis();
     
-    if(drawImage)
+    if(drawImage) {
+      background(255,255,255);
       image(img, 0, 0);
+      if(mousePressed)
+        drawImage = false;
+      return;
+    }
     
     int drawTime = 50;
     
