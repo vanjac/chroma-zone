@@ -3,6 +3,8 @@ final boolean LOGGING_ENABLED = false;
 final float PAN_STROKE = 4;
 final float RENDER_STROKE = 2;
 
+final float FILE_LIST_SIZE = 48;
+
 int[][] points;
 float minValue, maxValue;
 float centerValue, valueRange;
@@ -21,6 +23,20 @@ float mouseRotateX, mouseRotateY;
 
 boolean drawImage;
 
+String[] files = {
+  "574016.bmp",
+  "BREADTH.bmp",
+  "BRILL_N.bmp",
+  "HARVEST_bottom.bmp",
+  "HARVEST_top-left.bmp",
+  "JALVINSACH.bmp",
+  "LEE.bmp",
+  "LOCUS0_1080.bmp",
+  "MOTH.bmp",
+  "MUL.bmp",
+  "POINT.bmp"
+};
+
 
 void setup() {
   size(1024, 768, P3D);
@@ -29,7 +45,7 @@ void setup() {
 }
 
 void keyPressed() {
-  if(key == 'r')
+  if(key == 'r' || key == 'q' || keyCode == ESC)
     reset();
   if(key == 'h') {
     hsbMode = !hsbMode;
@@ -37,28 +53,6 @@ void keyPressed() {
   }
   if(key == 'i' && img != null)
     drawImage = true;
-  if(key == '1')
-    chooseFile("BREADTH_composite.bmp");
-  if(key == '2')
-    chooseFile("JALVINSACH_composite.bmp");
-  if(key == '3')
-    chooseFile("LOCUS0_1080.bmp");
-  if(key == '4')
-    chooseFile("BRILLN_composite.bmp");
-  if(key == '5')
-    chooseFile("574016_composite.bmp");
-  if(key == '6')
-    chooseFile("HARVEST_composite_tl.bmp");
-  if(key == '7')
-    chooseFile("HARVEST_composite_b.bmp");
-  if(key == '8')
-    chooseFile("MUL_composite.bmp");
-  if(key == '9')
-    chooseFile("LEE_composite.bmp");
-  if(key == '0')
-    chooseFile("POINT_composite.bmp");
-  if(key == '-')
-    chooseFile("MOTH_composite.bmp");
 }
 
 void chooseFile(String filePath) {
@@ -153,26 +147,31 @@ void mouseReleased() {
 
 void draw() {
   if(path == null) {
-    strokeWeight(RENDER_STROKE);
     fill(0,0,0);
-    textSize(36);
-    
-    textAlign(LEFT, CENTER);
+    textSize(32);
+    textLeading(32);
+    textAlign(LEFT, TOP);
     background(255,255,255);
-    text("Type a number... " +
-         "(mode: " + (hsbMode ? "HSB" : "RGB") + ", press H to switch)\n" +
-         "1: BREADTH\n" +
-         "2: JALVINSACH\n" +
-         "3: LOCUS\n" +
-         "4: N* BRILL\n" +
-         "5: 574016\n" +
-         "6: HARVEST (top left frame)\n" +
-         "7: HARVEST (bottom frame)\n" +
-         "8: MUL\n" +
-         "9: LEE\n" +
-         "0: POINT (still in progress)\n" +
-         "-: MOTH (still in progress)",
-         32,height/2);
+    text("Choose a file... (mode: "
+         + (hsbMode ? "HSB" : "RGB") + ", press H to switch)\n",
+         16, 0);
+    
+    textSize(24);
+    textLeading(24);
+    textAlign(LEFT, CENTER);
+    noFill();
+    strokeWeight(4);
+    for(int i = 0; i < files.length; i++) {
+      String filePath = files[i];
+      float top = i * FILE_LIST_SIZE + FILE_LIST_SIZE * 1.5;
+      stroke(0);
+      rect(0, top, width, FILE_LIST_SIZE);
+      noStroke();
+      text(filePath.substring(0, filePath.length() - 4), 16, top + FILE_LIST_SIZE/2);
+      
+      if(mousePressed && mouseY > top && mouseY < top + FILE_LIST_SIZE)
+        chooseFile(filePath);
+    }
   } else if (!loadingMessageDraw) {
     loadingMessageDraw = true;
     
