@@ -33,11 +33,11 @@ void keyPressed() {
   if(key == 'i' && img != null)
     drawImage = true;
   if(key == '1')
-    chooseFile("BREADTH_composite.png");
+    chooseFile("BREADTH_composite.bmp");
   if(key == '2')
-     chooseFile("JALVINSACH_composite.png");
+     chooseFile("JALVINSACH_composite.bmp");
    if(key == '3')
-     chooseFile("LOCUS0_1080.png");
+     chooseFile("LOCUS0_1080.bmp");
 }
 
 void chooseFile(String filePath) {
