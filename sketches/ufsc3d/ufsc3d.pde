@@ -3,18 +3,20 @@ final boolean CHOOSE_FILE = false;
 final float PAN_STROKE = 4;
 final float RENDER_STROKE = 2;
 
+PImage img;
 int[][] points = null;
 
 boolean firstDraw = true;
 String path = null;
 boolean startedLoading = false;
-boolean doneLoading = false;
+boolean startedReading = false;
+boolean doneReading = false;
 
 boolean mouseWasReleased = true;
 
 float mouseRotateX, mouseRotateY;
 
-float maxValue;
+float minValue, maxValue;
 
 void setup() {
   size(1024, 768, P3D);
@@ -26,14 +28,14 @@ void setup() {
   textAlign(CENTER, CENTER);
   text("Loading!\n(click and drag to rotate)",width/2,height/2);
   
-  loadPoints();
+  chooseFile();
 }
 
-void loadPoints() {
+void chooseFile() {
   if(CHOOSE_FILE)
-    selectInput("Choose a CSV file", "fileChosen");
+    selectInput("Choose an image file", "fileChosen");
   else
-    path = "breadthcsv.csv";
+    path = "BREADTH_composite.png";
 }
 
 void fileChosen(File f) {
@@ -42,22 +44,27 @@ void fileChosen(File f) {
   }
 }
 
-void readFile(String path) {
-  String[] lines = loadStrings(path);
-  points = new int[lines.length][];
-  //println(lines.length, "points");
+void loadFile(String path) {
+  img = loadImage(path);
+}
+
+boolean fileReady() {
+  if(img == null)
+    return false;
+  return img.width != 0;
+}
+
+void readFile() {
+  img.loadPixels();
+  points = new int[img.pixels.length][];
+  println(img.pixels.length, "points");
   
-  for(int i = 0; i < lines.length; i++) {
-    String line = lines[i];
-    String values[] = line.split(",");
-    if(values.length < 3) {
-      //println(i, "Error:", line);
-      continue;
-    }
+  for(int i = 0; i < img.pixels.length; i++) {
+    color pixel = img.pixels[i];
     int[] pointPos = new int[3];
-    pointPos[0] = int(values[0]) - 64;
-    pointPos[1] = int(values[1]) - 64;
-    pointPos[2] = int(values[2]) - 64;
+    pointPos[0] = pixel >> 16 & 0xFF; // red
+    pointPos[1] = pixel >> 8 & 0xFF; // green
+    pointPos[2] = pixel & 0xFF; // blue
     points[i] = pointPos;
     
     if(pointPos[0] > maxValue)
@@ -67,8 +74,8 @@ void readFile(String path) {
     if(pointPos[2] > maxValue)
       maxValue = pointPos[2];
   }
-  doneLoading = true;
-  //println("Max:", maxValue);
+  println("Max:", maxValue);
+  doneReading = true;
 }
 
 void mouseDragged() {
@@ -84,12 +91,13 @@ void draw() {
   if(firstDraw) {
     firstDraw = false;
     return;
-  }
-  if(path != null && !startedLoading) {
+  } else if(path != null && !startedLoading) {
     startedLoading = true;
-    readFile(path);
-  }
-  if(doneLoading) {
+    loadFile(path);
+  } else if(fileReady() && !startedReading) {
+    startedReading = true;
+    readFile();
+  } else if(doneReading) {
     float startTime = millis();
     
     int drawTime = 50;
