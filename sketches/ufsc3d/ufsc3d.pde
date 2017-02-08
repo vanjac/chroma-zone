@@ -145,7 +145,7 @@ void draw() {
     
     strokeWeight(RENDER_STROKE);
     fill(0,0,0);
-    textSize(48);
+    textSize(36);
     
     textAlign(LEFT, CENTER);
     background(255,255,255);
