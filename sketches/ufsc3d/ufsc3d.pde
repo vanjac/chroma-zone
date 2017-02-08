@@ -35,9 +35,21 @@ void keyPressed() {
   if(key == '1')
     chooseFile("BREADTH_composite.bmp");
   if(key == '2')
-     chooseFile("JALVINSACH_composite.bmp");
-   if(key == '3')
-     chooseFile("LOCUS0_1080.bmp");
+    chooseFile("JALVINSACH_composite.bmp");
+  if(key == '3')
+    chooseFile("LOCUS0_1080.bmp");
+  if(key == '4')
+    chooseFile("BRILLN_composite.bmp");
+  if(key == '5')
+    chooseFile("574016_composite.bmp");
+  if(key == '6')
+    chooseFile("HARVEST_composite_tl.bmp");
+  if(key == '7')
+    chooseFile("HARVEST_composite_b.bmp");
+  if(key == '8')
+    chooseFile("MUL_composite.bmp");
+  if(key == '9')
+    chooseFile("LEE_composite.bmp");
 }
 
 void chooseFile(String filePath) {
@@ -130,17 +142,28 @@ void draw() {
     strokeWeight(RENDER_STROKE);
     fill(0,0,0);
     textSize(48);
-    textAlign(CENTER, CENTER);
     
+    textAlign(LEFT, CENTER);
     background(255,255,255);
-    text("Select a file\nby typing a number:\n1: BREADTH\n2: JALVINSACH\n3: LOCUS",width/2,height/2);
+    text("Type a number...\n" +
+         "1: BREADTH\n" +
+         "2: JALVINSACH\n" +
+         "3: LOCUS\n" +
+         "4: N* BRILL\n" +
+         "5: 574016\n" +
+         "6: HARVEST (top left frame)\n" +
+         "7: HARVEST (bottom frame)\n" +
+         "8: MUL\n" +
+         "9: LEE\n",
+         32,height/2);
   } else if(path == null) {
     // wait...
   } else if (!loadingMessageDraw) {
     loadingMessageDraw = true;
     
     background(255,255,255);
-    text("Loading!\n(click and drag to rotate)",width/2,height/2);
+    textAlign(CENTER, CENTER);
+    text("Loading!\n(click and drag to rotate)\n(R to go to main menu)",width/2,height/2);
   } else if(!startedLoading) {
     startedLoading = true;
     loadFile(path);
