@@ -160,19 +160,21 @@ void draw() {
       return;
     }
     
-    int drawTime = 50;
+    int drawTime;
     
     if(mousePressed) {
       strokeWeight(PAN_STROKE);
       background(255,255,255);
+      drawTime = 100;
     } else {
       strokeWeight(RENDER_STROKE);
+      drawTime = 150;
     }
     
     if(mouseWasReleased) {
       mouseWasReleased = false;
       background(255,255,255);
-      drawTime = 250;
+      drawTime = 300;
     }
     
     float fov = radians(60);
