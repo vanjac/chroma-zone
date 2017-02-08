@@ -1,47 +1,64 @@
-final boolean CHOOSE_FILE = false;
+final boolean LOGGING_ENABLED = false;
 
 final float PAN_STROKE = 4;
 final float RENDER_STROKE = 2;
 
+int[][] points;
+float minValue, maxValue;
+float centerValue, valueRange;
+
+// sequence:
+boolean firstDraw;
+String path;
+boolean loadingMessageDraw;
+boolean startedLoading;
 PImage img;
-int[][] points = null;
+boolean fileRead;
 
-boolean firstDraw = true;
-String path = null;
-boolean startedLoading = false;
-boolean startedReading = false;
-boolean doneReading = false;
-
-boolean mouseWasReleased = true;
-
+boolean mouseWasReleased;
 float mouseRotateX, mouseRotateY;
 
-float minValue, maxValue;
 
 void setup() {
   size(1024, 768, P3D);
   
-  background(255,255,255);
-  strokeWeight(RENDER_STROKE);
-  fill(0,0,0);
-  textSize(64);
-  textAlign(CENTER, CENTER);
-  text("Loading!\n(click and drag to rotate)",width/2,height/2);
+  reset();
+}
+
+void keyPressed() {
+  if(key == 'r')
+    reset();
+  if(key == '1')
+    chooseFile("BREADTH_composite.png");
+  if(key == '2')
+     chooseFile("JALVINSACH_composite.png");
+   if(key == '3')
+     chooseFile("LOCUS0_1080.png");
+}
+
+void chooseFile(String filePath) {
+  if(path != null)
+    reset();
+  path = filePath;
+}
+
+void reset() {
+  points = null;
   
-  chooseFile();
-}
-
-void chooseFile() {
-  if(CHOOSE_FILE)
-    selectInput("Choose an image file", "fileChosen");
-  else
-    path = "BREADTH_composite.png";
-}
-
-void fileChosen(File f) {
-  if(f != null) {
-    path = f.toString();
-  }
+  firstDraw = false;
+  path = null;
+  loadingMessageDraw = false;
+  startedLoading = false;
+  img = null;
+  fileRead = false;
+  
+  mouseWasReleased = true;
+  
+  mouseRotateX = 0;
+  mouseRotateY = 0;
+  
+  minValue = 0;
+  maxValue = 0;
 }
 
 void loadFile(String path) {
@@ -57,8 +74,11 @@ boolean fileReady() {
 void readFile() {
   img.loadPixels();
   points = new int[img.pixels.length][];
-  println(img.pixels.length, "points");
+  if(LOGGING_ENABLED)
+    println(img.pixels.length, "points");
   
+  minValue = 255;
+  maxValue = 0;
   for(int i = 0; i < img.pixels.length; i++) {
     color pixel = img.pixels[i];
     int[] pointPos = new int[3];
@@ -73,14 +93,24 @@ void readFile() {
       maxValue = pointPos[1];
     if(pointPos[2] > maxValue)
       maxValue = pointPos[2];
+    if(pointPos[0] < minValue)
+      minValue = pointPos[0];
+    if(pointPos[1] < minValue)
+      minValue = pointPos[1];
+    if(pointPos[2] < minValue)
+      minValue = pointPos[2];
   }
-  println("Max:", maxValue);
-  doneReading = true;
+  if(LOGGING_ENABLED) {
+    println("Max:", maxValue);
+    println("Min:", minValue);
+  }
+  centerValue = (minValue + maxValue) / 2;
+  valueRange = maxValue - minValue;
 }
 
 void mouseDragged() {
-  mouseRotateX += radians(mouseX - pmouseX);
-  mouseRotateY += radians(mouseY - pmouseY);
+  mouseRotateX += radians(mouseX - pmouseX) / 2;
+  mouseRotateY += radians(mouseY - pmouseY) / 3;
 }
 
 void mouseReleased() {
@@ -88,16 +118,32 @@ void mouseReleased() {
 }
 
 void draw() {
-  if(firstDraw) {
-    firstDraw = false;
-    return;
-  } else if(path != null && !startedLoading) {
+  if(!firstDraw) {
+    firstDraw = true;
+    
+    strokeWeight(RENDER_STROKE);
+    fill(0,0,0);
+    textSize(48);
+    textAlign(CENTER, CENTER);
+    
+    background(255,255,255);
+    text("Select a file\nby typing a number:\n1: BREADTH\n2: JALVINSACH\n3: LOCUS",width/2,height/2);
+  } else if(path == null) {
+    // wait...
+  } else if (!loadingMessageDraw) {
+    loadingMessageDraw = true;
+    
+    background(255,255,255);
+    text("Loading!\n(click and drag to rotate)",width/2,height/2);
+  } else if(!startedLoading) {
     startedLoading = true;
     loadFile(path);
-  } else if(fileReady() && !startedReading) {
-    startedReading = true;
+  } else if(!fileReady()) {
+    // wait...
+  } else if(!fileRead) {
+    fileRead = true;
     readFile();
-  } else if(doneReading) {
+  } else {
     float startTime = millis();
     
     int drawTime = 50;
@@ -116,7 +162,7 @@ void draw() {
     float aspect = float(width)/float(height);
     perspective(fov, aspect, 1, width*2);
     
-    translate(width/2, height/2, width/2 - maxValue - 50);
+    translate(width/2, height/2, width/2 - valueRange - 50);
     rotateX(-mouseRotateY);
     rotateY(mouseRotateX);
     
@@ -125,7 +171,7 @@ void draw() {
       int[] pointPos = points[int(random(points.length))];
       if(pointPos != null) {
         stroke(pointPos[0], pointPos[1], pointPos[2]);
-        point(pointPos[0] - maxValue/2, pointPos[1] - maxValue/2, pointPos[2] - maxValue/2);
+        point(pointPos[0] - centerValue, pointPos[1] - centerValue, pointPos[2] - centerValue);
       }
       i++;
     }
