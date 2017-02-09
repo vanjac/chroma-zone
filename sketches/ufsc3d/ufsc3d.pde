@@ -25,8 +25,11 @@ float mouseRotateX, mouseRotateY;
 boolean drawImage;
 
 String[] files = {
+  "Numbered.bmp",
   "574016.bmp",
   "BREADTH.bmp",
+  "BRILL.bmp",
+  "BRILL_49999.bmp",
   "BRILL_N.bmp",
   "BRINE.bmp",
   "FEND.bmp",
@@ -35,8 +38,7 @@ String[] files = {
   "HARVEST_top-left.bmp",
   "JALVINSACH.bmp",
   "LEE.bmp",
-  "LOCUS0_1080.bmp",
-  "MOTH.bmp",
+  "LOCUS.bmp",
   "MUL.bmp",
   "POINT.bmp"
 };
@@ -180,16 +182,25 @@ void draw() {
     textAlign(LEFT, CENTER);
     noFill();
     strokeWeight(4);
+    float leftX = 0;
+    float top = FILE_LIST_SIZE * 1.5;
     for(int i = 0; i < files.length; i++) {
       String filePath = files[i];
-      float top = i * FILE_LIST_SIZE + FILE_LIST_SIZE * 1.5;
       stroke(0);
-      rect(0, top, width, FILE_LIST_SIZE);
+      rect(leftX, top, width/2, FILE_LIST_SIZE);
       noStroke();
-      text(filePath.substring(0, filePath.length() - 4), 16, top + FILE_LIST_SIZE/2);
+      text(filePath.substring(0, filePath.length() - 4), leftX + 16, top + FILE_LIST_SIZE/2);
       
-      if(mousePressed && mouseY > top && mouseY < top + FILE_LIST_SIZE)
+      if(mousePressed
+         && mouseY > top && mouseY < top + FILE_LIST_SIZE
+         && mouseX > leftX && mouseX < leftX + width/2)
         chooseFile(filePath);
+      
+      top += FILE_LIST_SIZE;
+      if(top + FILE_LIST_SIZE > height) {
+        top = FILE_LIST_SIZE * 1.5;
+        leftX += width/2;
+      }
     }
   } else if (!loadingMessageDraw) {
     loadingMessageDraw = true;
