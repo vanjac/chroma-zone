@@ -146,12 +146,14 @@ void readFile() {
     if(pointPos[2] < minValue)
       minValue = pointPos[2];
   }
+  centerValue = (minValue + maxValue) / 2;
+  valueRange = maxValue - minValue;
   if(LOGGING_ENABLED) {
     println("Max:", maxValue);
     println("Min:", minValue);
+    println("Center:", centerValue);
+    println("Range:", valueRange);
   }
-  centerValue = (minValue + maxValue) / 2;
-  valueRange = maxValue - minValue;
 }
 
 void mouseDragged() {
@@ -273,7 +275,8 @@ void draw() {
     strokeWeight(1);
     stroke(0);
     pushMatrix();
-    translate(centerValue - 127, centerValue - 127, centerValue - 127);
+    float translateAmount = 127 - centerValue;
+    translate(translateAmount, translateAmount, translateAmount);
     box(256);
     popMatrix();
   }
