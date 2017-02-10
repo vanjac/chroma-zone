@@ -251,6 +251,7 @@ void draw() {
       strokeWeight(PAN_STROKE);
       background(255,255,255);
       drawTime = 100;
+      animate = false;
     } else {
       strokeWeight(RENDER_STROKE);
       drawTime = 150;
@@ -260,8 +261,6 @@ void draw() {
       mouseWasReleased = false;
       background(255,255,255);
       drawTime = 300;
-      if(animate)
-        animateStep = 0;
     }
     
     float fov = radians(60);
@@ -278,7 +277,7 @@ void draw() {
     int i = 0;
     while(true) {
       int[] pointPos;
-      if(animate && !mousePressed)
+      if(animate)
         pointPos = points[animateStep];
       else
         pointPos = points[int(random(points.length))];
@@ -286,7 +285,7 @@ void draw() {
         stroke(pointPos[0], pointPos[1], pointPos[2]);
         point(pointPos[0] - centerValue, pointPos[1] - centerValue, pointPos[2] - centerValue);
       }
-      if(animate && !mousePressed) {
+      if(animate) {
         animateStep++;
         if(animateStep >= points.length)
           animateStep = points.length - 1;
