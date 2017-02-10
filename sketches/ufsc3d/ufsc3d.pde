@@ -22,8 +22,8 @@ boolean fileRead;
 boolean mouseWasReleased;
 float mouseRotateX, mouseRotateY;
 
-boolean animate = false;
-int animateStep = 0;
+boolean animate;
+int animateStep;
 
 boolean drawImage;
 
@@ -68,8 +68,11 @@ void keyPressed() {
   if(key == 'f')
     selectInput("Choose an image file", "chooseFileJava");
   if(key == 'a') {
-    animate = true;
-    animateStep = 0;
+    if(path != null) {
+      animate = true;
+      animateStep = 0;
+      background(255,255,255);
+    }
   }
 }
 
@@ -104,6 +107,9 @@ void reset() {
   
   mouseRotateX = 0;
   mouseRotateY = 0;
+  
+  animate = false;
+  animateStep = 0;
   
   drawImage = false;
 }
@@ -247,19 +253,15 @@ void draw() {
       drawTime = 100;
     } else {
       strokeWeight(RENDER_STROKE);
-      if(animate)
-        drawTime = 100;
-      else
-        drawTime = 150;
+      drawTime = 150;
     }
     
     if(mouseWasReleased) {
       mouseWasReleased = false;
       background(255,255,255);
+      drawTime = 300;
       if(animate)
         animateStep = 0;
-      else
-        drawTime = 300;
     }
     
     float fov = radians(60);
@@ -273,7 +275,8 @@ void draw() {
     if(hsbMode) {
       colorMode(HSB);
     }
-    while(millis() - startTime < drawTime) {
+    int i = 0;
+    while(true) {
       int[] pointPos;
       if(animate && !mousePressed)
         pointPos = points[animateStep];
@@ -287,7 +290,13 @@ void draw() {
         animateStep++;
         if(animateStep >= points.length)
           animateStep = points.length - 1;
+        if(i > points.length/120)
+          break;
+      } else {
+        if(millis() - startTime > drawTime)
+          break;
       }
+      i++;
     }
     colorMode(RGB);
     
