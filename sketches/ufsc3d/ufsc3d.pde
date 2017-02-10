@@ -225,7 +225,7 @@ void draw() {
     
     background(255,255,255);
     textAlign(CENTER, CENTER);
-    text("Loading!\n(click and drag to rotate)\n(A to enable Animate Mode)\n(R to go to main menu)",width/2,height/2);
+    text("Loading!\n(click and drag to rotate\nA to Animate\nR to return to menu)",width/2,height/2);
   } else if(!startedLoading) {
     startedLoading = true;
     loadFile(path);
