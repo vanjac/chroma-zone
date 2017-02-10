@@ -22,6 +22,9 @@ boolean fileRead;
 boolean mouseWasReleased;
 float mouseRotateX, mouseRotateY;
 
+boolean animate = false;
+int animateStep = 0;
+
 boolean drawImage;
 
 String[] files = {
@@ -64,6 +67,10 @@ void keyPressed() {
     drawImage = true;
   if(key == 'f')
     selectInput("Choose an image file", "chooseFileJava");
+  if(key == 'a') {
+    animate = true;
+    animateStep = 0;
+  }
 }
 
 void chooseFileJava(File f) {
@@ -212,7 +219,7 @@ void draw() {
     
     background(255,255,255);
     textAlign(CENTER, CENTER);
-    text("Loading!\n(click and drag to rotate)\n(R to go to main menu)",width/2,height/2);
+    text("Loading!\n(click and drag to rotate)\n(A to enable Animate Mode)\n(R to go to main menu)",width/2,height/2);
   } else if(!startedLoading) {
     startedLoading = true;
     loadFile(path);
@@ -240,13 +247,19 @@ void draw() {
       drawTime = 100;
     } else {
       strokeWeight(RENDER_STROKE);
-      drawTime = 150;
+      if(animate)
+        drawTime = 100;
+      else
+        drawTime = 150;
     }
     
     if(mouseWasReleased) {
       mouseWasReleased = false;
       background(255,255,255);
-      drawTime = 300;
+      if(animate)
+        animateStep = 0;
+      else
+        drawTime = 300;
     }
     
     float fov = radians(60);
@@ -257,17 +270,24 @@ void draw() {
     rotateX(-mouseRotateY);
     rotateY(mouseRotateX);
     
-    int i = 0;
     if(hsbMode) {
       colorMode(HSB);
     }
     while(millis() - startTime < drawTime) {
-      int[] pointPos = points[int(random(points.length))];
+      int[] pointPos;
+      if(animate && !mousePressed)
+        pointPos = points[animateStep];
+      else
+        pointPos = points[int(random(points.length))];
       if(pointPos != null) {
         stroke(pointPos[0], pointPos[1], pointPos[2]);
         point(pointPos[0] - centerValue, pointPos[1] - centerValue, pointPos[2] - centerValue);
       }
-      i++;
+      if(animate && !mousePressed) {
+        animateStep++;
+        if(animateStep >= points.length)
+          animateStep = points.length - 1;
+      }
     }
     colorMode(RGB);
     
