@@ -45,7 +45,8 @@ String[] files = {
   "JALVINSACH.bmp",
   "LEE.bmp",
   "LOCUS.bmp",
-  "MOTH.bmp",
+  "MOTH_top.bmp",
+  "MOTH_bottom.bmp",
   "MUL.bmp",
   "POINT.bmp"
 };
