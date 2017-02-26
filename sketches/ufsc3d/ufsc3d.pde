@@ -38,6 +38,7 @@ String[] files = {
   "BRILL_49999.bmp",
   "BRILL_N.bmp",
   "BRINE.bmp",
+  "BROTHER.bmp",
   "FEND.bmp",
   "FOND.bmp",
   "HARVEST_bottom.bmp",
