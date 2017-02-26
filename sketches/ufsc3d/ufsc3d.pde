@@ -5,6 +5,8 @@ final float RENDER_STROKE = 2;
 
 final float FILE_LIST_SIZE = 48;
 
+final String INSTRUCTIONS = "click and drag to rotate\nA to Animate\nR to return to menu";
+
 int[][] points;
 float minValue, maxValue;
 float centerValue, valueRange;
@@ -17,6 +19,7 @@ String path;
 boolean loadingMessageDraw;
 boolean startedLoading;
 PImage img;
+int pixelRead;
 boolean fileRead;
 
 boolean mouseWasReleased;
@@ -104,6 +107,7 @@ void reset() {
   loadingMessageDraw = false;
   startedLoading = false;
   img = null;
+  pixelRead = 0;
   fileRead = false;
   
   mouseWasReleased = true;
@@ -128,15 +132,18 @@ boolean fileReady() {
 }
 
 void readFile() {
-  img.loadPixels();
-  points = new int[img.pixels.length][];
-  if(LOGGING_ENABLED)
-    println(img.pixels.length, "points");
-  
-  minValue = 255;
-  maxValue = 0;
-  for(int i = 0; i < img.pixels.length; i++) {
-    color pixel = img.pixels[i];
+  if(pixelRead == 0) {
+    img.loadPixels();
+    points = new int[img.pixels.length][];
+    if(LOGGING_ENABLED)
+      println(img.pixels.length, "points");
+    
+    minValue = 255;
+    maxValue = 0;
+  }
+  int startTime = millis();
+  while(millis() - startTime < 100) {
+    color pixel = img.pixels[pixelRead];
     int[] pointPos = new int[3];
     if(hsbMode) {
       pointPos[0] = int(hue(pixel));
@@ -147,7 +154,7 @@ void readFile() {
       pointPos[1] = int(green(pixel));
       pointPos[2] = int(blue(pixel));
     }
-    points[i] = pointPos;
+    points[pixelRead] = pointPos;
     
     if(pointPos[0] > maxValue)
       maxValue = pointPos[0];
@@ -161,14 +168,21 @@ void readFile() {
       minValue = pointPos[1];
     if(pointPos[2] < minValue)
       minValue = pointPos[2];
-  }
-  centerValue = (minValue + maxValue) / 2;
-  valueRange = maxValue - minValue;
-  if(LOGGING_ENABLED) {
-    println("Max:", maxValue);
-    println("Min:", minValue);
-    println("Center:", centerValue);
-    println("Range:", valueRange);
+    
+    pixelRead ++;
+    if(pixelRead >= img.pixels.length) {
+      //finished
+      centerValue = (minValue + maxValue) / 2;
+      valueRange = maxValue - minValue;
+      if(LOGGING_ENABLED) {
+        println("Max:", maxValue);
+        println("Min:", minValue);
+        println("Center:", centerValue);
+        println("Range:", valueRange);
+      }
+      fileRead = true;
+      return;
+    }
   }
 }
 
@@ -228,15 +242,19 @@ void draw() {
     
     background(255,255,255);
     textAlign(CENTER, CENTER);
-    text("Loading!\n(click and drag to rotate\nA to Animate\nR to return to menu)",width/2,height/2);
+    text("Loading composite image...\n(" + INSTRUCTIONS + ")",width/2,height/2);
   } else if(!startedLoading) {
     startedLoading = true;
     loadFile(path);
   } else if(!fileReady()) {
     // wait...
   } else if(!fileRead) {
-    fileRead = true;
     readFile();
+    
+    background(255,255,255);
+    textAlign(CENTER, CENTER);
+    text("Getting points... (" + int(float(pixelRead)/float(img.pixels.length) * 100.0)
+         + "%)\n(" + INSTRUCTIONS + ")",width/2,height/2);
   } else {
     float startTime = millis();
     
