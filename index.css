@@ -125,3 +125,10 @@ h2 {
     margin: 4pt;
     padding-bottom: 6pt;
 }
+
+.tag {
+    border: 1px solid gray;
+    border-radius: 4pt;
+    padding: 4pt;
+    margin: 2pt;
+}

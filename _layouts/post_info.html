@@ -12,3 +12,15 @@ layout: default
     <a href="{{ page.link }}"> {{ page.link }} </a>
 </span> </p>
 
+<p> <em>Tags:</em>
+{% for tag in page.tags %}
+{% assign tagValue = tag %}
+{% if tag == 'bad' %}
+{% assign tagValue = 'low-quality' %}
+{% endif %}
+{% if tag == 'good' %}
+{% assign tagValue = 'high-quality' %}
+{% endif %}
+<span class="tag">{{ tagValue }}</span>
+{% endfor %}
+</p>
