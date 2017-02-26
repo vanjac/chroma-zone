@@ -4,3 +4,9 @@ defaults:
             path: ""
         values:
             filter: none
+    -
+        scope:
+            path: "_posts"
+        values:
+            layout: post_info
+
