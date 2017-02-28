@@ -30,6 +30,9 @@ layout: default
 {% if tag == 'video' %}
 {% assign tagURL = 'videos' %}
 {% endif %}
+{% if tag == 'webapp' %}
+{% assign tagURL = 'webapps' %}
+{% endif %}
 <a href="/{{ tagURL }}"><span class="tag">{{ tagName }}</span></a>
 {% endfor %}
 </p>
