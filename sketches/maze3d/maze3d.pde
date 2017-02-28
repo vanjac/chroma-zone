@@ -139,12 +139,12 @@ void draw() {
 
 void cameraPoint(float x, float y, float rotation) {
    float cameraY = height/2.0;
-   float fov = radians(90);
+   float fov = radians(95);
    float cameraZ = cameraY / tan(fov / 2.0);
    float aspect = float(width) / float(height);
    resetMatrix();
    beginCamera();
-   perspective(fov, aspect, cameraZ/15.0, cameraZ*100);
+   perspective(fov, aspect, cameraZ/50.0, cameraZ*100);
    translate(-x,0,-y);
    rotateY(-rotation + PI/2);
    endCamera();
