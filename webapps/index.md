@@ -5,5 +5,7 @@ filter:
     - all
     - projects
     - webapp
+unfilter:
+    - bad
 ---
 
