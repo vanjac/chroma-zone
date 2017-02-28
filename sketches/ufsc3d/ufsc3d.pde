@@ -11,7 +11,8 @@ int[][] points;
 float minValue, maxValue;
 float centerValue, valueRange;
 
-boolean hsbMode;
+boolean hsbMode = false;
+boolean differenceMode = false;
 
 // sequence:
 String uiChosenFile;
@@ -68,6 +69,10 @@ void keyPressed() {
   if(key == 'h') {
     hsbMode = !hsbMode;
     chooseFile(path);
+  }
+  if(key == 'd') {
+    differenceMode = !differenceMode;
+    background(255,255,255);
   }
   if(key == 'i' && img != null)
     drawImage = true;
@@ -204,12 +209,13 @@ void draw() {
   
   if(path == null) {
     fill(0,0,0);
-    textSize(32);
-    textLeading(32);
+    textSize(24);
+    textLeading(24);
     textAlign(LEFT, TOP);
     background(255,255,255);
-    text("Choose a file... (mode: "
-         + (hsbMode ? "HSB" : "RGB") + ", press H to switch)\n",
+    text("Choose a file... ("
+         + (hsbMode ? "HSB" : "RGB") + " mode, press H to switch; "
+         + (differenceMode ? "difference" : "absolute") + " mode, press D to switch)",
          16, 0);
     
     textSize(24);
@@ -288,7 +294,10 @@ void draw() {
     float aspect = float(width)/float(height);
     perspective(fov, aspect, 1, width*2);
     
-    translate(width/2, height/2, width/2 - valueRange - 50);
+    if(differenceMode)
+      translate(width/2, height/2, width/2 - 600);
+    else
+      translate(width/2, height/2, width/2 - valueRange - 50);
     rotateX(-mouseRotateY);
     rotateY(mouseRotateX);
     
@@ -297,14 +306,23 @@ void draw() {
     }
     int i = 0;
     while(true) {
-      int[] pointPos;
+      int pointI;
       if(animate)
-        pointPos = points[animateStep];
+        pointI = animateStep;
       else
-        pointPos = points[int(random(points.length))];
+        pointI = int(random(points.length));
+      int[] pointPos = points[pointI];
       if(pointPos != null) {
         stroke(pointPos[0], pointPos[1], pointPos[2]);
-        point(pointPos[0] - centerValue, pointPos[1] - centerValue, pointPos[2] - centerValue);
+        if(!differenceMode) {
+          point(pointPos[0] - centerValue, pointPos[1] - centerValue, pointPos[2] - centerValue);
+        } else {
+          if(pointI != 0) {
+            int[] lastPoint = points[pointI - 1];
+            if(lastPoint != null)
+              point(pointPos[0] - lastPoint[0], pointPos[1] - lastPoint[1], pointPos[2] - lastPoint[2]);
+          }
+        }
       }
       if(animate) {
         animateStep++;
@@ -324,9 +342,15 @@ void draw() {
     strokeWeight(1);
     stroke(0);
     pushMatrix();
-    float translateAmount = 127 - centerValue;
-    translate(translateAmount, translateAmount, translateAmount);
-    box(256);
+    if(differenceMode) {
+      line(-256,0,0,256,0,0);
+      line(0,-256,0,0,256,0);
+      line(0,0,-256,0,0,256);
+    } else {
+      float translateAmount = 127 - centerValue;
+      translate(translateAmount, translateAmount, translateAmount);
+      box(256);
+    }
     popMatrix();
   }
 }
