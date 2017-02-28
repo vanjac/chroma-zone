@@ -6,7 +6,7 @@ projects: Code project
 good: High quality
 bad: Low quality
 
-webapp: Web app or sketch - availible online
+webapp: Web app or sketch - availible online. Usually doesn't have good or bad tags.
 
 video: Video
 
