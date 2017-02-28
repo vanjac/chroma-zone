@@ -14,13 +14,22 @@ layout: default
 
 <p> <em>Tags:</em>
 {% for tag in page.tags %}
-{% assign tagValue = tag %}
+{% assign tagName = tag %}
+{% assign tagURL = tag %}
 {% if tag == 'bad' %}
-{% assign tagValue = 'low-quality' %}
+{% assign tagName = 'low-quality' %}
+{% assign tagURL = 'other' %}
 {% endif %}
 {% if tag == 'good' %}
-{% assign tagValue = 'high-quality' %}
+{% assign tagName = 'high-quality' %}
+{% assign tagURL = '' %}
 {% endif %}
-<span class="tag">{{ tagValue }}</span>
+{% if tag == 'projects' %}
+{% assign tagName = 'project' %}
+{% endif %}
+{% if tag == 'video' %}
+{% assign tagURL = 'videos' %}
+{% endif %}
+<a href="/{{ tagURL }}"><span class="tag">{{ tagName }}</span></a>
 {% endfor %}
 </p>
