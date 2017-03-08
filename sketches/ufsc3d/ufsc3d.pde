@@ -305,7 +305,7 @@ void draw() {
     rotateX(-mouseRotateY);
     rotateY(mouseRotateX);
     
-    if(hsbMode) {
+    if(hsbMode || animate) {
       colorMode(HSB);
     }
     int i = 0;
@@ -317,7 +317,10 @@ void draw() {
         pointI = int(random(points.length));
       int[] pointPos = points[pointI];
       if(pointPos != null) {
-        stroke(pointPos[0], pointPos[1], pointPos[2]);
+        if(animate)
+          stroke(pointI % 255, 255,255);
+        else
+          stroke(pointPos[0], pointPos[1], pointPos[2]);
         if(!differenceMode) {
           point(pointPos[0] - centerValue, pointPos[1] - centerValue, pointPos[2] - centerValue);
         } else {
