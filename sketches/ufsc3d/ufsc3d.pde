@@ -27,6 +27,7 @@ boolean mouseWasReleased;
 float mouseRotateX, mouseRotateY;
 
 boolean animate;
+boolean render;
 int animateStep;
 
 boolean drawImage;
@@ -89,6 +90,12 @@ void keyPressed() {
       background(255,255,255);
     }
   }
+  if(key == 'z') {
+    if(path != null) {
+      render = true;
+      animateStep = -1;
+    }
+  }
 }
 
 void chooseFileJava(File f) {
@@ -125,6 +132,7 @@ void reset() {
   mouseRotateY = 0;
   
   animate = false;
+  render = false;
   animateStep = 0;
   
   drawImage = false;
@@ -268,6 +276,17 @@ void draw() {
   } else {
     float startTime = millis();
     
+    if(render && animateStep == -1) {
+      animateStep = 0;
+      background(255,255,255);
+      fill(0,0,0);
+      textAlign(CENTER, CENTER);
+      text("Rendering...", width/2, height/2);
+      return;
+    } else if(render && animateStep == 0) {
+      background(255,255,255);
+    }
+    
     if(drawImage) {
       background(255,255,255);
       image(img, 0, 0);
@@ -283,6 +302,7 @@ void draw() {
       background(255,255,255);
       drawTime = 100;
       animate = false;
+      render = false;
     } else {
       strokeWeight(RENDER_STROKE);
       drawTime = 150;
@@ -311,7 +331,7 @@ void draw() {
     int i = 0;
     while(true) {
       int pointI;
-      if(animate)
+      if(animate || render)
         pointI = animateStep;
       else
         pointI = int(random(points.length));
@@ -331,12 +351,17 @@ void draw() {
           }
         }
       }
-      if(animate) {
+      if(animate || render) {
         animateStep++;
         if(animateStep >= points.length)
           animateStep = points.length - 1;
-        if(i > points.length/120)
-          break;
+        if(render) {
+          if(animateStep == points.length - 1)
+            break;
+        } else {
+          if(i > points.length/120)
+            break;
+        }
       } else {
         if(millis() - startTime > drawTime)
           break;
