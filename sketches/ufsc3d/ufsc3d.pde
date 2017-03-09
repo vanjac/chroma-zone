@@ -30,8 +30,6 @@ boolean animate;
 boolean render;
 int animateStep;
 
-boolean drawImage;
-
 String[] files = {
   "Numbered.bmp",
   "574016.bmp",
@@ -73,14 +71,12 @@ void keyPressed() {
     reset();
   if(key == 'h') {
     hsbMode = !hsbMode;
-    chooseFile(path);
+    resetPoints();
   }
   if(key == 'd') {
     differenceMode = !differenceMode;
     background(255,255,255);
   }
-  if(key == 'i' && img != null)
-    drawImage = true;
   if(key == 'f')
     selectInput("Choose an image file", "chooseFileJava");
   if(key == 'a') {
@@ -111,6 +107,19 @@ void chooseFile(String filePath) {
 }
 
 void reset() {
+  resetPoints();
+  
+  uiChosenFile = null;
+  path = null;
+  loadingMessageDraw = false;
+  startedLoading = false;
+  img = null;
+  
+  mouseRotateX = 0;
+  mouseRotateY = 0;
+}
+
+void resetPoints() {
   points = null;
   
   minValue = 127;
@@ -118,24 +127,14 @@ void reset() {
   centerValue = 127;
   valueRange = 0;
   
-  uiChosenFile = null;
-  path = null;
-  loadingMessageDraw = false;
-  startedLoading = false;
-  img = null;
   pixelRead = 0;
   fileRead = false;
   
   mouseWasReleased = true;
   
-  mouseRotateX = 0;
-  mouseRotateY = 0;
-  
   animate = false;
   render = false;
   animateStep = 0;
-  
-  drawImage = false;
 }
 
 void loadFile(String path) {
@@ -285,14 +284,6 @@ void draw() {
       return;
     } else if(render && animateStep == 0) {
       background(255,255,255);
-    }
-    
-    if(drawImage) {
-      background(255,255,255);
-      image(img, 0, 0);
-      if(mousePressed)
-        drawImage = false;
-      return;
     }
     
     int drawTime;
