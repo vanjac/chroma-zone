@@ -31,6 +31,7 @@ final boolean LOGGING_ENABLED = false;
 
 final float PAN_STROKE = 4;
 final float RENDER_STROKE = 2;
+final float FOV = radians(60);
 
 final float FILE_LIST_SIZE = 48;
 
@@ -314,9 +315,8 @@ void draw() {
       drawTime = 300;
     }
     
-    float fov = radians(60);
     float aspect = float(width)/float(height);
-    perspective(fov, aspect, 1, width*2);
+    perspective(FOV, aspect, 1, width*2);
     
     if(differenceMode)
       translate(width/2, height/2, width/2 - 2*valueRange - 50);
