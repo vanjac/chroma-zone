@@ -35,7 +35,7 @@ final float FOV = radians(60);
 
 final float FILE_LIST_SIZE = 48;
 
-final String INSTRUCTIONS = "click and drag to rotate\nA to Animate\nR to return to menu";
+final String INSTRUCTIONS = "Q to return to main menu\nsee below for controls";
 
 /* STATE */
 
@@ -235,8 +235,8 @@ void draw() {
     textAlign(LEFT, TOP);
     background(255,255,255);
     text("Choose a file... ("
-         + (hsbMode ? "HSB" : "RGB") + " mode, press H to switch; "
-         + (differenceMode ? "difference" : "absolute") + " mode, press D to switch)",
+         + (hsbMode ? "HSB" : "RGB") + " mode, H to switch; "
+         + (differenceMode ? "difference" : "absolute") + " mode, D to switch)",
          16, 0);
     
     textSize(24);
