@@ -1,36 +1,4 @@
-final boolean LOGGING_ENABLED = false;
-
-final float PAN_STROKE = 4;
-final float RENDER_STROKE = 2;
-
-final float FILE_LIST_SIZE = 48;
-
-final String INSTRUCTIONS = "click and drag to rotate\nA to Animate\nR to return to menu";
-
-int[][] points;
-float minValue, maxValue;
-float centerValue, valueRange;
-
-boolean hsbMode = false;
-boolean differenceMode = false;
-
-// sequence:
-String uiChosenFile;
-String path;
-boolean loadingMessageDraw;
-boolean startedLoading;
-PImage img;
-int pixelRead;
-boolean fileRead;
-
-boolean mouseWasReleased;
-float mouseRotateX, mouseRotateY;
-
-boolean animate;
-boolean render;
-int animateStep;
-
-String[] files = {
+final String[] files = {
   "Numbered.bmp",
   "574016.bmp",
   "BREADTH.bmp",
@@ -59,6 +27,78 @@ String[] files = {
   "POINT.bmp"
 };
 
+final boolean LOGGING_ENABLED = false;
+
+final float PAN_STROKE = 4;
+final float RENDER_STROKE = 2;
+
+final float FILE_LIST_SIZE = 48;
+
+final String INSTRUCTIONS = "click and drag to rotate\nA to Animate\nR to return to menu";
+
+/* STATE */
+
+// settings that are never reset
+boolean hsbMode = false;
+boolean differenceMode = false;
+
+// image load process
+String uiChosenFile;
+String path;
+boolean loadingMessageDraw;
+boolean startedLoading;
+PImage img;
+
+// points load process
+boolean fileRead;
+int pixelRead;
+int[][] points;
+float minValue, maxValue;
+float centerValue, valueRange;
+
+// graph state
+boolean mouseWasReleased;
+boolean animate;
+boolean render;
+int animateStep;
+float mouseRotateX, mouseRotateY;
+
+void reset() {
+  resetPoints();
+  
+  uiChosenFile = null;
+  path = null;
+  loadingMessageDraw = false;
+  startedLoading = false;
+  img = null;
+}
+
+void resetPoints() {
+  resetGraph();
+  
+  fileRead = false;
+  pixelRead = 0;
+  points = null;
+  minValue = 127;
+  maxValue = 127;
+  centerValue = 127;
+  valueRange = 0;
+}
+
+void resetGraph() {
+  clearGraph();
+  
+  mouseRotateX = 0;
+  mouseRotateY = 0;
+}
+
+void clearGraph() {
+  mouseWasReleased = true;
+  animate = false;
+  render = false;
+  animateStep = 0;
+}
+
 
 void setup() {
   size(1024, 768, P3D);
@@ -75,19 +115,19 @@ void keyPressed() {
   }
   if(key == 'd') {
     differenceMode = !differenceMode;
-    background(255,255,255);
+    clearGraph();
   }
   if(key == 'f')
     selectInput("Choose an image file", "chooseFileJava");
   if(key == 'a') {
     if(path != null) {
+      clearGraph();
       animate = true;
-      animateStep = 0;
-      background(255,255,255);
     }
   }
   if(key == 'z') {
     if(path != null) {
+      clearGraph();
       render = true;
       animateStep = -1;
     }
@@ -104,37 +144,6 @@ void chooseFile(String filePath) {
   if(path != null)
     reset();
   path = filePath;
-}
-
-void reset() {
-  resetPoints();
-  
-  uiChosenFile = null;
-  path = null;
-  loadingMessageDraw = false;
-  startedLoading = false;
-  img = null;
-  
-  mouseRotateX = 0;
-  mouseRotateY = 0;
-}
-
-void resetPoints() {
-  points = null;
-  
-  minValue = 127;
-  maxValue = 127;
-  centerValue = 127;
-  valueRange = 0;
-  
-  pixelRead = 0;
-  fileRead = false;
-  
-  mouseWasReleased = true;
-  
-  animate = false;
-  render = false;
-  animateStep = 0;
 }
 
 void loadFile(String path) {
