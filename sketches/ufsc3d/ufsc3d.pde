@@ -310,7 +310,7 @@ void draw() {
     perspective(fov, aspect, 1, width*2);
     
     if(differenceMode)
-      translate(width/2, height/2, width/2 - 600);
+      translate(width/2, height/2, width/2 - 2*valueRange - 50);
     else
       translate(width/2, height/2, width/2 - valueRange - 50);
     rotateX(-mouseRotateY);
