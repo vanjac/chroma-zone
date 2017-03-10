@@ -58,6 +58,7 @@ function copy() {
     console.log("Copied " + clipboard);
 }
 
+// not used
 function cut() {
     copy();
     var start = getSelectionStart(box);
@@ -71,6 +72,16 @@ function paste() {
     var caret = getCaretPosition(box);
     box.value = box.value.substring(0, caret) + clipboard
 	+ box.value.substring(caret, box.value.length);
+}
+
+function copyOrPaste() {
+    if(getSelectionStart(box) == getSelectionEnd(box)) {
+        // nothing selected
+        paste();
+    } else {
+        // something selected
+        copy();
+    }
 }
 
 
