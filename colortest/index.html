@@ -1,31 +1,15 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Color Quiz
+---
+<p><strong id="answer">Enter 3 digit hex code!</strong></p>
 
-  <title>Color Quiz</title>
-  
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-  </head>
-  
-  <body style="margin: auto; width: 256pt;">
+<form action="#" onsubmit="buttonClicked()">
+  <input type="text" id="colorbox" size="5" maxlength="3"></input>
+  <input type="submit" value="Check"></input>
+  <button onclick="location.reload()">Next</button>
+</form>
 
-    <p><strong id="answer">Enter 3 digit hex code!</strong></p>
+<div id="colorrect" style="width: 256pt; height: 256pt; border: 1px solid gray;"></div>
 
-    <form action="#" onsubmit="buttonClicked()">
-      <input type="text" id="colorbox" size="5" maxlength="3"></input>
-      <input type="submit" value="Check"></input>
-      <button onclick="location.reload()">Next</button>
-      <button onclick="window.location.href = &quot;../webapps&quot;">
-        Bye </button>
-    </form>
-    
-    
-
-    <div id="colorrect" style="width: 256pt; height: 256pt; border: 1px solid gray;"></div>
-
-    <script type="text/javascript" src="colortest.js"></script>
-
-  </body>
-
-</html>
+<script type="text/javascript" src="colortest.js"></script>
