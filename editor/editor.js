@@ -84,6 +84,52 @@ function copyOrPaste() {
     }
 }
 
+function fileCommand() {
+    var command = prompt("Enter a command...");
+    if(command.length == 0)
+        return;
+    var arg;
+    if(command.length == 2) {
+        alert("Invalid command!");
+        fileCommand();
+        return;
+    } else if(command.length > 2) {
+        if(command.charAt(1) != ' ') {
+            alert("Invalid command!");
+            fileCommand();
+            return;
+        }
+        arg = command.substring(2, command.length);
+    } else {
+        arg = "";
+    }
+    var commandChar = command.charAt(0);
+    if(commandChar == 'w') {
+        if(arg == "")
+            console.log("Write to existing file");
+        else
+            console.log("Write to file " + arg);
+    } else if(commandChar == 'l') {
+        if(arg == "")
+            console.log("Reload file");
+        else
+            console.log("Load file " + arg);
+    } else if(commandChar == 'd') {
+        if(arg == "")
+            console.log("Delete current file");
+        else
+            console.log("Delete file " + arg);
+    } else if(commandChar == 'a') {
+        if(arg == "")
+            alert("All files...");
+        else
+            alert("All files starting with " + arg);
+    } else {
+        alert("Unrecognized command!");
+        fileCommand();
+    }
+}
+
 
 // from: http://stackoverflow.com/questions/512528/set-cursor-position-in-html-textbox
 function setCaretPosition(elem, caretPos) {
