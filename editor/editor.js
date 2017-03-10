@@ -59,7 +59,6 @@ function copy() {
 }
 
 function cut() {
-    focusBox();
     copy();
     var start = getSelectionStart(box);
     var end = getSelectionEnd(box);
