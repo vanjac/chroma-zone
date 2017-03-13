@@ -4,6 +4,7 @@ One of these is required for a post to show up on a page:
 
 projects: Code project
 video: Video
+image: Image
 
 good: High quality
 bad: Low quality
