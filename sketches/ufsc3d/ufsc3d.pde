@@ -24,6 +24,7 @@ final String[] files = {
   "MOTH_3.bmp",
   "MOTH_4.bmp",
   "MUL.bmp",
+  "Output.bmp",
   "POINT.bmp"
 };
 
