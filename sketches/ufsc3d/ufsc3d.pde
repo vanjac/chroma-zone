@@ -1,5 +1,31 @@
 final String[] files = {
-  "Output.mp3"
+  "Numbered.bmp",
+  "574016.bmp",
+  "BREADTH.bmp",
+  "BREADTH_top.bmp",
+  "BREADTH_middle.bmp",
+  "BREADTH_bottom.bmp",
+  "BRILL.bmp",
+  "BRILL_49999.bmp",
+  "BRILL_N.bmp",
+  "BRINE.bmp",
+  "BROTHER.bmp",
+  "CLEAN.bmp",
+  "DIAGONAL.bmp",
+  "FEND.bmp",
+  "FOND.bmp",
+  "HARVEST_bottom.bmp",
+  "HARVEST_top-left.bmp",
+  "JALVINSACH.bmp",
+  "LEE.bmp",
+  "LOCUS.bmp",
+  "MOTH_1.bmp",
+  "MOTH_2.bmp",
+  "MOTH_3.bmp",
+  "MOTH_4.bmp",
+  "MUL.bmp",
+  "Output.bmp",
+  "POINT.bmp"
 };
 
 final boolean LOGGING_ENABLED = false;
