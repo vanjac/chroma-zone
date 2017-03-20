@@ -12,7 +12,7 @@ final String[] files = {
   "BROTHER.bmp",
   "CLEAN.bmp",
   "DIAGONAL.bmp",
-  "DUAL 0.bmp"
+  "DUAL 0.bmp",
   "FEND.bmp",
   "FOND.bmp",
   "HARVEST_bottom.bmp",
