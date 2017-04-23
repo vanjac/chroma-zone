@@ -235,6 +235,9 @@ function randomStroke() {
 // draw objects...
 
 var numObjects = randomInt(5);
+if(numObjects == 0)
+    if(random() < 0.75)
+        numObjects = randomInt(5);
 console.log(numObjects + " objects");
 
 for(var i = 0; i < numObjects; i++) {
