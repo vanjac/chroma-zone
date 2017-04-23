@@ -49,8 +49,9 @@ phrases = {
     {
       "name" : "adjective",
       "Phrases" : [
-        {"text" : "$adjective; and $adjective;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "$adjective; yet $adjective;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$adverb; $adjective;", "weight" : 2.0, "weightFactors" : ["adverb"], "isUnique" : true},
+        {"text" : "$adjective; and $adjective;", "weight" : 0.1, "weightFactors" : ["adjective"], "isUnique" : true},
+        {"text" : "$adjective; yet $adjective;", "weight" : 0.1, "weightFactors" : ["adjective"], "isUnique" : true},
         {"text" : "revolutionary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "thought-provoking", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "intellectual", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -250,6 +251,10 @@ phrases = {
     {
       "name" : "singular-noun-phrase",
       "Phrases" : [
+        {"text" : "its own $general-noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "our own $general-noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the artist's $general-noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "us", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our pursuit of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -289,13 +294,11 @@ phrases = {
     {
       "name" : "general-noun",
       "Phrases" : [
-        {"text" : "$adjective; $general-noun;", "weight": 0.35, "weightFactors": ["general-noun"], "isUnique" : true},
+        {"text" : "$adjective; $general-noun;", "weight": 0.3, "weightFactors": ["general-noun"], "isUnique" : true},
         {"text" : "$gerund;", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : false},
-        {"text" : "its own $general-noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "death", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "us", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "art", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "beauty", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "humanity", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -328,7 +331,10 @@ phrases = {
         {"text" : "terror", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "joy", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "sensation", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "freedom", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "freedom", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "mortality", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "fragility", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "time", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
