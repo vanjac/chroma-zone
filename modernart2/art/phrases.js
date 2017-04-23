@@ -310,7 +310,7 @@ phrases = {
           "weight" : 1.0,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "This $adjective-or-no; $art-type; $art-story-or-no; $verb; $noun;, and $verb; $noun;"
+          "text" : "This $adjective-or-no; $art-type; $art-story-or-no; $verb; $noun;, and $verb; $noun;."
         },
         {
           "weight" : 0.8,
