@@ -108,7 +108,8 @@ phrases = {
         {"text" : "soothing", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "striking", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "whimsical", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "interdisciplinary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "interdisciplinary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "meaningful", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -190,8 +191,18 @@ phrases = {
       ]
     },
     {
+      "name" : "adverb",
+      "Phrases" : [
+        {"text" : "truly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "surely", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "aptly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "harshly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+      ]
+    },
+    {
       "name" : "verb",
       "Phrases" : [
+        {"text" : "$adverb; $verb;", "weight": 1.5, "weightFactors": ["adverb"], "isUnique" : true},
         {"text" : "$verb; and $verb;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "exposes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "reveals", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -242,8 +253,7 @@ phrases = {
         {"text" : "$gerund;", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : false},
         {"text" : "$noun; and $noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "our pursuit of meaning", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "our pursuit of happiness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "our pursuit of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our modern society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in the universe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -269,9 +279,11 @@ phrases = {
         {"text" : "the consequences of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the mundanity of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the illusion of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the significance of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the universe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "humanity", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "human nature", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the world", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "nature", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -294,7 +306,18 @@ phrases = {
         {"text" : "consumerism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the subconscious", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "dreams", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "materialism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "materialism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "meaning", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "happiness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "sadness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "despair", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "sorrow", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "grief", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "love", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "awe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "fear", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "terror", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "joy", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
