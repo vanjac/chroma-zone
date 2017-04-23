@@ -3,6 +3,7 @@ phrases = {
     {
       "name" : "art-title",
       "Phrases" : [
+        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["art-title"], "isUnique" : true},
         {"text" : "Untitled", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Experiment", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Sketch", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},

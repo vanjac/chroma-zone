@@ -79,7 +79,12 @@ reviewString = reviewString.substring(0, 1).toUpperCase()
     + reviewString.substring(1);
 document.getElementById("artReview").innerHTML = reviewString;
 
-document.getElementById("artTitle").innerHTML = phraseGenRecursive(phrases, "art-title") + " #" + randomInt(1000);
+var title = phraseGenRecursive(phrases, "art-title");
+title = title.substring(0, 1).toUpperCase() + title.substring(1);
+if(random() < .5) {
+     title += " #" + randomInt(1000)
+}
+document.getElementById("artTitle").innerHTML = title;
 
 var priceElement = document.getElementById("artPrice");
 if(random() < .2) {
