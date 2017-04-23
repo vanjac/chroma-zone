@@ -107,7 +107,8 @@ phrases = {
         {"text" : "scrumptious", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "soothing", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "striking", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "whimsical", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "whimsical", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "interdisciplinary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -217,6 +218,7 @@ phrases = {
         {"text" : "ponders", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "represents", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "contemplates", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "evokes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "is a $adjective-or-no; $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true},
       ]
     },
@@ -264,6 +266,8 @@ phrases = {
         {"text" : "the futility of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the fallacy of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the consequences of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the mundanity of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the illusion of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the universe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "humanity", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -288,7 +292,8 @@ phrases = {
         {"text" : "the environment", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "consumerism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the subconscious", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "dreams", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "dreams", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "materialism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
