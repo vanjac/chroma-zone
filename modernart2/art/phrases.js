@@ -109,30 +109,15 @@ phrases = {
         {"text" : "striking", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "whimsical", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "interdisciplinary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "meaningful", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
-      ]
-    },
-    {
-      "name" : "adjective-or-no",
-      "Phrases" : [
-        {
-          "weight" : 1.0,
-          "weightFactors" : [],
-          "isUnique" : false,
-          "text" : ""
-        },
-        {
-          "weight" : 3.0,
-          "weightFactors" : [],
-          "isUnique" : false,
-          "text" : "$adjective;"
-        }
+        {"text" : "meaningful", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "incredible", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
       "name" : "art-type",
       "Phrases" : [
-        {"text" : "$adjective-or-no; $art-type;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$adjective; $art-type;", "weight" : 1.0, "weightFactors" : ["art-type"], "isUnique" : true},
+        {"text" : "$art-type;/$art-type;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "masterpiece", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "artistic breakthrough", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "piece", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -231,6 +216,8 @@ phrases = {
         {"text" : "represents", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "contemplates", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "evokes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "revolutionizes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "reinvents", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "is a $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true},
       ]
     },
@@ -238,7 +225,7 @@ phrases = {
     {
       "name" : "gerund",
       "Phrases" : [
-        {"text" : "$adjective-or-no; $gerund;", "weight": 4.0, "weightFactors": [ ], "isUnique" : true},
+        {"text" : "$adjective; $gerund;", "weight": 4.0, "weightFactors": [ ], "isUnique" : true},
         {"text" : "reflection", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "depiction", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "exploration", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -320,7 +307,9 @@ phrases = {
         {"text" : "awe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "fear", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "terror", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "joy", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "joy", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "sensation", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "freedom", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -339,19 +328,19 @@ phrases = {
           "text" : "This $art-type; $art-story-or-no; $verb; $noun;, and $verb; $noun;."
         },
         {
-          "weight" : 0.8,
+          "weight" : 0.4,
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $art-type; was $art-story;."
         },
         {
-          "weight" : 0.5,
+          "weight" : 0.4,
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $art-type;'s $gerund; of $noun; $verb; $noun;."
         },
         {
-          "weight" : 0.5,
+          "weight" : 0.4,
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $art-type;'s $gerund; of $noun; $verb; $noun;, and $verb; $noun;."
