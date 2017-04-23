@@ -42,7 +42,8 @@ phrases = {
         {"text" : "All of the money", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "A human sacrifice", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "A small country", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "50% off at selected stores", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "50% off at selected stores", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "2 for the price of 1", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {

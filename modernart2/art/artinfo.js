@@ -85,5 +85,10 @@ var priceElement = document.getElementById("artPrice");
 if(random() < .2) {
     priceElement.innerHTML = phraseGenRecursive(phrases, "price") + ".";
 } else {
-    priceElement.innerHTML = "$" + addCommas((randomInt(10000) + 1) + "00000");
+    if(random() < .9) {
+        price = addCommas((randomInt(10000) + 1) + "00000");
+    } else {
+        price = randomInt(30);
+    }
+    priceElement.innerHTML = "$" + price;
 }
