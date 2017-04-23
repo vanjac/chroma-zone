@@ -111,7 +111,8 @@ phrases = {
         {"text" : "interdisciplinary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "meaningful", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "incredible", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "bold", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "bold", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "deep", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
