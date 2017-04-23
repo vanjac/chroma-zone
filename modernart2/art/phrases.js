@@ -22,7 +22,7 @@ phrases = {
         {"text" : "The pinnacle of human accomplishment.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "An emotional roller coaster.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Wow.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "A tasteful addition for any d&eacute;cor.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "A tasteful addition to any d&eacute;cor.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Yes.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Indeed.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "This made me reconsider my purpose in life.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -110,7 +110,8 @@ phrases = {
         {"text" : "whimsical", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "interdisciplinary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "meaningful", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "incredible", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "incredible", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "bold", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -183,6 +184,7 @@ phrases = {
         {"text" : "surely", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "aptly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "harshly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "boldly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -250,6 +252,7 @@ phrases = {
         {"text" : "our cultural values", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our cultural norms", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our generation", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "our perception of reality", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "what it means to be alive", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "what it means to be human", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the human condition", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -270,6 +273,7 @@ phrases = {
         {"text" : "the illusion of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the significance of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "death", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the universe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "humanity", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
