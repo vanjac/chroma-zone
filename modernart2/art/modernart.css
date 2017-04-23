@@ -1,6 +1,15 @@
+p, h1, h2, h3 {
+    color: #EEEEEE;
+}
+
+a {
+    color: #AAAAEE;
+}
+
 body {
 	margin: 0;
 	padding: 1%;
+    background-color: #333333;
 }
 
 q {
@@ -10,7 +19,7 @@ q {
 canvas {
 	border-style: groove;
 	border-width: 15px;
-	border-color: gray;
+	border-color: #CCCCCC;
 	padding-left: 0;
 	padding-right: 0;
 	margin-left: auto;

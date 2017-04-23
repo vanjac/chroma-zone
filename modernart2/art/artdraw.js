@@ -232,6 +232,11 @@ function randomStroke() {
     ctx.lineWidth = random() * 8;
 }
 
+
+// background
+ctx.fillStyle = "#EEEEEE";
+ctx.fillRect(0, 0, width, height);
+
 // draw objects...
 
 var numObjects = randomInt(5);
