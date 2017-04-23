@@ -121,8 +121,8 @@ phrases = {
           "text" : ""
         },
         {
-          "weight" : 0.8,
-          "weightFactors" : ["adjective"],
+          "weight" : 3.0,
+          "weightFactors" : [],
           "isUnique" : false,
           "text" : "$adjective;"
         }
@@ -176,14 +176,14 @@ phrases = {
       "name" : "art-story-or-no",
       "Phrases" : [
         {
-          "weight" : 1.0,
+          "weight" : 2.0,
           "weightFactors" : [],
           "isUnique" : false,
           "text" : ""
         },
         {
-          "weight" : 0.8,
-          "weightFactors" : ["art-story"],
+          "weight" : 1.0,
+          "weightFactors" : [],
           "isUnique" : false,
           "text" : "$art-story;"
         }
