@@ -113,7 +113,8 @@ phrases = {
         {"text" : "meaningful", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "incredible", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "bold", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "deep", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "deep", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "brilliant", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -183,7 +184,7 @@ phrases = {
       "name" : "adverb",
       "Phrases" : [
         {"text" : "truly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "surely", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "clearly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "aptly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "harshly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "boldly", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
