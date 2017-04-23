@@ -27,7 +27,6 @@ phrases = {
         {"text" : "Indeed.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "This made me reconsider my purpose in life.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Life is a gift.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "New, yet familiar.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Worth every penny.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "The massive scope hurts my brain.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Amateur.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -114,7 +113,8 @@ phrases = {
         {"text" : "incredible", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "bold", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "deep", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "brilliant", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "brilliant", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "new, yet familiar", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -256,6 +256,7 @@ phrases = {
         {"text" : "our own $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the artist's $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "us", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our pursuit of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -305,7 +306,6 @@ phrases = {
         {"text" : "$gerund;", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : false},
         {"text" : "life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "death", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "art", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "beauty", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "humanity", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
