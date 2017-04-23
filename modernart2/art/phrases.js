@@ -227,7 +227,6 @@ phrases = {
     {
       "name" : "gerund",
       "Phrases" : [
-        {"text" : "$adjective; $gerund;", "weight": 4.0, "weightFactors": [ ], "isUnique" : true},
         {"text" : "reflection", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "depiction", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "exploration", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -242,8 +241,8 @@ phrases = {
       "name" : "noun",
       "Phrases" : [
         {"text" : "$noun; and $noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "$singular-noun-phrase;", "weight" : 1.0, "weightFactors" : ["singular-noun-phrase"], "isUnique" : true},
-        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["general-noun"], "isUnique" : true},
+        {"text" : "$singular-noun-phrase;", "weight" : 1.0, "weightFactors" : ["singular-noun-phrase"], "isUnique" : false},
+        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["general-noun"], "isUnique" : false},
       ]
     },
     {
@@ -288,7 +287,9 @@ phrases = {
     {
       "name" : "general-noun",
       "Phrases" : [
+        {"text" : "$adjective; $general-noun;", "weight": 0.35, "weightFactors": ["general-noun"], "isUnique" : true},
         {"text" : "$gerund;", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : false},
+        {"text" : "its own $general-noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "death", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
