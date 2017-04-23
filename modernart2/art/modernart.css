@@ -12,22 +12,23 @@ a {
 }
 
 body {
-	margin: 0;
-	padding: 1%;
+    margin: 0 auto;
+    padding: 1%;
     background-color: #222222;
+    max-width: 512pt;
 }
 
 q {
-	font-style: italic;
+    font-style: italic;
 }
 
 canvas {
-	border-style: groove;
-	border-width: 15px;
-	border-color: #CCCCCC;
-	padding-left: 0;
-	padding-right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+    border-style: groove;
+    border-width: 15px;
+    border-color: #CCCCCC;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
