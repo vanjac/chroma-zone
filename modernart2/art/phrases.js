@@ -227,6 +227,7 @@ phrases = {
     {
       "name" : "gerund",
       "Phrases" : [
+        {"text" : "$adjective; $gerund;", "weight": 0.35, "weightFactors": ["gerund"], "isUnique" : true},
         {"text" : "reflection", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "depiction", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "exploration", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
