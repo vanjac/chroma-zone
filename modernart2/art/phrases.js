@@ -101,7 +101,13 @@ phrases = {
         {"text" : "vivid", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "impressive", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "extraordinary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "resonating", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "resonating", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "trippy", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "neat", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "scrumptious", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "soothing", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "striking", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "whimsical", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -211,14 +217,21 @@ phrases = {
         {"text" : "ponders", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "represents", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "contemplates", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is a reflection of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is a depiction of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is an exploration of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is an analyzation of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is an interpretation of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is a realization of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is a reinterpretation of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is a representation of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "is a $adjective-or-no; $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true},
+      ]
+    },
+    
+    {
+      "name" : "gerund",
+      "Phrases" : [
+        {"text" : "reflection", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "depiction", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "exploration", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "analyzation", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "interpretation", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "realization", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "reinterpretation", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "representation", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
       ]
     },
     {
@@ -292,7 +305,13 @@ phrases = {
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $adjective-or-no; $art-type; $art-story-or-no; $verb; $noun;, and $verb; $noun;"
-        }
+        },
+        {
+          "weight" : 0.8,
+          "weightFactors" : [],
+          "isUnique" : false,
+          "text" : "This $adjective-or-no; $art-type; was $art-story;."
+        },
       ]
     },
   ]
