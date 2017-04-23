@@ -49,9 +49,9 @@ phrases = {
     {
       "name" : "adjective",
       "Phrases" : [
-        {"text" : "$adverb; $adjective;", "weight" : 2.0, "weightFactors" : ["adverb"], "isUnique" : true},
-        {"text" : "$adjective; and $adjective;", "weight" : 0.1, "weightFactors" : ["adjective"], "isUnique" : true},
-        {"text" : "$adjective; yet $adjective;", "weight" : 0.1, "weightFactors" : ["adjective"], "isUnique" : true},
+        {"text" : "$adverb; $adjective;", "weight" : 1.5, "weightFactors" : ["adverb"], "isUnique" : true},
+        {"text" : "$adjective; and $adjective;", "weight" : 0.08, "weightFactors" : ["adjective"], "isUnique" : true},
+        {"text" : "$adjective; yet $adjective;", "weight" : 0.08, "weightFactors" : ["adjective"], "isUnique" : true},
         {"text" : "revolutionary", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "thought-provoking", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "intellectual", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -252,9 +252,9 @@ phrases = {
     {
       "name" : "singular-noun-phrase",
       "Phrases" : [
-        {"text" : "its own $general-noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "our own $general-noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "the artist's $general-noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "its own $general-noun-with-adjective-or-no;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "our own $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the artist's $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "us", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our pursuit of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -293,9 +293,15 @@ phrases = {
       ]
     },
     {
+      "name" : "general-noun-with-adjective-or-no",
+      "Phrases" : [
+        {"text" : "$general-noun;", "weight": 1.0, "weightFactors": ["general-noun"], "isUnique" : true},
+        {"text" : "$adjective; $general-noun;", "weight": 0.5, "weightFactors": ["general-noun"], "isUnique" : true}
+      ]
+    },
+    {
       "name" : "general-noun",
       "Phrases" : [
-        {"text" : "$adjective; $general-noun;", "weight": 0.3, "weightFactors": ["general-noun"], "isUnique" : true},
         {"text" : "$gerund;", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : false},
         {"text" : "life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "death", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
