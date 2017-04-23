@@ -3,17 +3,6 @@ function addCommas(numberString) {
     return numberString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-
-// generate price
-var priceElement = document.getElementById("artPrice");
-if(random() < .2) {
-    // price phrase group...
-} else {
-    artPrice.innerHTML = "$" + addCommas((randomInt(10000) + 1) + "00000");
-}
-
-
-
 var usedPhrases = [ ]
 
 function resetPhraseGen() {
@@ -29,8 +18,8 @@ function findPhraseGroup(o, phraseGroupName) {
     return null;
 }
 
-
 function phraseGenRecursive(o, phraseGroupName) {
+    console.log("Phrase gen recursive " + phraseGroupName);
     var phraseGroup = findPhraseGroup(o, phraseGroupName);
     if(phraseGroup == null) {
         console.log("ERROR: couldn't find phrase group " + phraseGroupName);
@@ -42,7 +31,7 @@ function phraseGenRecursive(o, phraseGroupName) {
     var totalWeight = 0;
     for(var i = 0; i < phraseGroup.Phrases.length; i++) {
         var phrase = phraseGroup.Phrases[i];
-        if(phrase.isUnique && usedPhrases.indexOf(phrase.text) != -1)
+        if(phrase.isUnique && usedPhrases.indexOf(phrase) != -1)
             continue;
         phrases.push(phrase);
         var weight = phrase.weight;
@@ -51,7 +40,7 @@ function phraseGenRecursive(o, phraseGroupName) {
                 findPhraseGroup(o, phrase.weightFactors[j]).Phrases.length;
             weight *= numItems;
         }
-        console.log(phrase.text + ": " + weight);
+        //console.log(phrase.text + ": " + weight);
         totalWeight += weight;
         totalWeights.push(totalWeight)
     }
@@ -67,7 +56,7 @@ function phraseGenRecursive(o, phraseGroupName) {
         console.log("ERROR choosing phrase");
         return;
     }
-    usedPhrases.push(chosenPhrase.text);
+    usedPhrases.push(chosenPhrase);
     
     var phraseText = chosenPhrase.text;
     
@@ -79,7 +68,22 @@ function phraseGenRecursive(o, phraseGroupName) {
         phraseText = phraseText.replace(phraseRegex, textSub);
     }
     
+    console.log("done with " + phraseGroupName + " returning " + phraseText);
     return phraseText;
 }
 
-artCaption.innerHTML = phraseGenRecursive(phrases, "caption");
+document.getElementById("artCaption").innerHTML = phraseGenRecursive(phrases, "caption");
+
+var reviewString = phraseGenRecursive(phrases, "review");
+reviewString = reviewString.substring(0, 1).toUpperCase()
+    + reviewString.substring(1);
+document.getElementById("artReview").innerHTML = reviewString;
+
+document.getElementById("artTitle").innerHTML = phraseGenRecursive(phrases, "art-title") + " #" + randomInt(1000);
+
+var priceElement = document.getElementById("artPrice");
+if(random() < .2) {
+    priceElement.innerHTML = phraseGenRecursive(phrases, "price") + ".";
+} else {
+    priceElement.innerHTML = "$" + addCommas((randomInt(10000) + 1) + "00000");
+}
