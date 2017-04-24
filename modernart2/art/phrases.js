@@ -146,7 +146,8 @@ phrases = {
         {"text" : "still art", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "forgery", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "self-portrait", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "oil painting", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "oil painting", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "experiment in $general-noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
