@@ -4,6 +4,7 @@ phrases = {
       "name" : "art-title",
       "Phrases" : [
         {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["art-title"], "isUnique" : true},
+        {"text" : "$color;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Untitled", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Experiment", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Sketch", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -45,6 +46,18 @@ phrases = {
         {"text" : "A small country", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "50% off at selected stores", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "2 for the price of 1", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+      ]
+    },
+    {
+      "name" : "color",
+      "Phrases" : [
+        {"text" : "red", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "orange", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "yellow", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "green", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "blue", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "purple", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "pink", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
