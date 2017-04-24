@@ -271,6 +271,7 @@ phrases = {
         {"text" : "its own $general-noun-with-adjective-or-no;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our own $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the artist's $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the $gerund; of $noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "us", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
