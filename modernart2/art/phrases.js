@@ -239,7 +239,7 @@ phrases = {
         {"text" : "evokes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "revolutionizes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "reinvents", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is a $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true},
+        {"text" : "is a $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true}
       ]
     },
     
@@ -362,6 +362,16 @@ phrases = {
       ]
     },
     {
+      "name" : "technique",
+      "Phrases" : [
+        {"text" : "$color;", "weight" : 2.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$adjective; $technique;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "surrealism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "irony", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "symbolism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+      ]
+    },
+    {
       "name" : "caption",
       "Phrases" : [
         {
@@ -393,6 +403,12 @@ phrases = {
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $art-type;'s $gerund; of $noun; $verb; $noun;, and $verb; $noun;."
+        },
+        {
+          "weight" : 0.2,
+          "weightFactors" : [],
+          "isUnique" : false,
+          "text" : "This $art-type; $art-story-or-no; $verb; $noun; through the use of $technique;"
         }
       ]
     },
