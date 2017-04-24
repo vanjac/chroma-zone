@@ -32,3 +32,19 @@ canvas {
     margin-right: auto;
     display: block;
 }
+
+.nextbutton {
+    padding-left: 14pt;
+    padding-right: 14pt;
+    padding-top: 6pt;
+    padding-bottom: 6pt;
+    border-style: solid;
+    border-width: 1.5pt;
+    border-color: #000000;
+    border-radius: 7pt;
+    background-color: #3C96F2;
+
+    color: #000000;
+    font-weight: bold;
+    font-size: 16pt;
+}
