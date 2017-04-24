@@ -18,6 +18,13 @@ function findPhraseGroup(o, phraseGroupName) {
     return null;
 }
 
+function phraseGen(o, phraseGroupName) {
+    var phrase = phraseGenRecursive(o, phraseGroupName);
+    // replace "a" followed by a word starting with a vowel with "an"
+    phrase = phrase.replace(/ a (?=[aeiou])/gi, " an ");
+    return phrase;
+}
+
 function phraseGenRecursive(o, phraseGroupName) {
     console.log("Phrase gen recursive " + phraseGroupName);
     var phraseGroup = findPhraseGroup(o, phraseGroupName);
@@ -72,14 +79,14 @@ function phraseGenRecursive(o, phraseGroupName) {
     return phraseText;
 }
 
-document.getElementById("artCaption").innerHTML = phraseGenRecursive(phrases, "caption");
+document.getElementById("artCaption").innerHTML = phraseGen(phrases, "caption");
 
-var reviewString = phraseGenRecursive(phrases, "review");
+var reviewString = phraseGen(phrases, "review");
 reviewString = reviewString.substring(0, 1).toUpperCase()
     + reviewString.substring(1);
 document.getElementById("artReview").innerHTML = reviewString;
 
-var title = phraseGenRecursive(phrases, "art-title");
+var title = phraseGen(phrases, "art-title");
 title = title.substring(0, 1).toUpperCase() + title.substring(1);
 if(random() < .5) {
      title += " #" + randomInt(1000)
@@ -88,7 +95,7 @@ document.getElementById("artTitle").innerHTML = title;
 
 var priceElement = document.getElementById("artPrice");
 if(random() < .2) {
-    priceElement.innerHTML = phraseGenRecursive(phrases, "price") + ".";
+    priceElement.innerHTML = phraseGen(phrases, "price") + ".";
 } else {
     if(random() < .9) {
         price = addCommas((randomInt(10000) + 1) + "00000");
