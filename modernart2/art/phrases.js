@@ -229,7 +229,6 @@ phrases = {
         {"text" : "interprets", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "reconsiders", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "upends our understanding of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "transcends", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "provides thoughts on", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "reinterprets", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -385,6 +384,12 @@ phrases = {
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $art-type; $art-story-or-no; $verb; $noun;, and $verb; $noun;."
+        },
+        {
+          "weight" : 0.2,
+          "weightFactors" : [],
+          "isUnique" : false,
+          "text" : "This $art-type; $art-story-or-no; is $noun;."
         },
         {
           "weight" : 0.4,
