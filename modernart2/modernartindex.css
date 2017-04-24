@@ -15,9 +15,6 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
-    border-color: black;
-    border-style: groove;
-    border-width: 15px;
     background-color: #222222;
 }
 
@@ -32,4 +29,14 @@ p {
 
 a {
     color: inherit;
+}
+
+.title-card {
+    border-color: black;
+    border-style: groove;
+    border-width: 15px;
+}
+
+.external-link {
+    color: #444444;
 }
