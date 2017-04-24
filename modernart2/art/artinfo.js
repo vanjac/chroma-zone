@@ -97,7 +97,7 @@ var priceElement = document.getElementById("artPrice");
 if(random() < .2) {
     priceElement.innerHTML = phraseGen(phrases, "price") + ".";
 } else {
-    if(random() < .9) {
+    if(random() < .8) {
         price = addCommas((randomInt(10000) + 1) + "00000");
     } else {
         price = randomInt(30);
