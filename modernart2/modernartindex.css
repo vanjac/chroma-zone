@@ -32,7 +32,7 @@ a {
 }
 
 .title-card {
-    border-color: black;
+    border-color: gray; /*black works on firefox but not chrome*/
     border-style: groove;
     border-width: 15px;
 }
