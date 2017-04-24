@@ -15,7 +15,7 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
-    background-color: black;
+    border-color: black;
     border-style: groove;
     border-width: 15px;
     background-color: #222222;
