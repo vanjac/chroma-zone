@@ -96,6 +96,11 @@ var drawCircleStroke = function() {
 
 var drawScribble = function() {
     console.log("scribble");
+
+    // override generated line width
+    // scribbles look better with thinner lines
+    ctx.lineWidth = random() * (width/64);
+
     var x = random() * width;
     var y = random() * height;
     var numSegments = randomInt(128);
@@ -230,6 +235,7 @@ function randomFill() {
 function randomStroke() {
     ctx.strokeStyle = randomStyle();
     ctx.lineWidth = random() * (width/32);
+    ctx.lineJoin = "round";
 }
 
 
