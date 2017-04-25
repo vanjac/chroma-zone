@@ -410,7 +410,9 @@ phrases = {
         {"text" : "irony", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "symbolism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "allegory", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "composition", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "composition", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "minimalism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "contrast", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
