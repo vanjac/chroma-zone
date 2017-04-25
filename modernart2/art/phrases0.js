@@ -1,4 +1,4 @@
-phrases = {
+phraseSets[0] = {
   "PhraseGroups" : [
     {
       "name" : "art-title",

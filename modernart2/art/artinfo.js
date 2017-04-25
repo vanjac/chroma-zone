@@ -79,6 +79,9 @@ function phraseGenRecursive(o, phraseGroupName) {
     return phraseText;
 }
 
+console.log("Using phrase set " + version);
+var phrases = phraseSets[version];
+
 var caption = phraseGen(phrases, "caption");
 caption = caption.substring(0, 1).toUpperCase()
     + caption.substring(1);

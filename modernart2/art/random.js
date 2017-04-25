@@ -12,6 +12,12 @@ if(getParameterByName("b") !=null) { //use specified seed
     // replace all
     base64String = base64String.split(" ").join("+");
     seed = atob(base64String);
+    if(getParameterByName("v") != null) {
+        version = getParameterByName("v");
+    } else {
+        // always default to the oldest version. don't update this!
+        version = 0
+    }
 } else { //generate a new seed
     seed = randomSeed();
 }
