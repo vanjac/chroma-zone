@@ -245,6 +245,34 @@ phrases = {
         {"text" : "is a $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true}
       ]
     },
+    {
+      "name" : "backwards-verb",
+      "Phrases" : [
+        {"text" : "is exposed through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is revealed through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is commented on through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is reflected through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is depicted by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is explored through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is analyzed through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is evidenced by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is uncovered through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is considered through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is showcased by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is expressed through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is interpreted through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is reconsidered through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is transcended through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is reinterpreted through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is pondered through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is represented by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is contemplated through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is evoked by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is revolutionized through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is reinvented by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is embodied by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+      ]
+    },
     
     {
       "name" : "gerund",
@@ -423,6 +451,18 @@ phrases = {
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $art-type; $art-story-or-no; $verb; $noun; through the use of $technique;"
+        },
+        {
+          "weight" : 0.3,
+          "weightFactors" : [],
+          "isUnique" : false,
+          "text" : "$color; in this $art-type; $verb; $noun;."
+        },
+        {
+          "weight" : 0.4,
+          "weightFactors" : [],
+          "isUnique" : false,
+          "text" : "In this $art-type;, $noun; $backwards-verb; $technique;."
         }
       ]
     },

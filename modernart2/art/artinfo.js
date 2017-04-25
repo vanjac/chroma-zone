@@ -79,7 +79,10 @@ function phraseGenRecursive(o, phraseGroupName) {
     return phraseText;
 }
 
-document.getElementById("artCaption").innerHTML = phraseGen(phrases, "caption");
+var caption = phraseGen(phrases, "caption");
+caption = caption.substring(0, 1).toUpperCase()
+    + caption.substring(1);
+document.getElementById("artCaption").innerHTML = caption;
 
 var reviewString = phraseGen(phrases, "review");
 reviewString = reviewString.substring(0, 1).toUpperCase()
