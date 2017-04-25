@@ -26,7 +26,7 @@ function phraseGen(o, phraseGroupName) {
 }
 
 function phraseGenRecursive(o, phraseGroupName) {
-    console.log("Phrase gen recursive " + phraseGroupName);
+    console.log("Generating " + phraseGroupName + " phrase");
     var phraseGroup = findPhraseGroup(o, phraseGroupName);
     if(phraseGroup == null) {
         console.log("ERROR: couldn't find phrase group " + phraseGroupName);
@@ -63,6 +63,7 @@ function phraseGenRecursive(o, phraseGroupName) {
         console.log("ERROR choosing phrase");
         return;
     }
+    console.log("Chose phrase '" + chosenPhrase.text + "'");
     usedPhrases.push(chosenPhrase);
     
     var phraseText = chosenPhrase.text;
@@ -75,7 +76,8 @@ function phraseGenRecursive(o, phraseGroupName) {
         phraseText = phraseText.replace(phraseRegex, textSub);
     }
     
-    console.log("done with " + phraseGroupName + " returning " + phraseText);
+    console.log("Done with " + phraseGroupName + " returning '" + phraseText
+        + "'");
     return phraseText;
 }
 
