@@ -257,7 +257,7 @@ phrases = {
         {"text" : "interpretation", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "realization", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "reinterpretation", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "representation", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "representation", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -265,7 +265,7 @@ phrases = {
       "Phrases" : [
         {"text" : "$noun; and $noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "$singular-noun-phrase;", "weight" : 1.0, "weightFactors" : ["singular-noun-phrase"], "isUnique" : false},
-        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["general-noun"], "isUnique" : false},
+        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["general-noun"], "isUnique" : false}
       ]
     },
     {
@@ -376,7 +376,7 @@ phrases = {
         {"text" : "$adjective; $technique;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "surrealism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "irony", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "symbolism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "symbolism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
