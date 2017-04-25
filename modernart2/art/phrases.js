@@ -129,7 +129,8 @@ phrases = {
         {"text" : "bold", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "deep", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "brilliant", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "new, yet familiar", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "new, yet familiar", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "spiritual", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -238,6 +239,9 @@ phrases = {
         {"text" : "evokes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "revolutionizes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "reinvents", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "embodies", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "pushes the boundaries of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is an allegory of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "is a $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true}
       ]
     },
@@ -307,6 +311,8 @@ phrases = {
         {"text" : "the present", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the environment", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the subconscious", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "human compassion", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "human knowledge", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -357,7 +363,10 @@ phrases = {
         {"text" : "freedom", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "mortality", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "fragility", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "time", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "time", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "spirituality", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "energy", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "faith", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
