@@ -130,7 +130,8 @@ phrases = {
         {"text" : "deep", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "brilliant", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "new, yet familiar", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "spiritual", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "spiritual", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "subtle", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -307,6 +308,7 @@ phrases = {
         {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our pursuit of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "our quest for $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our modern society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in the universe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -334,6 +336,7 @@ phrases = {
         {"text" : "the mundanity of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the illusion of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the significance of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the journey of $general-noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the universe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the world", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the present", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -404,7 +407,8 @@ phrases = {
         {"text" : "$adjective; $technique;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "surrealism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "irony", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "symbolism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "symbolism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "allegory", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
