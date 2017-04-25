@@ -131,7 +131,8 @@ phrases = {
         {"text" : "brilliant", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "new, yet familiar", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "spiritual", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "subtle", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "subtle", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "symbolic", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
