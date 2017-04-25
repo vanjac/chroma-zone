@@ -437,6 +437,12 @@ phrases = {
           "weight" : 0.4,
           "weightFactors" : [],
           "isUnique" : false,
+          "text" : "$noun; $backwards-verb; this $art-type;."
+        },
+        {
+          "weight" : 0.4,
+          "weightFactors" : [],
+          "isUnique" : false,
           "text" : "This $art-type; was $art-story;."
         },
         {
@@ -456,6 +462,12 @@ phrases = {
           "weightFactors" : [],
           "isUnique" : false,
           "text" : "This $art-type; $art-story-or-no; $verb; $noun; through the use of $technique;"
+        },
+        {
+          "weight" : 0.2,
+          "weightFactors" : [],
+          "isUnique" : false,
+          "text" : "Through the use of $technique;, this $art-type; $art-story-or-no; $verb; $noun;."
         },
         {
           "weight" : 0.3,
