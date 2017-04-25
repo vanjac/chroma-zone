@@ -103,8 +103,8 @@ var drawScribble = function() {
     ctx.lineCap="round";
     ctx.moveTo(x, y);
     for(var i = 0; i < numSegments; i++) {
-	x += random() * 16 - 8;
-	y += random() * 16 - 8;
+	x += random() * (width/16) - (width/32);
+	y += random() * (width/16) - (width/32);
 	ctx.lineTo(x, y);
     }
     ctx.stroke();
@@ -114,8 +114,8 @@ var drawCrookedLine = function() {
     console.log("crooked line");
     var x = random() * width;
     var y = random() * height;
-    var xChange = random() * 64 - 32;
-    var yChange = random() * 64 - 32;
+    var xChange = random() * (width/4) - (width/8);
+    var yChange = random() * (width/4) - (width/8);
     var numSegments = randomInt(10);
     ctx.beginPath();
     ctx.lineCap="round";
@@ -123,8 +123,8 @@ var drawCrookedLine = function() {
     for(var i = 0; i < numSegments; i++) {
 	x += xChange;
 	y += yChange;
-	xChange += random() * 16 - 8;
-	yChange += random() * 16 - 8;
+	xChange += random() * (width/16) - (width/32);
+	yChange += random() * (width/16) - (width/32);
 	ctx.lineTo(x, y);
     }
     ctx.stroke();
@@ -229,7 +229,7 @@ function randomFill() {
 
 function randomStroke() {
     ctx.strokeStyle = randomStyle();
-    ctx.lineWidth = random() * 8;
+    ctx.lineWidth = random() * (width/32);
 }
 
 
