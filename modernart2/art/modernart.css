@@ -35,12 +35,27 @@ canvas {
     max-width: 332pt;
 }
 
+table {
+    width: auto;
+}
+
+table td:first-child {
+    width: 100%;
+}
+
+table td, table td * {
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
 .info {
     font-size: 14pt;
     font-weight: bold;
 }
 
 .nextbutton {
+    display: inline-block;
     padding-left: 14pt;
     padding-right: 14pt;
     padding-top: 6pt;
