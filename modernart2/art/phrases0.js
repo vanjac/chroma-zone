@@ -106,7 +106,7 @@ phraseSets[0] = {
         {"text" : "gluten-free", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "vegan", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "delicate", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "gender neutral", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "gender-neutral", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "abstract", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "cutting edge", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "spectacular", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
