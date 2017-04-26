@@ -3,8 +3,8 @@ phraseSets[0] = {
     {
       "name" : "art-title",
       "Phrases" : [
-        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["art-title"], "isUnique" : true},
-        {"text" : "$color;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["art-title"], "isUnique" : false},
+        {"text" : "$color;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : false},
         {"text" : "Untitled", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Experiment", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Sketch", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -17,7 +17,7 @@ phraseSets[0] = {
     {
       "name" : "review",
       "Phrases" : [
-        {"text" : "$adjective;.", "weight" : 8.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$adjective;.", "weight" : 8.0, "weightFactors" : [ ], "isUnique" : false},
         {"text" : "Nature is amazing.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "A real work of art.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "10/10.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -169,8 +169,8 @@ phraseSets[0] = {
     {
       "name" : "art-story",
       "Phrases" : [
-        {"text" : "inspired by $noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "by a $artist;", "weight" : 4.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "inspired by $noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : false},
+        {"text" : "by a $artist;", "weight" : 4.0, "weightFactors" : [ ], "isUnique" : false},
         {"text" : "by a renowned artist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "drawn while blindfolded", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "by an anonymous artist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -405,7 +405,7 @@ phraseSets[0] = {
     {
       "name" : "technique",
       "Phrases" : [
-        {"text" : "$color;", "weight" : 2.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$color;", "weight" : 2.0, "weightFactors" : [ ], "isUnique" : false},
         {"text" : "$adjective; $technique;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "surrealism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "irony", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -421,7 +421,7 @@ phraseSets[0] = {
       "Phrases" : [
         {"text" : "self-described $artist;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "master of $technique;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "$ist;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$ist;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : false},
         {"text" : "renowned $artist;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
