@@ -170,6 +170,7 @@ phraseSets[0] = {
       "name" : "art-story",
       "Phrases" : [
         {"text" : "inspired by $noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "by a $artist;", "weight" : 4.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "by a renowned artist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "drawn while blindfolded", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "by an anonymous artist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -413,6 +414,28 @@ phraseSets[0] = {
         {"text" : "composition", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "minimalism", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "contrast", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+      ]
+    },
+    {
+      "name" : "artist",
+      "Phrases" : [
+        {"text" : "self-described $artist;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "master of $technique;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$ist;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "renowned $artist;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+      ]
+    },
+    {
+      "name" : "ist",
+      "Phrases" : [
+        {"text" : "neo-$ist;", "weight" : 2.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "post-$ist;", "weight" : 2.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "non-conformist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "realist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "absurdist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "surrealist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "humanist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "modernist", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
