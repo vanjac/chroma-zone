@@ -464,7 +464,7 @@ phraseSets[0] = {
           "weight" : 0.2,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "This $art-type; $art-story-or-no; $verb; $noun; through the use of $technique;"
+          "text" : "This $art-type; $art-story-or-no; $verb; $noun; through the use of $technique;."
         },
         {
           "weight" : 0.2,
