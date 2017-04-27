@@ -20,9 +20,12 @@ if(views == 200) {
     alert("You have visited this page 200 times in a row."
 	  + "\nI can't let you continue like this."
 	  + " I'm blocking you from accessing this page.");
-    while(true)
-	alert("Go away.");
 }
+if(views >= 200) {
+    var bodyElement = document.getElementsByTagName("BODY")[0];
+    bodyElement.innerHTML = "<p>go away</p>";
+}
+
 var today = new Date();
 var date = today.getDate();
 var month = today.getMonth()+1;
