@@ -96,7 +96,12 @@ document.getElementById("artReview").innerHTML = reviewString;
 
 var title = phraseGen(phrases, "art-title");
 title = title.substring(0, 1).toUpperCase() + title.substring(1);
-if(random() < .5) {
+var r = random();
+if(r < .3) {
+    title += " #" + randomInt(10)
+} else if(r < .4) {
+    title += " #" + randomInt(100)
+} else if(r < .5) {
      title += " #" + randomInt(1000)
 }
 document.getElementById("artTitle").innerHTML = title;
