@@ -310,6 +310,8 @@ phraseSets[0] = {
         {"text" : "the $gerund; of $noun;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "us", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "itself", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "the self", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our pursuit of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our quest for $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
