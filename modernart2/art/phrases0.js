@@ -132,7 +132,8 @@ phraseSets[0] = {
         {"text" : "new, yet familiar", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "spiritual", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "subtle", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "symbolic", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "symbolic", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "exhilarating", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     {
@@ -163,6 +164,7 @@ phraseSets[0] = {
         {"text" : "forgery", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "self-portrait", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "oil painting", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "mural", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "experiment in $general-noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
