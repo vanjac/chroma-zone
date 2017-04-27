@@ -186,7 +186,7 @@ phraseSets[0] = {
       ]
     },
     {
-      "name" : "art-story-or-no",
+      "name" : "art-story-with-commas-or-no",
       "Phrases" : [
         {
           "weight" : 2.0,
@@ -198,7 +198,7 @@ phraseSets[0] = {
           "weight" : 1.0,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "$art-story;"
+          "text" : ", $art-story;,"
         }
       ]
     },
@@ -447,19 +447,19 @@ phraseSets[0] = {
           "weight" : 1.0,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "This $art-type; $art-story-or-no; $verb; $noun;."
+          "text" : "This $art-type;$art-story-with-commas-or-no; $verb; $noun;."
         },
         {
           "weight" : 1.0,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "This $art-type; $art-story-or-no; $verb; $noun;, and $verb; $noun;."
+          "text" : "This $art-type;$art-story-with-commas-or-no; $verb; $noun;, and $verb; $noun;."
         },
         {
           "weight" : 0.2,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "This $art-type; $art-story-or-no; is $noun;."
+          "text" : "This $art-type;$art-story-with-commas-or-no; is $noun;."
         },
         {
           "weight" : 0.4,
@@ -489,13 +489,13 @@ phraseSets[0] = {
           "weight" : 0.2,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "This $art-type; $art-story-or-no; $verb; $noun; through the use of $technique;."
+          "text" : "This $art-type;$art-story-with-commas-or-no; $verb; $noun; through the use of $technique;."
         },
         {
           "weight" : 0.2,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "Through the use of $technique;, this $art-type; $art-story-or-no; $verb; $noun;."
+          "text" : "Through the use of $technique;, this $art-type;$art-story-with-commas-or-no; $verb; $noun;."
         },
         {
           "weight" : 0.3,
