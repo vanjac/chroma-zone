@@ -20,6 +20,9 @@ if(getParameterByName("b") !=null) { //use specified seed
     }
 } else { //generate a new seed
     seed = randomSeed();
+    if(getParameterByName("v") != null) {
+        version = getParameterByName("v");
+    }
 }
 Math.seedrandom(seed);
 
