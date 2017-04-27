@@ -27,7 +27,7 @@ phraseSets[0] = {
         {"text" : "A tasteful addition to any d&eacute;cor.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Yes.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Indeed.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "This made me reconsider my purpose in life.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "This made me reconsider $singular-noun-phrase-no-context;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Life is a gift.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "Worth every penny.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "The massive scope hurts my brain.", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -297,13 +297,22 @@ phraseSets[0] = {
       "name" : "noun",
       "Phrases" : [
         {"text" : "$noun; and $noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "$singular-noun-phrase;", "weight" : 1.0, "weightFactors" : ["singular-noun-phrase"], "isUnique" : false},
+        {"text" : "$singular-noun-phrase;", "weight" : 1.0, "weightFactors" : ["singular-noun-phrase-no-context"], "isUnique" : false},
+        {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["general-noun"], "isUnique" : false}
+      ]
+    },
+    {
+      "name" : "noun-no-context",
+      "Phrases" : [
+        {"text" : "$noun; and $noun;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "$singular-noun-phrase-no-context;", "weight" : 1.0, "weightFactors" : ["singular-noun-phrase-no-context"], "isUnique" : false},
         {"text" : "$general-noun;", "weight" : 1.0, "weightFactors" : ["general-noun"], "isUnique" : false}
       ]
     },
     {
       "name" : "singular-noun-phrase",
       "Phrases" : [
+        {"text" : "$singular-noun-phrase-no-context;", "weight" : 1.0, "weightFactors" : ["singular-noun-phrase-no-context"], "isUnique" : true},
         {"text" : "its own $general-noun-with-adjective-or-no;", "weight" : 5.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our own $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the artist's $general-noun-with-adjective-or-no;", "weight" : 3.0, "weightFactors" : [ ], "isUnique" : true},
@@ -312,12 +321,18 @@ phraseSets[0] = {
         {"text" : "now", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "itself", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "the self", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+      ]
+    },
+    {
+      "name" : "singular-noun-phrase-no-context",
+      "Phrases" : [
         {"text" : "our human weakness", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our pursuit of $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our quest for $noun;", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our modern society", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our place in the universe", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "our purpose in life", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our culture", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our cultural values", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "our cultural norms", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
@@ -467,7 +482,7 @@ phraseSets[0] = {
           "weight" : 0.4,
           "weightFactors" : [],
           "isUnique" : false,
-          "text" : "$noun; $backwards-verb; this $art-type;."
+          "text" : "$noun-no-context; $backwards-verb; this $art-type;."
         },
         {
           "weight" : 0.4,
