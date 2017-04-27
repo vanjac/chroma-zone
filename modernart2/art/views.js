@@ -15,7 +15,7 @@ if(views == 100)
 	  + "\nI'm impressed. You've found a way to binge-watch art.");
 if(views == 150)
     alert("You have visited this page 150 times in a row."
-	  + "\nPlease stop. Your friends are starting to worry.");
+	  + "\nPlease stop, your friends are starting to worry.");
 if(views == 200) {
     alert("You have visited this page 200 times in a row."
 	  + "\nI can't let you continue like this."
