@@ -247,6 +247,8 @@ phraseSets[0] = {
         {"text" : "embodies", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "pushes the boundaries of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "is an allegory of", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "symbolizes", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is a metaphor for", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "is a $gerund; of", "weight" : 1.0, "weightFactors" : ["gerund"], "isUnique" : true}
       ]
     },
@@ -275,7 +277,8 @@ phraseSets[0] = {
         {"text" : "is evoked by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "is revolutionized through", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
         {"text" : "is reinvented by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
-        {"text" : "is embodied by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
+        {"text" : "is embodied by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true},
+        {"text" : "is symbolized by", "weight" : 1.0, "weightFactors" : [ ], "isUnique" : true}
       ]
     },
     
