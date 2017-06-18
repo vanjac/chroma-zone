@@ -3,8 +3,19 @@ layout: default
 title: Everything
 ---
 
+<style>
+.post-link:hover {
+  color: #2266FF;
+  text-shadow: 2px 2px #000088;
+}
+.post-link:active {
+  color: #FF0099;
+  text-shadow: 2px 2px #880088;
+}
+</style>
+
 <p><strong>Click a link below to view more details:</strong></p>
 
 {% for post in site.posts %}
-    <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+    <p><a href="{{ post.url }}" class="post-link">{{ post.title }}</a></p>
 {% endfor %}
