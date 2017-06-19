@@ -77,6 +77,11 @@ canvas {
     animation-name: leftBlockKeyframes;
 }
 
+.block-group-left:hover {
+    animation-name: leftBlockHover;
+    animation-duration: 0.5s;
+}
+
 @keyframes leftBlockKeyframes {
     0% {
         opacity: 0;
@@ -88,9 +93,24 @@ canvas {
     }
 }
 
+@keyframes leftBlockHover {
+    0% {
+        
+    }
+    
+    100% {
+        transform: translate3d(5%, 0, 0);
+    }
+}
+
 .block-group-right {
     text-align: right;
     animation-name: rightBlockKeyframes;
+}
+
+.block-group-right:hover {
+    animation-name: rightBlockHover;
+    animation-duration: 0.5s;
 }
 
 @keyframes rightBlockKeyframes {
@@ -101,6 +121,16 @@ canvas {
     
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes rightBlockHover {
+    0% {
+        
+    }
+    
+    100% {
+        transform: translate3d(-5%, 0, 0);
     }
 }
 
