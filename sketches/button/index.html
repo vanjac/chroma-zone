@@ -1,0 +1,15 @@
+<p id="js-warning">Javascript must be enabled.</p>
+
+<p>Score: <span id="score"></span></p>
+
+<p id="button1-p" style="display:none;"> press this button --&gt;
+    <button onclick="if(state[0]&&state[1]) on(2); on(0); updateState()">Button</button>
+</p>
+
+<p id="button2-p" style="display:none;"> don't press this button --&gt;
+    <button onclick="off(0); tog(1); off(2); updateState()">Button</button>
+</p>
+
+
+<script type="text/javascript" src="button.js"></script>
+
