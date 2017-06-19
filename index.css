@@ -77,6 +77,13 @@ canvas {
     animation-name: leftBlockKeyframes;
 }
 
+.block-group-left-transition {
+    animation-name: rightBlockHover;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+}
+
 .block-group-left-transition:hover {
     animation-name: leftBlockHover;
     transition-timing-function: ease-in;
@@ -101,13 +108,20 @@ canvas {
     }
     
     100% {
-        transform: translate3d(5%, 0, 0);
+        transform: translate3d(-5%, 0, 0);
     }
 }
 
 .block-group-right {
     text-align: right;
     animation-name: rightBlockKeyframes;
+}
+
+.block-group-right-transition {
+    animation-name: leftBlockHover;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
 }
 
 .block-group-right-transition:hover {
@@ -134,7 +148,7 @@ canvas {
     }
     
     100% {
-        transform: translate3d(-5%, 0, 0);
+        transform: translate3d(5%, 0, 0);
     }
 }
 
