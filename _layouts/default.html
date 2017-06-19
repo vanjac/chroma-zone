@@ -58,8 +58,10 @@
           <div class="block-group-left"
         {% endif %}
         style="animation-delay: {{animationDelay}}s; background-color: #BEB;">
+        <div class="block-group-transition">
         <p class="project-name"> {{ post.title }} </p>
         <p class="project-description">{{ post.excerpt | strip }}</p>
+        </div>
         </div>
       </a>
       {% assign animationDelay = animationDelay | plus: 0.1 %}
