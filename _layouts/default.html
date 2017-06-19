@@ -53,12 +53,13 @@
       {% if matchesFilter == false %} {% continue %} {% endif %}
       <a href="{{ post.link }}">
         {% if isRightBlock %} {% assign isRightBlock = false %}
+          <div class="block-group-right-transition">
           <div class="block-group-right"
         {% else %} {% assign isRightBlock = true %}
+          <div class="block-group-left-transition">
           <div class="block-group-left"
         {% endif %}
         style="animation-delay: {{animationDelay}}s; background-color: #BEB;">
-        <div class="block-group-transition">
         <p class="project-name"> {{ post.title }} </p>
         <p class="project-description">{{ post.excerpt | strip }}</p>
         </div>

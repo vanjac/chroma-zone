@@ -77,7 +77,7 @@ canvas {
     animation-name: leftBlockKeyframes;
 }
 
-.block-group-left > .block-group-transition:hover {
+.block-group-left-transition:hover {
     animation-name: leftBlockHover;
     transition-timing-function: ease-in;
     animation-fill-mode: both;
@@ -110,7 +110,7 @@ canvas {
     animation-name: rightBlockKeyframes;
 }
 
-.block-group-right > .block-group-transition:hover {
+.block-group-right-transition:hover {
     animation-name: rightBlockHover;
     transition-timing-function: ease-in;
     animation-fill-mode: both;
