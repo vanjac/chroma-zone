@@ -1,9 +1,6 @@
 ---
 title: Projects
 layout: default
-filter:
-    - all
-    - projects
-    - good
+filter: projects
 ---
 
