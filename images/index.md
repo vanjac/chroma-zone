@@ -1,8 +1,6 @@
 ---
 title: Images
 layout: default
-filter:
-    - all
-    - image
+filter: images
 ---
 
