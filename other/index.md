@@ -6,6 +6,3 @@ filter:
     - projects
     - bad
 ---
-
-See also: <span style="text-decoration:underline;">[Works in progress](/wip/)</span>.
-
