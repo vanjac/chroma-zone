@@ -41,16 +41,7 @@
     {% assign isRightBlock = false %}
     {% assign animationDelay = 0.0 %}
     
-    {% for post in site.posts %} {% assign matchesFilter = true %}
-      {% for tag in page.filter %}
-        {% unless post.tags contains tag %} {% assign matchesFilter = false %}
-        {% endunless %}
-      {% endfor %}
-      {% for tag in page.unfilter %}
-        {% if post.tags contains tag %} {% assign matchesFilter = false %}
-        {% endif %}
-      {% endfor %}
-      {% if matchesFilter == false %} {% continue %} {% endif %}
+    {% for post in site.tags[page.filter] %}
       <a href="{{ post.link }}">
         {% if isRightBlock %} {% assign isRightBlock = false %}
           <div class="block-group-right-transition">

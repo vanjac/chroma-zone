@@ -16,26 +16,6 @@ layout: default
 {% for tag in page.tags %}
 {% assign tagName = tag %}
 {% assign tagURL = tag %}
-{% if tag == 'bad' %}
-{% assign tagName = 'low-quality' %}
-{% assign tagURL = 'other' %}
-{% endif %}
-{% if tag == 'good' %}
-{% assign tagName = 'high-quality' %}
-{% assign tagURL = '' %}
-{% endif %}
-{% if tag == 'projects' %}
-{% assign tagName = 'project' %}
-{% endif %}
-{% if tag == 'video' %}
-{% assign tagURL = 'videos' %}
-{% endif %}
-{% if tag == 'image' %}
-{% assign tagURL = 'images' %}
-{% endif %}
-{% if tag == 'webapp' %}
-{% assign tagURL = 'webapps' %}
-{% endif %}
 <a href="/{{ tagURL }}"><span class="tag">{{ tagName }}</span></a>
 {% endfor %}
 </p>

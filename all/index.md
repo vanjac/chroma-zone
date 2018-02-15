@@ -1,7 +1,6 @@
 ---
 title: All
 layout: default
-filter:
-    - all
+filter: all
 ---
 
