@@ -61,7 +61,7 @@ canvas {
 }
 
 .block-group, .block-group-left, .block-group-right {
-    border: 1px solid gray;
+    border: 1px solid black;
     border-radius: 12pt;
     padding-top: 4pt;
     padding-right: 96pt;
@@ -182,7 +182,7 @@ canvas {
 }
 
 .linkbutton, .linkbutton-selected {
-    border: 1px solid gray;
+    border: 1px solid black;
     border-radius: 8pt;
     background-color: #DDD;
     padding: 6pt;
