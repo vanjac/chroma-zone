@@ -1,6 +1,6 @@
 ---
-title: Projects
+title: Featured
 layout: default
-filter: projects
+filter: featured
 ---
 
