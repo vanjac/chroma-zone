@@ -210,9 +210,12 @@ canvas {
     text-align: center;
 }
 
-.tag {
-    border: 1px solid gray;
-    border-radius: 4pt;
-    padding: 4pt;
-    margin: 2pt;
+table {
+    border-spacing: 4pt 0;
+}
+
+th {
+    white-space: nowrap;
+    text-align: left;
+    font-weight: 300;
 }

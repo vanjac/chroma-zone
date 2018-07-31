@@ -3,21 +3,18 @@ layout: default
 title: Everything
 ---
 
-<style>
-.post-link:hover {
-  color: #2266FF;
-  text-shadow: 1px 1px #000088;
-  font-weight: bold;
-}
-.post-link:active {
-  color: #FF0099;
-  text-shadow: 1px 1px #880088;
-  font-weight: bold;
-}
-</style>
+<p>Click a link below to view more details:</p>
 
-<p><strong>Click a link below to view more details:</strong></p>
-
+<table>
 {% for post in site.posts %}
-    <p><a href="{{ post.url }}" class="post-link">{{ post.title }}</a></p>
+  <tr>
+    <th>{{ post.date | date_to_string }}</th>
+    <th><a href="{{ post.link }}">{{ post.title }}</a></th>
+    </tr>
+  <tr>
+  </tr>
+    <th></th>
+    <th><i>{{ post.content }}</i></th>
+  </tr>
 {% endfor %}
+</table>
