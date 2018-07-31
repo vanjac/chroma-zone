@@ -9,6 +9,9 @@ html {
 
 a {
     color: inherit;
+}
+
+.blocklink {
     text-decoration: none; /* remove link underline */
 }
 

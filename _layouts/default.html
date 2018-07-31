@@ -30,7 +30,7 @@
         {% if page.title == linkName %}
           <span class="linkbutton-selected">{{ linkName }}</span>
         {% else %}
-          <a href="{{linkURL}}"><span class="linkbutton">{{linkName}}</span></a>
+          <a href="{{linkURL}}" class="blocklink"><span class="linkbutton">{{linkName}}</span></a>
         {% endif %}
       {% endfor %}
     </div>
@@ -43,7 +43,7 @@
     {% assign animationDelay = 0.0 %}
     
     {% for post in site.tags[page.filter] %}
-      <a href="{{ post.link }}">
+      <a href="{{ post.link }}" class="blocklink">
         {% if isRightBlock %} {% assign isRightBlock = false %}
           <div class="block-group-right-transition">
           <div class="block-group-right"
