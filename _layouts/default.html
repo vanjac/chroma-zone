@@ -24,9 +24,9 @@
     </script>
     
     <div class="linksection">
-      {% for i in (1..4) %}
-        {% capture linkName %}{% cycle 'All', 'Featured', 'Unfinished', 'About' %}{% endcapture %}
-        {% capture linkURL %}{% cycle '/all/', '/', '/unfinished/', '/about/' %}{% endcapture %}
+      {% for i in (1..5) %}
+        {% capture linkName %}{% cycle 'All', 'Featured', 'Sketches', 'Unfinished', 'About' %}{% endcapture %}
+        {% capture linkURL %}{% cycle '/all/', '/', '/sketches/'. '/unfinished/', '/about/' %}{% endcapture %}
         {% if page.title == linkName %}
           <span class="linkbutton-selected">{{ linkName }}</span>
         {% else %}
