@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!--this file was generated with Jekyll/Liquid.-->
-<!--sorry about the whitespace-->
 <html>
   
   <head>
@@ -13,8 +11,6 @@
   </head>
   
   <body>
-    <script type="text/javascript" src="/redirect.js"></script>
-  
     <h1 onclick="titleClicked()" id="titleText">{{ page.title }}</h1>
     <script type="text/javascript">
     function titleClicked() {
@@ -30,29 +26,7 @@
     <!--start page content-->
     {{ content }}
     <!--end page content-->
-    
-    {% assign isRightBlock = false %}
-    {% assign animationDelay = 0.0 %}
-    
-    {% for post in site.tags[page.filter] %}
-      <a href="{{ post.link }}" class="blocklink" title="{{ post.date | date_to_string }}">
-        {% if isRightBlock %} {% assign isRightBlock = false %}
-          <div class="block-group-right-transition">
-          <div class="block-group-right"
-        {% else %} {% assign isRightBlock = true %}
-          <div class="block-group-left-transition">
-          <div class="block-group-left"
-        {% endif %}
-        style="animation-delay: {{animationDelay}}s; background-color: #BEB;">
-        <p class="project-name"> {{ post.title }} </p>
-        <p class="project-description">{{ post.excerpt | strip }}</p>
-        </div>
-        </div>
-      </a>
-      {% assign animationDelay = animationDelay | plus: 0.1 %}
-    {% endfor %}
-    
-    <script type="text/javascript" src="/colorful-index.js"></script>
+
   </body>
 
 </html>
