@@ -24,15 +24,7 @@
     </script>
     
     <div class="linksection">
-      {% for i in (1..5) %}
-        {% capture linkName %}{% cycle 'Featured', 'Other', 'Sketches', 'Unfinished', 'About' %}{% endcapture %}
-        {% capture linkURL %}{% cycle '/', '/other/', '/sketches/', '/unfinished/', '/about/' %}{% endcapture %}
-        {% if page.title == linkName %}
-          <span class="linkbutton-selected">{{ linkName }}</span>
-        {% else %}
-          <a href="{{linkURL}}" class="blocklink"><span class="linkbutton">{{linkName}}</span></a>
-        {% endif %}
-      {% endfor %}
+          <a href="http://chroma.zone/" class="blocklink"><span class="linkbutton">Home</span></a>
     </div>
     
     <!--start page content-->
