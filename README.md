@@ -1,3 +1,3 @@
 # vanjac.github.io
 
-My github.io page. Main website is at [chroma.zone](http://chroma.zone/).
+Used to be my main website. Now it has moved to [chroma.zone](http://chroma.zone/), and other pages have been split off into their own repositories.
