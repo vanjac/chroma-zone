@@ -1,1 +1,0 @@
-CFUP 00040200 https://github.com/vanjac/chromafiler/releases/tag/v0.4.1-beta
