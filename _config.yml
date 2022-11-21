@@ -4,3 +4,4 @@ defaults:
             path: ""
         values:
             filter: none
+remote_theme: vanjac/theme
