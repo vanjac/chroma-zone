@@ -30,6 +30,7 @@ body {
 
 .content-box {
   flex-grow: 1;
+  min-width: 0;
 }
 
 .content {

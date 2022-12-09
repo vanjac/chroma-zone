@@ -33,8 +33,14 @@ html {
 }
 ::-webkit-scrollbar {
   background-color: white;
-  border-left: 1pt solid black;
   width: 7pt;
+  height: 7pt;
+}
+::-webkit-scrollbar:vertical, ::-webkit-scrollbar-corner {
+  border-left: 1pt solid black;
+}
+::-webkit-scrollbar:horizontal, ::-webkit-scrollbar-corner {
+  border-top: 1pt solid black;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #888;
