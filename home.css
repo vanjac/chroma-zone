@@ -1,0 +1,73 @@
+body {
+  max-width: 1000pt;
+  padding: 20pt;
+  margin: auto;
+}
+
+.page-root, .nav-box, .content-box {
+  border: 3pt solid black;
+}
+.nav-box, .content-box {
+  margin: 3pt;
+  position: relative;
+}
+
+.page-root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.nav-box {
+  width: 180pt;
+  flex-shrink: 0;
+  margin-right: 0;
+}
+
+.nav-box > iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.content-box {
+  flex-grow: 1;
+}
+
+.content {
+  overflow-y: auto;
+  padding: 24pt 16pt 4pt;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-button-left {
+  position: absolute;
+  background: white;
+  border: 1pt solid black;
+  cursor: pointer;
+  padding: 2pt;
+  left: -1pt;
+  top: -1pt;
+}
+
+.floating-button-left img {
+  width: 20pt;
+  height: 20pt;
+  margin: 0;
+}
+
+#open-nav-button {
+  display: none;
+}
+
+@media (max-width: 45em) {
+  body {
+    padding: 6pt;
+  }
+  .nav-box {
+    display: none;
+  }
+  #open-nav-button {
+    display: block;
+  }
+}

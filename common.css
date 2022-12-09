@@ -1,0 +1,68 @@
+/* CSS Reset based on https://www.joshwcomeau.com/css/custom-css-reset/ */
+/* see also: https://piccalil.li/blog/a-modern-css-reset/ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+iframe {
+  border: none;
+}
+/* end CSS Reset */
+
+
+html {
+  scrollbar-color: black white; /* TODO webkit support? */
+}
+
+body {
+  font-family: "Iosevka Web", monospace;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 12pt;
+}
+
+h2 {
+  margin-top: 12pt;
+}
+
+img {
+  margin-top: 8pt;
+  margin-bottom: 8pt;
+}
+
+a {
+  color: #8d00b0;
+}
+
+a:hover {
+  background-color: #f2d5e5;
+  border-radius: 3pt;
+  margin: -3pt;
+  padding: 3pt;
+}
+
+code {
+  background-color: #eee;
+  margin: -3pt;
+  padding: 3pt;
+}
