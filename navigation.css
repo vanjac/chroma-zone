@@ -1,3 +1,23 @@
 body {
   padding: 24pt 16pt 4pt;
+  overflow-x: hidden;
+}
+
+.nav-link {
+  display: block;
+  margin: 0 -50pt;
+  padding: 0 50pt;
+  transition: background-color 1s;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.nav-link:after {
+  content: " >";
+}
+
+.nav-link:hover {
+  background-color: hsl(var(--link-hue),100%,45%);
+  color: white;
+  transition: background-color 0s;
 }

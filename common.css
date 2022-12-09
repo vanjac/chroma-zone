@@ -31,6 +31,14 @@ iframe {
 html {
   scrollbar-color: black white; /* TODO webkit support? */
 }
+::-webkit-scrollbar {
+  background-color: white;
+  border-left: 1pt solid black;
+  width: 7pt;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
 
 body {
   font-family: "Iosevka Web", monospace;
@@ -50,11 +58,11 @@ img {
   margin-bottom: 8pt;
 }
 
-a {
+p a {
   color: #8d00b0;
 }
 
-a:hover {
+p a:hover {
   background-color: #f2d5e5;
   border-radius: 3pt;
   margin: -3pt;
