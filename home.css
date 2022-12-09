@@ -21,7 +21,6 @@ body {
 .nav-box {
   width: 180pt;
   flex-shrink: 0;
-  margin-right: 0;
 }
 
 .nav-box > iframe {
@@ -56,18 +55,25 @@ body {
   margin: 0;
 }
 
-#open-nav-button {
+#close-nav-button, #expand-nav-button, #open-nav-button {
   display: none;
 }
 
-@media (max-width: 45em) {
+@media all and (max-width: 45em) {
   body {
     padding: 6pt;
   }
   .nav-box {
     display: none;
+    width: 0;
+    flex-grow: 1;
   }
   #open-nav-button {
     display: block;
+  }
+}
+@media not all and (max-width: 45em) {
+  .nav-box {
+    margin-right: 0;
   }
 }
