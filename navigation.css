@@ -16,7 +16,7 @@ body {
   content: " >";
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link:target {
   background-color: hsl(var(--link-hue),100%,45%);
   color: white;
   transition: background-color 0s;
