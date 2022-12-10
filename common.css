@@ -59,12 +59,12 @@ h2 {
   margin-top: 12pt;
 }
 
-img {
+img, p, ul, ol {
   margin-top: 8pt;
   margin-bottom: 8pt;
 }
 
-p a, li a {
+a {
   color: #8d00b0;
 }
 
