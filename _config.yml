@@ -1,10 +1,1 @@
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      links:
-        -
-          title: Test
-          url: https://chroma.zone/test
 remote_theme: vanjac/theme
