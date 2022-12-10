@@ -64,11 +64,11 @@ img {
   margin-bottom: 8pt;
 }
 
-p a {
+p a, li a {
   color: #8d00b0;
 }
 
-p a:hover {
+p a:hover, li a:hover {
   background-color: #f2d5e5;
   border-radius: 3pt;
   margin: -3pt;
