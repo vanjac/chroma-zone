@@ -35,9 +35,32 @@ body {
 
 .content {
   overflow-y: auto;
-  padding: 24pt 16pt 4pt;
+  padding: 4pt 16pt;
   width: 100%;
   height: 100%;
+}
+
+.content-header {
+  margin-left: auto;
+  height: 32pt;
+  display: table;
+  border-spacing: 4pt 0;
+}
+
+.quick-link {
+  display: table-cell;
+  border: 1pt solid black;
+  text-decoration: inherit;
+  color: inherit;
+  height: 100%;
+  vertical-align: middle;
+  padding: 0 8pt;
+}
+
+.quick-link:hover {
+  background: black;
+  color: white;
+  border-color: white;
 }
 
 .floating-button-left {
