@@ -46,6 +46,10 @@ html {
   background-color: #888;
 }
 
+:focus {
+  outline: 1.5pt solid black;
+}
+
 body {
   font-family: "Iosevka Fixed Web", monospace;
   font-weight: 400;
