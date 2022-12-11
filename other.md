@@ -41,8 +41,6 @@ These are from high school or earlier and of varying quality, listed here for ar
   Simulates an old version of the Instagram iOS app. You can add your own photos and captions.
 - [**Minus**](https://github.com/vanjac/Minus) _(2016-03)_  
   Interpreter for an esoteric programming language.
-- [**Christmas Engine**](https://github.com/vanjac/ChristmasEngine) _(2015-12)_  
-  The engine isn't very interesting, but it includes a fun and top quality demo game.
 - [**HexKey**](https://github.com/vanjac/HexKey) _(2015-08)_  
   Maps keyboard keys to piano notes in a special hexagonal layout, inspired by an app called [HexASound](http://hexasound.com/). Chords and harmonies are shapes.
 - [**Interactive Timeline**](https://github.com/vanjac/interactive/tree/master/InteractiveTimeline) _(2015-06)_  
