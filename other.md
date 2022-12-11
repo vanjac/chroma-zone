@@ -1,7 +1,7 @@
 # Other Projects
 
 - [**Pipes of Wrath**](https://chroma.zone/wrath/)  
-  Entry for a game jam
+  Entry for a game jam (with [Andrey Risukhin](https://andreyrisukhin.github.io/))
 - [**Pixilang Decompiler**](https://github.com/vanjac/pixilang-decompiler)  
   A decompiler for the [Pixilang](https://www.warmplace.ru/soft/pixilang/) programming language. (made private, email for more info)
 
@@ -12,6 +12,8 @@
   A wiki documenting the ZoomScape engine, a 3D engine used in 1990's era educational games.
 
 ## Old Projects:
+These are from high school or earlier, listed here for archival only.
+
 - [**Visual Logo**](https://vanjac.github.io/visual-logo) _(2017-09)_  
   Small experiment based on the scripting system I designed for ARDROID. It combines a Logo-like language with a visual palette of commands which you can click to build programs.
 - [**Spyfall**](https://vanjac.github.io/share/spyfall/) _(2017-06)_  
