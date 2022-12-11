@@ -1,8 +1,6 @@
 # welcome to the chroma zone
 
-> Hi, this site is still under construction! Some pages might be missing or unfinished.
-
-This is a collection of apps, utilities, and other projects I've worked on. I'm studying computer science and I'm especially interested in designing software for use in creative fields (like graphics, music, game dev, and video production), as well as unusual and unique computer interfaces that make complex systems more approachable.
+This is a collection of apps, utilities, and other projects I've worked on.
 
 ## Projects Overview
 
