@@ -23,7 +23,7 @@ This website is a collection of things I've made, mostly experiments for my own 
 
 ### Currently working on:
 
-- [RISCy Save](/riscy-save/): an open/save dialog enhancer utility for Windows, inspired by [RISC OS](https://en.wikipedia.org/wiki/RISC_OS)
+- [RISCy Save](/riscy-save/): an open/save dialog enhancer utility for Windows
 - Updates to [ChromaFiler](/chromafiler/)
 - Finishing this website
 
