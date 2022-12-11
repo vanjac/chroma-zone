@@ -20,3 +20,11 @@ This website is a collection of things I've made, mostly experiments for my own 
   Small 3D renderer for the Game Boy Advance. Features very fast solid triangle fill, optimized in ARM assembly.
 - [**Tapedeck**](/tapedeck/)
   An audio editor designed to be controlled with a MIDI DJ board and no screen.
+
+### Currently working on:
+
+- [RISCy Save](/riscy-save/): an open/save dialog enhancer utility for Windows, inspired by [RISC OS](https://en.wikipedia.org/wiki/RISC_OS)
+- Updates to [ChromaFiler](/chromafiler/)
+- Finishing this website
+
+_(updated 2022-12-10)_
