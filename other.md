@@ -1,11 +1,12 @@
 # Other Projects
 
+## Unlisted:
 - [**Pipes of Wrath**](https://chroma.zone/wrath/)  
   Entry for a game jam (with [Andrey Risukhin](https://andreyrisukhin.github.io/))
 - [**Pixilang Decompiler**](https://github.com/vanjac/pixilang-decompiler)  
   A decompiler for the [Pixilang](https://www.warmplace.ru/soft/pixilang/) programming language. (made private, email for more info)
 
-## Unfinished Projects:
+## Unfinished:
 - [**chromatracker**](https://github.com/vanjac/chromatracker)  
   A [music tracker](https://en.wikipedia.org/wiki/Music_tracker) for phones.
 - [**ZoomScape Info**](https://github.com/vanjac/zoomscape-info/wiki)  
