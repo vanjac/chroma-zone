@@ -35,10 +35,6 @@ These are from high school or earlier and of varying quality, listed here for ar
   An Arduino robot controller app for Android, featuing a simplified scripting system. Designed to be used by middle school robotics classes, as part of a platform where students could design and build 3D-printed Arduino robots.
 - [**FRC Tutorials**](https://seamonsters-2605.github.io/) _(2016-11)_  
   Collection of online tutorials and resources created for the FRC team. Some feature interactive graphics and simulations (eg. [Mecanum Drive](https://seamonsters-2605.github.io/archive/mecanum/)). *Note: currently maintained by someone else.*
-- [**Code Slideshow**](https://github.com/Seamonsters-2605/SeamonstersCodeSlideshow) _(2016-09)_  
-  Scrolls through a library of code and makes you look like a hacker.
-- [**Instagram Simulator**](https://github.com/vanjac/interactive/tree/master/IGSim) _(2016-03)_  
-  Simulates an old version of the Instagram iOS app. You can add your own photos and captions.
 - [**Minus**](https://github.com/vanjac/Minus) _(2016-03)_  
   Interpreter for an esoteric programming language.
 - [**HexKey**](https://github.com/vanjac/HexKey) _(2015-08)_  
