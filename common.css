@@ -80,3 +80,10 @@ code {
   margin: -3pt;
   padding: 3pt;
 }
+
+blockquote {
+  border-left: 3pt solid #999;
+  padding-left: 8pt;
+  font-style: italic;
+  background-color: #eee;
+}
