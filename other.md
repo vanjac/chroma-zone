@@ -13,7 +13,7 @@
   A wiki documenting the ZoomScape engine, a 3D engine used in 1990's era educational games.
 
 ## Old Projects:
-These are from high school or earlier and of varying quality, listed here for archival only.
+These were made when I was in high school or earlier and are of varying quality, listed here for archival only.
 
 - [**Visual Logo**](https://chroma.zone/visual-logo/) _(2017-09)_  
   Small experiment based on the scripting system I designed for ARDROID. It combines a Logo-like language with a visual palette of commands which you can click to build programs.
