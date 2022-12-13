@@ -1,3 +1,10 @@
+---
+links:
+  -
+    title: RSS
+    url: https://chroma.zone/rss.xml
+---
+
 # Other Projects
 
 ## Unlisted:
