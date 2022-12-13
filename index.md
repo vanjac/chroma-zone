@@ -1,6 +1,7 @@
 # welcome to the chroma zone
 
 This is where I collect various apps, utilities, and other projects I've worked on.
+Everything is open source and free for you to try.
 
 ## Projects Overview
 
