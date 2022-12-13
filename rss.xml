@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>chroma zone</title>
+    <link>https://chroma.zone/</link>
+    <description>chroma zone updates</description>
+    <language>en-us</language>
+    <image>
+      <title>chroma zone</title>
+      <link>https://chroma.zone/</link>
+      <url>https://chroma.zone/favicon.ico</url>
+      <width>32</width>
+      <height>32</height>
+    </image>
+    <item>
+      <title>New site design published</title>
+      <pubDate>Sat, 10 Dec 2022 17:23:00 -0800</pubDate>
+      <link>https://chroma.zone/updates</link>
+      <description><![CDATA[New site design published. I'll use this page to post updates about anything I'm working on.]]></description>
+    </item>
+  </channel>
+</rss>
