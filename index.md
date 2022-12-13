@@ -1,6 +1,6 @@
 # welcome to the chroma zone
 
-This is where I collect apps, utilities, and other projects I've worked on.
+This is where I collect various apps, utilities, and other projects I've worked on.
 
 ## Projects Overview
 
