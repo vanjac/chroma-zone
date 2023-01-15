@@ -24,6 +24,5 @@ Everything is open source and free for you to try.
 
 - [RISCy Save](/riscy-save/): an open/save dialog enhancer utility for Windows
 - Experimental successor to [N-Space](/voxel-editor/) using Godot
-- Finishing this website
 
 _(updated 2023-01-14)_
