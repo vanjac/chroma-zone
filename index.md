@@ -22,7 +22,6 @@ Everything is open source and free for you to try.
 
 ### Currently working on:
 
-- [RISCy Save](/riscy-save/): an open/save dialog enhancer utility for Windows
-- Experimental successor to [N-Space](/voxel-editor/) using Godot
+- [Aodix](https://github.com/vanjac/aodix-repair/) source code archival project
 
-_(updated 2023-01-14)_
+_(updated 2023-03-10)_
