@@ -22,6 +22,6 @@ Everything is open source and free for you to try.
 
 ### Currently working on:
 
-- [Aodix](https://github.com/vanjac/aodix-repair/) source code archival project
+- [Aodix](https://github.com/vanjac/aodix-enhanced/) development
 
-_(updated 2023-03-10)_
+_(updated 2023-03-22)_
