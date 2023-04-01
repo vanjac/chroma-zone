@@ -13,6 +13,12 @@
       <height>32</height>
     </image>
     <item>
+      <title>Aodix Enhanced version 4.2.0.2 released</title>
+      <pubDate>Fri, 31 Mar 2023 21:45:47 -0700</pubDate>
+      <link>https://github.com/vanjac/aodix-enhanced/releases/tag/v4.2.0.2</link>
+      <description><![CDATA[Aodix was recently made open source, and I've been working on my own fork to fix some bugs. I've released a new version which should fix a lot of plugin compatibility issues.]]></description>
+    </item>
+    <item>
       <title>N-Space 2 Progress Update</title>
       <pubDate>Sun, 5 Feb 2023 18:18:25 -0800</pubDate>
       <link>https://www.reddit.com/r/nspace/comments/10utdja/nspace_2_progress_update/</link>
