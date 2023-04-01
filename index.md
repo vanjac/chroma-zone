@@ -9,8 +9,8 @@ Everything is open source and free for you to try.
   An experimental file manager for Windows, borrowing ideas from [Spatial file managers](https://en.wikipedia.org/wiki/Spatial_file_manager) and [Miller Column browsers](https://en.wikipedia.org/wiki/Miller_columns).
 - [**N-Space**](/voxel-editor/)  
   A mobile app for building 3D interactive worlds. It has a unique interface built for rapid design and modification, and it has a logic system for making games.
-- [**Aodix Repair**](/aodix-repair/)  
-  A project to fix bugs in an old music sequencer program, through reverse engineering and code injection.
+- [**Aodix Enhanced**](/aodix-enhanced/)  
+  A fork of the Aodix music sequencer to fix longstanding bugs and continue development.
 - [**AR Recorder**](/ar-recorder/)  
   Use your phone as a 6DOF controller for Blender.
 - [**SketchUp Extensions**](/su-extensions/)  
@@ -24,4 +24,4 @@ Everything is open source and free for you to try.
 
 - [Aodix](https://github.com/vanjac/aodix-enhanced/) development
 
-_(updated 2023-03-22)_
+_(updated 2023-03-31)_
