@@ -13,6 +13,12 @@
       <height>32</height>
     </image>
     <item>
+      <title>ChromaFiler version 0.6.0 released</title>
+      <pubDate>Tue, 18 Apr 2023 15:52:48 -0700</pubDate>
+      <link>https://github.com/vanjac/chromafiler/releases/tag/v0.6.0-beta</link>
+      <description><![CDATA[This update includes many UI improvements, better Windows 7 compatibility, and some bug fixes.]]></description>
+    </item>
+    <item>
       <title>Aodix Enhanced version 4.2.0.2 released</title>
       <pubDate>Fri, 31 Mar 2023 21:45:47 -0700</pubDate>
       <link>https://github.com/vanjac/aodix-enhanced/releases/tag/v4.2.0.2</link>
