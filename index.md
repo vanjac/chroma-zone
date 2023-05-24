@@ -22,6 +22,6 @@ Everything is open source and free for you to try.
 
 ### Currently working on:
 
-- [Aodix](https://github.com/vanjac/aodix-enhanced/) development
+- [WingEd](https://chroma.zone/WingEd/) 3D modeling tool
 
-_(updated 2023-03-31)_
+_(updated 2023-05-24)_
