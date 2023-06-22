@@ -8,7 +8,7 @@ Everything is open source and free for you to try.
 - [**ChromaFiler**](/chromafiler/)  
   An experimental file manager for Windows, borrowing ideas from [Spatial file managers](https://en.wikipedia.org/wiki/Spatial_file_manager) and [Miller Column browsers](https://en.wikipedia.org/wiki/Miller_columns).
 - [**N-Space**](/voxel-editor/)  
-  A mobile app for building 3D interactive worlds. It has a unique interface built for rapid design and modification, and it has a logic system for making games.
+  A mobile app for building 3D interactive worlds. It has a unique interface built for rapid design and modification, and it has a logic system for making games. WIP successor: [N-Space 2](https://www.reddit.com/r/nspace/comments/10utdja/nspace_2_progress_update/)
 - [**Aodix Enhanced**](/aodix-enhanced/)  
   A fork of the Aodix music sequencer to fix longstanding bugs and continue development.
 - [**AR Recorder**](/ar-recorder/)  
@@ -23,5 +23,6 @@ Everything is open source and free for you to try.
 ### Currently working on:
 
 - [WingEd](https://chroma.zone/WingEd/) 3D modeling tool
+- Learning [Uxn](https://100r.co/site/uxn.html)
 
-_(updated 2023-05-24)_
+_(updated 2023-06-22)_
