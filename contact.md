@@ -4,4 +4,6 @@ The best way to contact me is by [email](ma&#105;&#108;to&#58;&#99;&#104;ro&#109
 
 My GitHub is [vanjac](https://github.com/vanjac/)
 
-I am also on Discord: `chroma_zone#2926`
+I am also on Discord `@chroma_zone`. Please message me somewhere else before adding me.
+
+Pronouns: he/they
