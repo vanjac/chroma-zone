@@ -11,7 +11,8 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
             return self.forward_request()
         _, ext = os.path.splitext(self.path)
         if ext == '.html' or ext == '':
-            return self.forward_request()
+            if not os.path.exists(self.translate_path(self.path)):
+                return self.forward_request()
         return super().do_GET()
 
     def forward_request(self):

@@ -16,6 +16,10 @@ body {
   content: " >";
 }
 
+.ext-link:after {
+  content: " ->";
+}
+
 .nav-link:hover, .nav-link:target {
   background-color: var(--link-col);
   color: white;
