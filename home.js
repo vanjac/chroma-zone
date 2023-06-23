@@ -26,5 +26,5 @@ $('#open-nav-button').addEventListener('click', e => {
 
 $('#close-nav-button').addEventListener('click', resetNav);
 
-if (PerformanceNavigationTiming.type === "back_forward")
+if (window.performance.getEntriesByType("navigation")[0].type === "back_forward")
   resetNav(); // some mobile browsers preserve the style changes
