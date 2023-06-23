@@ -26,5 +26,7 @@ $('#open-nav-button').addEventListener('click', e => {
 
 $('#close-nav-button').addEventListener('click', resetNav);
 
-if (window.performance.getEntriesByType("navigation")[0].type === "back_forward")
-  resetNav(); // some mobile browsers preserve the style changes
+window.addEventListener("load", e => {
+  if (window.performance.getEntriesByType("navigation")[0].type === "back_forward")
+    resetNav(); // some mobile browsers preserve the style changes
+});
