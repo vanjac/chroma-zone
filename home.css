@@ -7,6 +7,12 @@ body {
 .page-root, .nav-box, .content-box {
   border: 3pt solid black;
 }
+@media (prefers-color-scheme: dark) {
+  .page-root, .nav-box, .content-box {
+    border-color: white;
+  }
+}
+
 .nav-box, .content-box {
   margin: 3pt;
   position: relative;
@@ -56,11 +62,23 @@ body {
   vertical-align: middle;
   padding: 0 8pt;
 }
+@media (prefers-color-scheme: dark) {
+  .quick-link {
+    border-color: white;
+  }
+}
 
 .quick-link:hover {
   background: black;
   color: white;
   border-color: white;
+}
+@media (prefers-color-scheme: dark) {
+  .quick-link:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
 }
 
 .floating-button-left {
@@ -71,6 +89,11 @@ body {
   padding: 2pt;
   left: -1pt;
   top: -1pt;
+}
+@media (prefers-color-scheme: dark) {
+  .floating-button-left {
+    filter: invert(100%);
+  }
 }
 
 .floating-button-left img {

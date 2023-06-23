@@ -45,14 +45,39 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: #888;
 }
+@media (prefers-color-scheme: dark) {
+  html {
+    scrollbar-color: white black;
+  }
+  ::-webkit-scrollbar {
+    background-color: black;
+  }
+  ::-webkit-scrollbar:vertical, ::-webkit-scrollbar-corner {
+    border-left-color: white;
+  }
+  ::-webkit-scrollbar:horizontal, ::-webkit-scrollbar-corner {
+    border-top-color: white;
+  }
+}
 
 :focus {
   outline: 1.5pt solid black;
+}
+@media (prefers-color-scheme: dark) {
+  :focus {
+    outline-color: white;
+  }
 }
 
 body {
   font-family: "Iosevka Fixed Web", monospace;
   font-weight: 400;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
 }
 
 h2 {
@@ -67,6 +92,11 @@ img, p, ul, ol {
 a {
   color: #8d00b0;
 }
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #dc4fff;
+  }
+}
 
 p a, li a {
   margin: -3pt;
@@ -77,11 +107,21 @@ p a:hover, li a:hover {
   background-color: #f2d5e5;
   border-radius: 3pt;
 }
+@media (prefers-color-scheme: dark) {
+  p a:hover, li a:hover {
+    background-color: #6e0840;
+  }
+}
 
 code, pre {
   background-color: #eee;
   margin: -3pt 0;
   padding: 3pt;
+}
+@media (prefers-color-scheme: dark) {
+  code, pre {
+    background-color: #333;
+  }
 }
 
 blockquote {
@@ -89,4 +129,9 @@ blockquote {
   padding-left: 8pt;
   font-style: italic;
   background-color: #eee;
+}
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background-color: #333;
+  }
 }
