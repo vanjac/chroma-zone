@@ -6,4 +6,3 @@ My GitHub is [vanjac](https://github.com/vanjac/)
 
 I am also on Discord `@chroma_zone`. Please message me somewhere else before adding me.
 
-Pronouns: he/they
