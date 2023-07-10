@@ -24,5 +24,5 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(resp.content)
         self.wfile.flush()
 
-with http.server.HTTPServer(('', 8000), CustomHandler) as server:
+with http.server.HTTPServer(('', PORT), CustomHandler) as server:
     server.serve_forever()
