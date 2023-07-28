@@ -5,3 +5,5 @@ The best way to contact me is by [email](ma&#105;&#108;to&#58;&#99;&#104;ro&#109
 GitHub: [vanjac](https://github.com/vanjac/)
 
 Discord: `@chroma_zone` (please message me somewhere else before adding me)
+
+LinkedIn and resume: email me!
