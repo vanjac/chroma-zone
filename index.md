@@ -22,9 +22,9 @@ Everything is open source and free for you to try.
 
 ### Currently working on:
 
-- [WingEd](https://chroma.zone/WingEd/) 3D modeling tool
-- Learning [Uxn](https://100r.co/site/uxn.html)
+- [WingEd](/WingEd/) 3D modeling tool
+- [N-Space](/voxel-editor/) updates
 
-_(updated 2023-06-22)_
+_(updated 2023-07-28)_
 
 *All work copyright © 2019 - 2023 J. van't Hoog. [Contact me](/contact)*
