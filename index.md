@@ -26,3 +26,5 @@ Everything is open source and free for you to try.
 - Learning [Uxn](https://100r.co/site/uxn.html)
 
 _(updated 2023-06-22)_
+
+*All work copyright © 2019 - 2023 J. van't Hoog. [Contact me](/contact)*
