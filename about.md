@@ -2,7 +2,7 @@
 
 *(he/they)*
 
-I'm a recent computer science graduate (B.S.) who uses their free time to hack on a variety of personal projects. I'm especially interested in creative tools, user interfaces, and low-level programming. I like to study old software to learn about forgotten UI paradigms that can inspire my work.
+I'm a recent computer science graduate (B.S.) who uses their free time to hack on a variety of personal projects. I'm especially interested in creative tools, user interfaces, and low-level programming. I like to study old software to learn about forgotten paradigms that can inspire my work.
 
 I'm currently looking for work. [Contact me](/contact)
 
