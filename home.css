@@ -107,6 +107,7 @@ body {
 }
 
 .tech-tag {
+  display: none;
   color: #888;
   text-decoration: inherit;
 }

@@ -38,6 +38,8 @@ Everything is open source and free for you to try.
   <a class="tech-tag" href="#linux">#linux</a>  
   An audio editor designed to be controlled with a MIDI DJ board and no screen.
 
+<input type="checkbox" id="show-tags"><label for="show-tags">Show tags</label>
+
 ### Currently working on:
 
 - [WingEd](/WingEd/) 3D modeling tool

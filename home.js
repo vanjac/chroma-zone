@@ -1,7 +1,7 @@
 const $ = s => document.querySelector(s);
 const $all = s => document.querySelectorAll(s);
 
-function resetNav(e) {
+function resetNav() {
   $('#navigation').style.display = null;
   $('#content-box').style.display = null;
   $('#collapse-nav-button').style.display = null;
@@ -10,7 +10,7 @@ function resetNav(e) {
   $('#close-nav-button').style.display = null;
 }
 
-$('#collapse-nav-button').addEventListener('click', e => {
+$('#collapse-nav-button').addEventListener('click', () => {
   $('#navigation').style.display = 'none';
   $('#collapse-nav-button').style.display = 'none';
   $('#expand-nav-button').style.display = 'block';
@@ -18,7 +18,7 @@ $('#collapse-nav-button').addEventListener('click', e => {
 
 $('#expand-nav-button').addEventListener('click', resetNav);
 
-$('#open-nav-button').addEventListener('click', e => {
+$('#open-nav-button').addEventListener('click', () => {
   $('#navigation').style.display = 'block';
   $('#content-box').style.display = 'none';
   $('#open-nav-button').style.display = 'none';
@@ -27,10 +27,23 @@ $('#open-nav-button').addEventListener('click', e => {
 
 $('#close-nav-button').addEventListener('click', resetNav);
 
-$all('.tech-tag').forEach(anchor => {
-  if (anchor.hash === window.location.hash) {
-    anchor.classList.add("tech-hilite");
-  }
+function updateTags() {
+  $all('.tech-tag').forEach(anchor => {
+    if (anchor.hash === window.location.hash) {
+      anchor.classList.add('tech-hilite');
+    } else {
+      anchor.classList.remove('tech-hilite');
+    }
+  });
+}
+
+updateTags();
+window.addEventListener('hashchange', updateTags);
+
+$('#show-tags').addEventListener('change', e => {
+  $all('.tech-tag').forEach(anchor => {
+    anchor.style.display = (e.currentTarget.checked) ? 'inline' : 'none';
+  });
 })
 
 // https://web.dev/bfcache/
