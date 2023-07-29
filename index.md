@@ -42,7 +42,7 @@ Everything is open source and free for you to try.
   <a class="tech-tag" href="#audio">#audio</a>  
   An audio editor designed to be controlled with a MIDI DJ board and no screen.
 
-<input type="checkbox" id="show-tags" style="display:none;"><label for="show-tags">Show tags</label>
+<span style="display:none;"><input type="checkbox" id="show-tags"><label for="show-tags">Show tags</label></span>
 
 ### Currently working on:
 
