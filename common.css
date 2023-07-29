@@ -135,3 +135,7 @@ blockquote {
     background-color: #333;
   }
 }
+
+input {
+  margin: 0 6pt;
+}

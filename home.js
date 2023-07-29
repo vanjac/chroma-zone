@@ -28,23 +28,20 @@ $('#open-nav-button').addEventListener('click', () => {
 $('#close-nav-button').addEventListener('click', resetNav);
 
 function updateTags() {
+  let dispstyle = $('#show-tags').checked ? 'inline' : 'none';
   $all('.tech-tag').forEach(anchor => {
     if (anchor.hash === window.location.hash) {
       anchor.classList.add('tech-hilite');
     } else {
       anchor.classList.remove('tech-hilite');
     }
+    anchor.style.display = dispstyle;
   });
 }
 
 updateTags();
 window.addEventListener('hashchange', updateTags);
-
-$('#show-tags').addEventListener('change', e => {
-  $all('.tech-tag').forEach(anchor => {
-    anchor.style.display = (e.currentTarget.checked) ? 'inline' : 'none';
-  });
-})
+$('#show-tags').addEventListener('change', updateTags);
 
 // https://web.dev/bfcache/
 window.addEventListener('pageshow', e => {
