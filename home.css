@@ -106,6 +106,15 @@ body {
   display: none;
 }
 
+.tech-tag {
+  color: #888;
+  text-decoration: inherit;
+}
+
+.tech-tag:target {
+  font-weight: bold;
+}
+
 @media all and (max-width: 45em) {
   body {
     padding: 6pt;
