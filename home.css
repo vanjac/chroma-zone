@@ -111,7 +111,7 @@ body {
   text-decoration: inherit;
 }
 
-.tech-tag:target {
+.tech-hilite {
   font-weight: bold;
 }
 

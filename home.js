@@ -1,4 +1,5 @@
 const $ = s => document.querySelector(s);
+const $all = s => document.querySelectorAll(s);
 
 function resetNav(e) {
   $('#navigation').style.display = null;
@@ -25,6 +26,12 @@ $('#open-nav-button').addEventListener('click', e => {
 });
 
 $('#close-nav-button').addEventListener('click', resetNav);
+
+$all('.tech-tag').forEach(anchor => {
+  if (anchor.hash === window.location.hash) {
+    anchor.classList.add("tech-hilite");
+  }
+})
 
 // https://web.dev/bfcache/
 window.addEventListener('pageshow', e => {
