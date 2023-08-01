@@ -1,7 +1,7 @@
 "use strict";
 
-const $ = s => document.querySelector(s);
-const $all = s => document.querySelectorAll(s);
+const $ = document.querySelector.bind(document);
+const $all = document.querySelectorAll.bind(document);
 
 function resetNav() {
   $('#navigation').style.display = null;
