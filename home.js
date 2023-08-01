@@ -1,3 +1,5 @@
+"use strict";
+
 const $ = s => document.querySelector(s);
 const $all = s => document.querySelectorAll(s);
 
@@ -27,8 +29,10 @@ $('#open-nav-button').addEventListener('click', () => {
 
 $('#close-nav-button').addEventListener('click', resetNav);
 
+let showTagsCheck = $('#show-tags');
+
 function updateTags() {
-  let dispstyle = $('#show-tags').checked ? 'inline' : 'none';
+  let dispstyle = showTagsCheck.checked ? 'inline' : 'none';
   $all('.tech-tag').forEach(anchor => {
     if (anchor.hash === window.location.hash) {
       anchor.classList.add('tech-hilite');
@@ -39,9 +43,11 @@ function updateTags() {
   });
 }
 
-updateTags();
-window.addEventListener('hashchange', updateTags);
-$('#show-tags').addEventListener('change', updateTags);
+if (showTagsCheck) {
+  updateTags();
+  window.addEventListener('hashchange', updateTags);
+  showTagsCheck.addEventListener('change', updateTags);
+}
 
 // https://web.dev/bfcache/
 window.addEventListener('pageshow', e => {
