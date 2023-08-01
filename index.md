@@ -49,6 +49,4 @@ Everything is open source and free for you to try.
 
 _(updated 2023-07-28)_
 
-*All work copyright © 2019 - 2023 J. van't Hoog. [Contact me](/contact)*
-
-<span style="display:none;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>
+*All work copyright © 2019 - 2023 J. van't Hoog. [Contact me](/contact)* <span style="display:none;float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>
