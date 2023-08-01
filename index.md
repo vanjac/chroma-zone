@@ -18,7 +18,7 @@ Everything is open source and free for you to try.
   <a class="tech-tag" href="#cpp">#c++</a>
   <a class="tech-tag" href="#x86">#x86</a>
   <a class="tech-tag" href="#assembly">#assembly</a>
-  <a class="tech-tag" href="#reverse-engineering">#reverse engineering</a>  
+  <a class="tech-tag" href="#reverse-eng">#reverse eng</a>  
   A fork of the Aodix music sequencer to fix longstanding bugs and continue development.
 - [**AR Recorder**](/ar-recorder/)&nbsp;
   <a class="tech-tag" href="#c-sharp">#c sharp</a>
