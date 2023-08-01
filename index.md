@@ -42,8 +42,6 @@ Everything is open source and free for you to try.
   <a class="tech-tag" href="#audio">#audio</a>  
   An audio editor designed to be controlled with a MIDI DJ board and no screen.
 
-<span style="display:none;"><input type="checkbox" id="show-tags"><label for="show-tags">Show tags</label></span>
-
 ### Currently working on:
 
 - [WingEd](/WingEd/) 3D modeling tool
@@ -52,3 +50,5 @@ Everything is open source and free for you to try.
 _(updated 2023-07-28)_
 
 *All work copyright © 2019 - 2023 J. van't Hoog. [Contact me](/contact)*
+
+<span style="display:none;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>
