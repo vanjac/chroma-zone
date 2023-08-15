@@ -45,11 +45,8 @@ Everything is open source and free for you to try.
 ### Currently working on:
 
 - [Aodix](/aodix-enhanced) updates
-- [WingEd](/WingEd/) 3D modeling tool&nbsp;
-  <a class="tech-tag" href="#cpp">#c++</a>
-  <a class="tech-tag" href="#win32">#win32</a>
-  <a class="tech-tag" href="#3d">#3d</a>
+- [ChromaFiler](/chromafiler) updates
 
-_(updated 2023-08-03)_
+_(updated 2023-08-15)_
 
 *Copyright © 2019 - 2023 J. van't Hoog. [Contact me](/contact)* <span style="float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>
