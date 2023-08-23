@@ -1,4 +1,4 @@
-# welcome to the chroma zone
+# chroma zone
 
 This is where I collect various apps, utilities, and other projects I've worked on.
 Everything is open source and free for you to try.
@@ -45,7 +45,11 @@ Everything is open source and free for you to try.
 ### Currently working on:
 
 - [Aodix](/aodix-enhanced) updates
-- [ChromaFiler](/chromafiler) updates
+- [WingEd](/WingEd/) 3D modeling tool&nbsp;
+  <a class="tech-tag" href="#cpp">#c++</a>
+  <a class="tech-tag" href="#win32">#win32</a>
+  <a class="tech-tag" href="#opengl">#opengl</a>
+  <a class="tech-tag" href="#3d">#3d</a>
 
 _(updated 2023-08-15)_
 
