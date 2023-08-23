@@ -47,9 +47,9 @@ Everything is open source and free for you to try.
 - [Aodix](/aodix-enhanced) updates
 - [WingEd](/WingEd/) 3D modeling tool&nbsp;
   <a class="tech-tag" href="#cpp">#c++</a>
-  <a class="tech-tag" href="#win32">#win32</a>
   <a class="tech-tag" href="#opengl">#opengl</a>
   <a class="tech-tag" href="#3d">#3d</a>
+  <a class="tech-tag" href="#win32">#win32</a>
 
 _(updated 2023-08-15)_
 
