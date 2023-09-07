@@ -6,4 +6,4 @@ GitHub: [vanjac](https://github.com/vanjac/)
 
 Discord: `@chroma_zone` (please message me somewhere else before adding me)
 
-LinkedIn and resume: unlisted to fight spam, please email me!
+LinkedIn and resume: unlisted to avoid spam, please email me!
