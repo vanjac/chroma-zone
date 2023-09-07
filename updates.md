@@ -7,6 +7,7 @@ links:
 
 # Updates
 
+- **2023-09-07:** [Aodix Enhanced version 4.2.0.3 released](https://github.com/vanjac/aodix-enhanced/releases/tag/v4.2.0.3)
 - **2023-07-16:** [N-Space version 1.3.5 released](https://github.com/vanjac/voxel-editor/releases/tag/v1.3.5)
 - **2023-04-18:** [ChromaFiler version 0.6.0 released](https://github.com/vanjac/chromafiler/releases/tag/v0.6.0-beta)
 - **2023-03-31:** [Aodix Enhanced version 4.2.0.2 released](https://github.com/vanjac/aodix-enhanced/releases/tag/v4.2.0.2)
