@@ -44,13 +44,8 @@ Everything is open source and free for you to try.
 
 ### Currently working on:
 
-- [WingEd](/WingEd/) 3D modeling tool&nbsp;
-  <a class="tech-tag" href="#cpp">#c++</a>
-  <a class="tech-tag" href="#opengl">#opengl</a>
-  <a class="tech-tag" href="#3d">#3d</a>
-  <a class="tech-tag" href="#win32">#win32</a>
-- N-Space tutorial videos
+- [ChromaFiler](/chromafiler/) updates
 
-_(updated 2023-08-23)_
+_(updated 2023-08-23) [Contact me](/contact)_
 
-*Copyright © 2019 - 2023 J. van't Hoog. [Contact me](/contact)* <!--<span style="float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>-->
+<!--<span style="float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>-->
