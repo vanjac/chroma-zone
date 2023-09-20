@@ -44,8 +44,8 @@ Everything is open source and free for you to try.
 
 ### Currently working on:
 
-- [ChromaFiler](/chromafiler/) updates
+- Taking a break
 
-_(updated 2023-08-23) [Contact me](/contact)_
+_(updated 2023-09-19) [Contact me](/contact)_
 
 <!--<span style="float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>-->
