@@ -13,6 +13,12 @@
       <height>32</height>
     </image>
     <item>
+      <title>ChromaFiler version 0.7.0 released</title>
+      <pubDate>Tue, 19 Sep 2023 19:37:01 -0700/pubDate>
+      <link>https://github.com/vanjac/chromafiler/releases/tag/v0.7.0-beta</link>
+      <description><![CDATA[Lots of changes to move ChromaFiler closer to being a proper "spatial" file manager.]]></description>
+    </item>
+    <item>
       <title>Aodix Enhanced version 4.2.0.3 released</title>
       <pubDate>Thu, 7 Sep 2023 14:27:44 -0700</pubDate>
       <link>https://github.com/vanjac/aodix-enhanced/releases/tag/v4.2.0.3</link>
