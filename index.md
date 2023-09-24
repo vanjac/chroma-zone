@@ -1,4 +1,4 @@
-# chroma zone
+# welcome to the chroma zone
 
 This is where I collect various apps, utilities, and other projects I've worked on.
 Everything is open source and free for you to try.
@@ -46,6 +46,6 @@ Everything is open source and free for you to try.
 
 - Taking a break
 
-_(updated 2023-09-19) [Contact me](/contact)_
+_(updated 2023-09-24) [Contact me](/contact)_
 
 <!--<span style="float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>-->
