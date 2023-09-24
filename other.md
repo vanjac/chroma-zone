@@ -1,4 +1,4 @@
-# Etc
+# Etc.
 
 ## Unlisted:
 - [**uxnwave**](https://github.com/vanjac/uxnwave)  

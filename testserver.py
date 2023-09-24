@@ -25,4 +25,5 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.flush()
 
 with http.server.HTTPServer(('', PORT), CustomHandler) as server:
+    print(f'http://localhost:{PORT}/')
     server.serve_forever()
