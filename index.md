@@ -13,7 +13,7 @@ Everything is open source and free for you to try.
   <a class="tech-tag" href="#c-sharp">#c sharp</a>
   <a class="tech-tag" href="#unity">#unity</a>
   <a class="tech-tag" href="#3d">#3d</a>  
-  A mobile app for building 3D interactive worlds. It has a unique interface built for rapid design and modification, and it has a logic system for making games.
+  A mobile app for building 3D interactive worlds. It has a unique interface built for rapid design and modification, and it has a logic system for making games. WIP successor: [N-Space 2](https://www.reddit.com/r/nspace/comments/10utdja/nspace_2_progress_update/)
 - [**Aodix Enhanced**](/aodix-enhanced/)&nbsp;
   <a class="tech-tag" href="#cpp">#c++</a>
   <a class="tech-tag" href="#x86">#x86</a>

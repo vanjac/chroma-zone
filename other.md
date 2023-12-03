@@ -1,6 +1,6 @@
 # Etc.
 
-## Unlisted:
+## More projects:
 - [**uxnwave**](https://github.com/vanjac/uxnwave)  
   WAV audio player for [Uxn](https://100r.co/site/uxn.html)
 - [**Pipes of Wrath**](https://chroma.zone/wrath/)  
