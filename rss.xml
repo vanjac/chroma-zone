@@ -13,6 +13,12 @@
       <height>32</height>
     </image>
     <item>
+      <title>ChromaFiler version 0.7.1 released</title>
+      <pubDate>Sun, 3 Dec 2023 15:45:13 -0800</pubDate>
+      <link>https://github.com/vanjac/chromafiler/releases/tag/v0.7.1-beta</link>
+      <description><![CDATA[This is a small bug fix release for ChromaFiler, including some bugs that were introduced by recent Windows 11 updates.]]></description>
+    </item>
+    <item>
       <title>ChromaFiler version 0.7.0 released</title>
       <pubDate>Tue, 19 Sep 2023 19:37:01 -0700</pubDate>
       <link>https://github.com/vanjac/chromafiler/releases/tag/v0.7.0-beta</link>

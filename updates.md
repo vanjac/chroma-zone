@@ -7,6 +7,7 @@ links:
 
 # Updates
 
+- **2023-12-03:** [ChromaFiler version 0.7.1 released](https://github.com/vanjac/chromafiler/releases/tag/v0.7.1-beta)
 - **2023-09-19:** [ChromaFiler version 0.7.0 released](https://github.com/vanjac/chromafiler/releases/tag/v0.7.0-beta)
 - **2023-09-07:** [Aodix Enhanced version 4.2.0.3 released](https://github.com/vanjac/aodix-enhanced/releases/tag/v4.2.0.3)
 - **2023-08-24:** [ChromaFiler version 0.6.1 released](https://github.com/vanjac/chromafiler/releases/tag/v0.6.1-beta)
