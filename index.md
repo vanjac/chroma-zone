@@ -1,7 +1,7 @@
 # welcome to the chroma zone
 
 This is where I collect various apps, utilities, and other projects I've worked on.
-Everything is open source and free for you to try.
+Everything here is open source and free for you to try.
 
 ## Projects Overview
 
@@ -44,8 +44,8 @@ Everything is open source and free for you to try.
 
 ### Currently working on:
 
-- Taking a break
+- Catching up
 
-_(updated 2023-09-24) [Contact me](/contact)_
+_(updated 2024-10-12) [Contact me](/contact)_
 
 <!--<span style="float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>-->

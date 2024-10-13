@@ -1,6 +1,6 @@
 # J
 
-I'm a software engineer who uses their free time (?) to hack on a variety of personal projects. I'm especially interested in creative tools and unusual user interfaces. I find a lot of inspiration in studying old/historical software, and design paradigms that were abandoned or never fully explored.
+I'm a software engineer who uses their free time (???) to hack on a variety of personal projects. I'm especially interested in creative tools and unusual user interfaces. I find a lot of inspiration in studying old/historical software, and design paradigms that were abandoned or never fully explored.
 
 [Contact me](/contact)
 
