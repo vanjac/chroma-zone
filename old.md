@@ -2,19 +2,19 @@
 
 These were made around when I was a teenager and are of varying quality, listed here for archival only.
 
-- [**Visual Logo**](https://chroma.zone/visual-logo/) _(2017-09)_  
+- [**Visual Logo**](/visual-logo/) _(2017-09)_  
   Small experiment based on the scripting system I designed for ARDROID. It combines a Logo-like language with a visual palette of commands which you can click to build programs.
-- [**Spyfall**](https://chroma.zone/share/spyfall/) _(2017-06)_  
+- [**Spyfall**](/share/spyfall/) _(2017-06)_  
   An alternative version of the online [Spyfall](https://spyfall.crabhat.com/) game with new locations, made with some friends. It's designed to work without connecting to a central server.
 - [**three**](https://github.com/vanjac/three) _(2017-05)_  
   3D game engine and map editor written in Python. I wouldn't recommend using this for any games.
 - [**tiny game console**](https://github.com/vanjac/tiny-game) _(2017-05)_  
   Experiment in making an extremely minimal virtual game console.
-- [**Modern Art 2**](https://chroma.zone/modernart2/) _(2017-04)_  
+- [**Modern Art 2**](/modernart2/) _(2017-04)_  
   Generates art pieces and constructs captions using recursive phrase templates.
 - [**DTMF Control**](https://github.com/vanjac/interactive/tree/master/dtmf) _(2017-03)_  
   Recognizes touch-tone sounds from a phone, and uses them to control a mouse or keyboard. [Video](https://youtu.be/I2vBBda5kAw)
-- [**UFSC-3D**](https://chroma.zone/sketches/ufsc3d/) _(2017-02)_  
+- [**UFSC-3D**](/sketches/ufsc3d/) _(2017-02)_  
   Tool to help decipher videos produced by the mysterious [unfavorable semicircle](https://www.unfavorablesemicircle.com/) account. It was discovered that, in at least one video, the RGB colors of frames map to XYZ points on a 3D object. You can see this most clearly with BREADTH.
 - [**Seamonsters Library**](https://github.com/seamonsters-2605/seamonsterstemplate) _(2017-01)_  
   Library for robot code that I built for my high school's [FRC](https://www.firstinspires.org/robotics/frc) team. Features include: coroutine-based robot commands which can be assembled into sequences; a universal drivetrain controller that can be configured for any type/configuration of wheels; robot position tracking and path following.

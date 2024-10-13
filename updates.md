@@ -2,7 +2,7 @@
 links:
   -
     title: RSS
-    url: https://chroma.zone/rss.xml
+    url: /rss.xml
 ---
 
 # Updates
