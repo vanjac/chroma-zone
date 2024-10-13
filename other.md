@@ -3,7 +3,7 @@
 ## More projects:
 - [**uxnwave**](https://github.com/vanjac/uxnwave)  
   WAV audio player for [Uxn](https://100r.co/site/uxn.html)
-- [**Pipes of Wrath**](https://chroma.zone/wrath/)  
+- [**Pipes of Wrath**](/wrath/)  
   Entry for a game jam (with [Andrey Risukhin](https://andreyrisukhin.github.io/))
 - [**Pixilang Decompiler**](https://github.com/vanjac/pixilang-decompiler)  
   A decompiler for the [Pixilang](https://www.warmplace.ru/soft/pixilang/) programming language. (made private, email for more info)
