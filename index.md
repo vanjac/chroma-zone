@@ -48,4 +48,5 @@ Everything here is open source and free for you to try.
 
 _(updated 2024-10-12) [Contact me](/contact)_
 
+<!--This website can be converted into a resume if I'm really desparate:-->
 <!--<span style="float:right;"><input type="checkbox" id="show-tags"><label for="show-tags">Resume mode</label></span>-->

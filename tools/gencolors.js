@@ -1,4 +1,5 @@
 "use strict";
+// Generate link colors for the navigation sidebar
 
 // https://twitter.com/jon_barron/status/1388233935641976833
 // https://basecase.org/env/on-rainbows

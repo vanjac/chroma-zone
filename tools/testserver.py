@@ -1,3 +1,4 @@
+# This script exists because I can't be bothered to get Jekyll running locally
 import os.path
 import http.server
 import requests
