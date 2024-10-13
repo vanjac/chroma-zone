@@ -45,6 +45,8 @@ Everything here is open source and free for you to try.
 ### Currently working on:
 
 - Catching up
+- Game dev experiments
+- Learning FORTH
 
 _(updated 2024-10-12) [Contact me](/contact)_
 
