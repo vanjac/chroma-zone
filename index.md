@@ -1,3 +1,10 @@
+---
+links:
+  -
+    title: GitHub
+    url: https://github.com/vanjac/
+---
+
 # welcome to the chroma zone
 
 This is where I collect various apps, utilities, and other projects I've worked on.
