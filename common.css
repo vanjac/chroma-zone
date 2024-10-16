@@ -68,7 +68,6 @@ html {
 
 body {
   font-family: "Iosevka Fixed Web", monospace;
-  font-weight: 400;
 }
 @media (prefers-color-scheme: dark) {
   body {
