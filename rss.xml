@@ -14,6 +14,12 @@
       <height>32</height>
     </image>
     <item>
+      <title>N-Space version 1.4.1</title>
+      <pubDate>Tue, 15 Oct 2024 19:03:25 PDT</pubDate>
+      <link>https://github.com/vanjac/voxel-editor/releases/tag/v1.4.1</link>
+      <description><![CDATA[I missed posting the last couple N-Space releases. Version 1.4.0 added "Prop" objects and some other improvements. Version 1.4.1 is a bug fix release, and is now available on Google Play. There is also now a <a href="https://chroma-zone.itch.io/n-space">Web Player</a> for playing .nspace files in a desktop browser.]]></description>
+    </item>
+    <item>
       <title>ChromaFiler version 0.7.1 released</title>
       <pubDate>Sun, 3 Dec 2023 15:45:13 -0800</pubDate>
       <link>https://github.com/vanjac/chromafiler/releases/tag/v0.7.1-beta</link>
