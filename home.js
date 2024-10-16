@@ -4,12 +4,12 @@ var $ = document.querySelector.bind(document)
 var $all = document.querySelectorAll.bind(document)
 
 function resetNav() {
-    $('#navigation').style.display = null
-    $('#content-box').style.display = null
-    $('#collapse-nav-button').style.display = null
-    $('#expand-nav-button').style.display = null
-    $('#open-nav-button').style.display = null
-    $('#close-nav-button').style.display = null
+    $('#navigation').style.display = ''
+    $('#content-box').style.display = ''
+    $('#collapse-nav-button').style.display = ''
+    $('#expand-nav-button').style.display = ''
+    $('#open-nav-button').style.display = ''
+    $('#close-nav-button').style.display = ''
 }
 
 $('#collapse-nav-button').addEventListener('click', function() {
