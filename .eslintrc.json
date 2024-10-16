@@ -1,0 +1,16 @@
+{
+    "ignorePatterns": ["tools/*.js"],
+    "env": {
+        "browser": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "curly": "error",
+        "strict": ["error", "global"],
+        "semi": ["error", "never", {"beforeStatementContinuationChars": "always"} ],
+        "no-extra-semi": "off",
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "no-empty": "off"
+    }
+}
