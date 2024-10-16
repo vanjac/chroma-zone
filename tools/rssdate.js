@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * @param {Date} date
  * @returns {string}
