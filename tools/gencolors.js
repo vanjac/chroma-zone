@@ -10,7 +10,10 @@ for (let i = 0; i < numColors; i++) {
     let h = i / numColors
     let r = f(3/6 - h), g = f(5/6 - h), b = f(7/6 - h)
     let className = '.link-color' + i
-    console.log(`${className}:hover, ${className}:target {
+    console.log(`${className}:hover {
+    background-color: #${r}${g}${b};
+}
+${className}:target {
     background-color: #${r}${g}${b};
 }`)
 }
