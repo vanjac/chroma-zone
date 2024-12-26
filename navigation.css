@@ -27,8 +27,6 @@ body {
 }
 
 .nav a:hover, .nav a:target {
-  background-color: #DC1566; /* fallback */
-  background-color: var(--link-col);
   color: white;
   transition: background-color 0s;
 }

@@ -9,5 +9,8 @@ let f = x => Math.floor(Math.sin(Math.PI * x)**2 * 230).toString(16).toUpperCase
 for (let i = 0; i < numColors; i++) {
     let h = i / numColors
     let r = f(3/6 - h), g = f(5/6 - h), b = f(7/6 - h)
-    console.log(`${i}: ${r}${g}${b}`)
+    let className = '.link-color' + i
+    console.log(`${className}:hover, ${className}:target {
+    background-color: #${r}${g}${b};
+}`)
 }
