@@ -26,7 +26,11 @@ body {
   content: " ->";
 }
 
-.nav a:hover, .nav a:target {
+.nav a:hover {
+  color: white;
+  transition: background-color 0s;
+}
+.nav a:target {
   color: white;
   transition: background-color 0s;
 }
