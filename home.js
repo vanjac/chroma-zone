@@ -1,7 +1,6 @@
 'use strict'
 
-var $ = document.querySelector.bind(document)
-var $all = document.querySelectorAll.bind(document)
+function $(s) { return document.querySelector(s) }
 
 function resetNav() {
     $('#navigation').style.display = ''
@@ -12,28 +11,28 @@ function resetNav() {
     $('#close-nav-button').style.display = ''
 }
 
-$('#collapse-nav-button').addEventListener('click', function() {
+$('#collapse-nav-button').onclick = function() {
     $('#navigation').style.display = 'none'
     $('#collapse-nav-button').style.display = 'none'
     $('#expand-nav-button').style.display = 'block'
-})
+}
 
-$('#expand-nav-button').addEventListener('click', resetNav)
+$('#expand-nav-button').onclick = resetNav
 
-$('#open-nav-button').addEventListener('click', function() {
+$('#open-nav-button').onclick = function() {
     $('#navigation').style.display = 'block'
     $('#content-box').style.display = 'none'
     $('#open-nav-button').style.display = 'none'
     $('#close-nav-button').style.display = 'block'
-})
+}
 
-$('#close-nav-button').addEventListener('click', resetNav)
+$('#close-nav-button').onclick = resetNav
 
 var showTagsCheck = $('#show-tags')
 
 function updateTags() {
     var dispstyle = showTagsCheck.checked ? 'inline' : 'none'
-    $all('.tech-tag').forEach(function(anchor) {
+    document.querySelectorAll('.tech-tag').forEach(function(anchor) {
         if (anchor.hash === window.location.hash) {
             anchor.classList.add('tech-hilite')
         } else {
@@ -45,13 +44,13 @@ function updateTags() {
 
 if (showTagsCheck) {
     updateTags()
-    window.addEventListener('hashchange', updateTags)
-    showTagsCheck.addEventListener('change', updateTags)
+    window.onhashchange = updateTags
+    showTagsCheck.onchange = updateTags
 }
 
 // https://web.dev/bfcache/
-window.addEventListener('pageshow', function(e) {
+window.onpageshow = function(e) {
     if (e.persisted) {
         resetNav()
     }
-})
+}
