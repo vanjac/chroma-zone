@@ -109,6 +109,7 @@ body {
 .floating-button-left img {
   width: 20pt;
   height: 20pt;
+  max-width: none;
   margin: 0;
 }
 
