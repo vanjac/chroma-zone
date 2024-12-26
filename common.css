@@ -99,6 +99,8 @@ a {
 p a, li a {
   margin: -3pt;
   padding: 3pt;
+  -moz-border-radius: 3pt;
+  -webkit-border-radius: 3pt;
   border-radius: 3pt;
 }
 
