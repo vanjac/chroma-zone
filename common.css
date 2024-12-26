@@ -142,3 +142,8 @@ blockquote {
 input {
   margin: 0 6pt;
 }
+
+em {
+  /* simulate italic variant */
+  font-style: oblique 10deg;
+}
