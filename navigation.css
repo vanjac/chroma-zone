@@ -3,13 +3,13 @@ body {
   overflow-x: hidden;
 }
 
-.nav-menu {
+.nav ul {
   margin: 0 0 18pt 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-link {
+.nav a {
   display: block;
   margin: 0 -50pt;
   padding: 0 50pt;
@@ -18,22 +18,22 @@ body {
   color: inherit;
 }
 
-.nav-link:after {
+.nav a:after {
   content: " >";
 }
 
-.ext-link:after {
+.nav .ext-link:after {
   content: " ->";
 }
 
-.nav-link:hover, .nav-link:target {
+.nav a:hover, .nav a:target {
   background-color: #DC1566; /* fallback */
   background-color: var(--link-col);
   color: white;
   transition: background-color 0s;
 }
 @media (prefers-color-scheme: dark) {
-  .nav-link:hover, .nav-link:target {
+  .nav a:hover, .nav a:target {
     color: black;
   }
 }
