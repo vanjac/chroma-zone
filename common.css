@@ -67,7 +67,7 @@ html {
 }
 
 body {
-  font-family: "Iosevka Aile Custom Web", monospace;
+  font-family: "Iosevka Aile Custom Web", "Consolas", monospace;
 }
 @media (prefers-color-scheme: dark) {
   body {
