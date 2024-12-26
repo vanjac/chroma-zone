@@ -1,6 +1,8 @@
 /* CSS Reset based on https://www.joshwcomeau.com/css/custom-css-reset/ */
 /* see also: https://piccalil.li/blog/a-modern-css-reset/ */
 *, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 * {
