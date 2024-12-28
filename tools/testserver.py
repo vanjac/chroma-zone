@@ -10,14 +10,13 @@ class CustomHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path.endswith('/'):
             return self.forward_request()
-        _, ext = os.path.splitext(self.path)
-        if ext == '.html' or ext == '':
-            if not os.path.exists(self.translate_path(self.path)):
-                return self.forward_request()
+        if not os.path.exists(self.translate_path(self.path)):
+            return self.forward_request()
         return super().do_GET()
 
     def forward_request(self):
         url = 'http://chroma.zone' + self.path.replace('.html', '')
+        print('Forward', url)
         headers = {'Host': 'chroma.zone', 'Accept': 'text/html'}
         resp = requests.get(url, headers=headers, verify=False)
         self.send_response(resp.status_code)
