@@ -32,20 +32,24 @@ var showTagsCheck = $('#show-tags')
 
 function updateTags() {
     var dispstyle = showTagsCheck.checked ? 'inline' : 'none'
-    document.querySelectorAll('.tech-tag').forEach(function(anchor) {
+    var anchors = document.querySelectorAll('.tech-tag')
+    for (var i = 0; i < anchors.length; i++) {
+        var anchor = anchors[i]
         if (anchor.hash === window.location.hash) {
-            anchor.classList.add('tech-hilite')
+            anchor.className = 'tech-tag tech-hilite'
         } else {
-            anchor.classList.remove('tech-hilite')
+            anchor.className = 'tech-tag'
         }
         anchor.style.display = dispstyle
-    })
+    }
 }
 
-if (showTagsCheck) {
-    updateTags()
-    window.onhashchange = updateTags
-    showTagsCheck.onchange = updateTags
+window.onload = function() {
+    if (showTagsCheck) {
+        updateTags()
+        window.onhashchange = updateTags
+        showTagsCheck.onclick = updateTags
+    }
 }
 
 // https://web.dev/bfcache/
