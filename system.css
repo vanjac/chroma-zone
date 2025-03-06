@@ -20,6 +20,10 @@ blockquote {
 	font-style: italic;
 }
 
+table, caption {
+	font: inherit; /* for Quirks mode */
+}
+
 th, td {
 	padding: 0.5em;
 }
