@@ -152,7 +152,7 @@ input {
   margin: 0 6pt;
 }
 
-em {
+em, i {
   /* simulate italic variant */
   font-style: oblique 10deg;
 }
