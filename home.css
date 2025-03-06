@@ -53,20 +53,27 @@ body {
 
 .content-header {
   float: right;
-  height: 32pt;
   display: table;
   border-spacing: 4pt 0;
 }
 
 .content-header a {
-  display: table-cell;
   border: 1pt solid black;
   text-decoration: inherit;
   color: inherit;
-  height: 100%;
   vertical-align: middle;
-  padding: 0 8pt;
+  padding: 6pt 8pt;
 }
+.content-header > a {
+  display: table-cell;
+}
+.content-header td {
+  padding: 0;
+}
+.content-header td a {
+  display: inline-block;
+}
+
 @media (prefers-color-scheme: dark) {
   .content-header a {
     border-color: white;
