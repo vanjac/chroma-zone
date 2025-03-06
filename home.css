@@ -52,13 +52,13 @@ body {
 }
 
 .content-header {
-  margin-left: auto;
+  float: right;
   height: 32pt;
   display: table;
   border-spacing: 4pt 0;
 }
 
-.quick-link {
+.content-header a {
   display: table-cell;
   border: 1pt solid black;
   text-decoration: inherit;
@@ -68,18 +68,18 @@ body {
   padding: 0 8pt;
 }
 @media (prefers-color-scheme: dark) {
-  .quick-link {
+  .content-header a {
     border-color: white;
   }
 }
 
-.quick-link:hover {
+.content-header a:hover {
   background: black;
   color: white;
   border-color: white;
 }
 @media (prefers-color-scheme: dark) {
-  .quick-link:hover {
+  .content-header a:hover {
     background-color: white;
     color: black;
     border-color: black;

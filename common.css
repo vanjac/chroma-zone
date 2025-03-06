@@ -83,6 +83,9 @@ body {
   }
 }
 
+h1 {
+  margin-top: 32pt;
+}
 h2 {
   margin-top: 12pt;
 }
