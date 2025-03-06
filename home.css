@@ -57,21 +57,16 @@ body {
   border-spacing: 4pt 0;
 }
 
+.content-header td {
+  padding: 0;
+}
 .content-header a {
+  display: inline-block;
   border: 1pt solid black;
   text-decoration: inherit;
   color: inherit;
   vertical-align: middle;
   padding: 6pt 8pt;
-}
-.content-header > a {
-  display: table-cell; /* compat for older layouts */
-}
-.content-header td {
-  padding: 0;
-}
-.content-header td a {
-  display: inline-block;
 }
 
 @media (prefers-color-scheme: dark) {
