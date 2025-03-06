@@ -19,3 +19,7 @@ pre {
 blockquote {
 	font-style: italic;
 }
+
+th, td {
+	padding: 0.5em;
+}

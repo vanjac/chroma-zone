@@ -65,7 +65,7 @@ body {
   padding: 6pt 8pt;
 }
 .content-header > a {
-  display: table-cell;
+  display: table-cell; /* compat for older layouts */
 }
 .content-header td {
   padding: 0;
