@@ -1,0 +1,9 @@
+html {
+	color-scheme: light dark;
+	font-family: system-ui, sans-serif;
+	line-height: 1.5;
+}
+
+pre, code, kbd, samp {
+	font-family: ui-monospace, monospace;
+}

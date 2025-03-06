@@ -8,7 +8,7 @@ PORT = 8000
 # forward any HTML requests to chroma.zone, use local directory otherwise
 class CustomHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        if self.path.endswith('/'):
+        if self.path.endswith('/') or self.path.endswith('.html'):
             return self.forward_request()
         if not os.path.exists(self.translate_path(self.path)):
             return self.forward_request()
