@@ -2,12 +2,6 @@ html, body {
   height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
-
 body {
   max-width: 900pt;
   padding: 20pt;
@@ -55,6 +49,12 @@ body {
   overflow-y: auto;
   padding: 4pt 16pt;
   height: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .content {
+    scroll-behavior: smooth;
+  }
 }
 
 .content-header {
