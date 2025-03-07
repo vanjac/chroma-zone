@@ -11,6 +11,10 @@ html {
   }
 }
 
+:target {
+  color: ActiveText;
+}
+
 pre, code, kbd, samp {
   font-family: ui-monospace, monospace;
   background: ButtonFace;
