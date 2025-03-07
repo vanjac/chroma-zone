@@ -4,7 +4,11 @@ html {
   color-scheme: light dark;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
-  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 pre, code, kbd, samp {
@@ -27,4 +31,9 @@ table, caption {
 
 th, td {
   padding: 0.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
