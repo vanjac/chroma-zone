@@ -2,6 +2,12 @@ html, body {
   height: 100%;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   max-width: 900pt;
   padding: 20pt;
