@@ -27,6 +27,7 @@ pre, code, kbd, samp {
   font-family: ui-monospace, monospace;
   background: ButtonFace;
   color: ButtonText;
+  padding: 0 0.3em;
 }
 
 pre {
