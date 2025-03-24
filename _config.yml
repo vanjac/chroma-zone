@@ -19,3 +19,99 @@ defaults:
     values:
       layout: default
       navigation: "/WingEd/navigation.html"
+  -
+    scope:
+      path: "aodix-enhanced"
+    values:
+      links:
+        -
+          title: Download
+          url: https://github.com/vanjac/aodix-enhanced/releases
+        -
+          title: GitHub
+          url: https://github.com/vanjac/aodix-enhanced
+  -
+    scope:
+      path: "aodix-repair"
+    values:
+      links:
+        -
+          title: Download
+          url: https://github.com/vanjac/aodix-repair/releases
+        -
+          title: Wiki
+          url: https://github.com/vanjac/aodix-repair/wiki
+        -
+          title: GitHub
+          url: https://github.com/vanjac/aodix-repair
+  -
+    scope:
+      path: "ar-recorder"
+    values:
+      links:
+        -
+          title: Download
+          url: https://github.com/vanjac/ar-recorder/releases
+        -
+          title: GitHub
+          url: https://github.com/vanjac/ar-recorder
+  -
+    scope:
+      path: "chromafiler"
+    values:
+      links:
+        -
+          title: Download
+          url: https://github.com/vanjac/chromafiler/releases
+        -
+          title: Wiki
+          url: https://github.com/vanjac/chromafiler/wiki
+        -
+          title: GitHub
+          url: https://github.com/vanjac/chromafiler
+  -
+    scope:
+      path: "riscy-save"
+    values:
+      links:
+        -
+          title: GitHub
+          url: https://github.com/vanjac/riscy-save
+  -
+    scope:
+      path: "spans"
+    values:
+      links:
+        -
+          title: GitHub
+          url: https://github.com/vanjac/spans
+  -
+    scope:
+      path: "su-extensions"
+    values:
+      links:
+        -
+          title: Warehouse
+          url: https://extensions.sketchup.com/user/extensions/5eb54850-2587-4a13-b5e2-0b270a7cecdb/Jacob%20van't%20Hoog
+        -
+          title: GitHub
+          url: https://github.com/vanjac/su-extensions/
+  -
+    scope:
+      path: "tapedeck"
+    values:
+      links:
+        -
+          title: GitHub
+          url: https://github.com/vanjac/tapedeck
+  -
+    scope:
+      path: "voxel-editor"
+    values:
+      links:
+        -
+          title: Google Play
+          url: https://play.google.com/store/apps/details?id=com.vantjac.voxel
+        -
+          title: GitHub
+          url: https://github.com/vanjac/voxel-editor
