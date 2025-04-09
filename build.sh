@@ -7,9 +7,9 @@ navquery() {
   echo $(basename "${path%/index}")
 }
 
-rsync -a --delete --exclude=.* --exclude=_* ./ _build
+rsync -a --delete --exclude=.* --exclude=_* ./ _site
 
-find _build -type f -name '*.html' | while read path; do
+find _site -type f -name '*.html' | while read path; do
   firstline=$(head -n 1 "$path")
   if [ "$firstline" = "---" ]; then
     echo "Build $path"
@@ -26,7 +26,7 @@ find _build -type f -name '*.html' | while read path; do
   fi
 done
 
-find _build -type f -name '*.md' | while read path; do
+find _site -type f -name '*.md' | while read path; do
   outpath="${path%.md}.html"
   case $outpath in */README.html)
     outpath="${outpath%README.html}index.html"

@@ -2,27 +2,27 @@
 set -eu
 
 case $1 in
-  _build/WingEd/README.md)
+  _site/WingEd/README.md)
     echo "winged.yaml" ;;
-  _build/WingEd/*.html)
+  _site/WingEd/*.html)
     echo "winged-docs.yaml" ;;
-  _build/aodix-enhanced/*)
+  _site/aodix-enhanced/*)
     echo "aodix-enhanced.yaml" ;;
-  _build/aodix-repair/*)
+  _site/aodix-repair/*)
     echo "aodix-repair.yaml" ;;
-  _build/ar-recorder/*)
+  _site/ar-recorder/*)
     echo "ar-recorder.yaml" ;;
-  _build/chromafiler/*)
+  _site/chromafiler/*)
     echo "chromafiler.yaml" ;;
-  _build/riscy-save/*)
+  _site/riscy-save/*)
     echo "riscy-save.yaml" ;;
-  _build/spans/*)
+  _site/spans/*)
     echo "spans.yaml" ;;
-  _build/su-extensions/*)
+  _site/su-extensions/*)
     echo "su-extensions.yaml" ;;
-  _build/tapedeck/*)
+  _site/tapedeck/*)
     echo "tapedeck.yaml" ;;
-  _build/voxel-editor/*)
+  _site/voxel-editor/*)
     echo "voxel-editor.yaml" ;;
   *)
     echo "default.yaml" ;;
