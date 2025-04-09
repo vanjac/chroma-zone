@@ -34,14 +34,15 @@ find _build -type f -name '*.md' | while read path; do
   if [ ! -e "$outpath" ]; then
     echo "Build $path as $outpath"
 
+    title=
     firstline=$(head -n 1 "$path")
     case $firstline in \#*)
       title=${firstline#\# }
     esac
 
     navquery=$(navquery "$outpath")
-    pandoc --from=gfm-autolink_bare_uris --to=html --standalone --wrap=none \
+    pandoc --from=gfm-autolink_bare_uris --to=html --standalone --wrap=preserve \
            --data-dir=pandoc --metadata-file=$(pandoc/metadata-file.sh "$path") \
-           -M title="${title:-}" -M navquery="$navquery" "$path" -o "$outpath"
+           -M title="$title" -M navquery="$navquery" "$path" -o "$outpath"
   fi
 done
