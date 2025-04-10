@@ -21,7 +21,7 @@ find _site -type f -name '*.html' | while read path; do
 
     navquery=$(navquery "$path")
     pandoc --from=commonmark+yaml_metadata_block --to=html --standalone --wrap=preserve \
-           --data-dir=pandoc --metadata-file=$(pandoc/metadata-file.sh "$path") \
+           --data-dir=_pandoc --metadata-file=$(_pandoc/metadata-file.sh "$path") \
            --template="$template" -M navquery="$navquery" "$path" -o "$path"
   fi
 done
@@ -42,7 +42,7 @@ find _site -type f -name '*.md' | while read path; do
 
     navquery=$(navquery "$outpath")
     pandoc --from=gfm-autolink_bare_uris --to=html --standalone --wrap=preserve \
-           --data-dir=pandoc --metadata-file=$(pandoc/metadata-file.sh "$path") \
+           --data-dir=_pandoc --metadata-file=$(_pandoc/metadata-file.sh "$path") \
            -M title="$title" -M navquery="$navquery" "$path" -o "$outpath"
   fi
 done
