@@ -1,3 +1,5 @@
 to: html
 standalone: true
 wrap: preserve
+filters:
+  - v4.lua

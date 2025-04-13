@@ -67,8 +67,11 @@ input, button, textarea, select, table, caption {
 /* Quick links */
 
 nav {
-  display: inline-block;
   float: right;
+}
+
+h1 span {
+  display: inline-block; /* avoid wrapping around float */
 }
 
 /* Header */
