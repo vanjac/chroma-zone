@@ -1,0 +1,5 @@
+navpage: /navigation.html
+links:
+  -
+    title: RSS
+    url: rss.xml
