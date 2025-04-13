@@ -71,15 +71,12 @@ header table {
   border-collapse: collapse;
   width: 100%;
   color: canvas;
-  table-layout: fixed;
 }
 
 header td {
   padding: 0;
-  width: -moz-max-content;
-  width: -webkit-max-content;
-  width: intrinsic;
-  width: max-content;
+  width: 0;
+  white-space: nowrap;
 }
 
 header td:empty {
