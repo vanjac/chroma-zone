@@ -19,6 +19,15 @@ $endfor$
         </tr>
       </table>
     </header>
+    $if(links)$<nav>
+      <table>
+        <tr>
+$for(links)$
+          <td><a href="$it.url$">$it.title$</a></td>
+$endfor$
+        </tr>
+      </table>
+    </nav>$endif$
     <main>
 $body$
     </main>
