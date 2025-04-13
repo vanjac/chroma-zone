@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="/assets/font.css">
     <link rel="stylesheet" href="/v4.css">
     <link rel="shortcut icon" href="/favicon.ico">
-    $if(title)$<title>$title$</title>$endif$
+$if(title)$
+    <title>$title$</title>
+$endif$
   </head>
   <body>
     <header>
@@ -19,7 +21,8 @@ $endfor$
         </tr>
       </table>
     </header>
-    $if(links)$<nav>
+$if(links)$
+    <nav>
       <table>
         <tr>
 $for(links)$
@@ -27,7 +30,8 @@ $for(links)$
 $endfor$
         </tr>
       </table>
-    </nav>$endif$
+    </nav>
+$endif$
     <main>
 $body$
     </main>
