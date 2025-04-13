@@ -70,7 +70,7 @@ input, button, textarea, select, table, caption {
 header table {
   border-collapse: collapse;
   width: 100%;
-  color: canvas;
+  color: white;
 }
 
 header td {
@@ -106,22 +106,22 @@ header td:nth-child(1) a:hover {
   color: #E63939;
 }
 header td:nth-child(2) {
-  background-color: #C49003;
+  background-color: #C40390;
 }
 header td:nth-child(2) a:hover {
-  color: #C49003;
+  color: #C40390;
 }
 header td:nth-child(3) {
-  background-color: #73D60F;
+  background-color: #730FD6;
 }
 header td:nth-child(3) a:hover {
-  color: #73D60F;
+  color: #730FD6;
 }
 header td:nth-child(4) {
-  background-color: #21E255;
+  background-color: #2155E2;
 }
 header td:nth-child(4) a:hover {
-  color: #21E255;
+  color: #2155E2;
 }
 header td:nth-child(5) {
   background-color: #00ACAC;
@@ -130,20 +130,20 @@ header td:nth-child(5) a:hover {
   color: #00ACAC;
 }
 header td:nth-child(6) {
-  background-color: #2155E2;
+  background-color: #21E255;
 }
 header td:nth-child(6) a:hover {
-  color: #2155E2;
+  color: #21E255;
 }
 header td:nth-child(7) {
-  background-color: #730FD6;
+  background-color: #73D60F;
 }
 header td:nth-child(7) a:hover {
-  color: #730FD6;
+  color: #73D60F;
 }
 header td:nth-child(8) {
-  background-color: #C40390;
+  background-color: #C49003;
 }
 header td:nth-child(8) a:hover {
-  color: #C40390;
+  color: #C49003;
 }
