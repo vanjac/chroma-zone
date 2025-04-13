@@ -67,10 +67,14 @@ input, button, textarea, select, table, caption {
 
 /* Header */
 
+header {
+  color: white;
+  font-weight: bold;
+}
+
 header table {
   border-collapse: collapse;
   width: 100%;
-  color: white;
 }
 
 header td {
