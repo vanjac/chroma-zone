@@ -22,12 +22,13 @@ EOF
   do
     case $part in
       *.html)
-        part="${part%.html}"
         url="${url}$part"
+        part="${part%.html}"
         ;;
       *)
+        url="${url}$part/"
         part="${part}/"
-        url="${url}$part/" ;;
+        ;;
     esac
     count=$(($count + 1))
     cat <<EOF >> _site/nav.yaml
