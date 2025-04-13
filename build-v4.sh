@@ -11,7 +11,7 @@ navgen() {
 variables:
   nav:
     -
-      name: chroma.zone
+      name: chroma.zone/
       url: /
 EOF
 
@@ -21,10 +21,14 @@ EOF
   for part in $path;
   do
     case $part in
-      *.html) url="${url}$part" ;;
-      *) url="${url}$part/" ;;
+      *.html)
+        part="${part%.html}"
+        url="${url}$part"
+        ;;
+      *)
+        part="${part}/"
+        url="${url}$part/" ;;
     esac
-    part="${part%.html}"
     count=$(($count + 1))
     cat <<EOF >> _site/nav.yaml
     -
