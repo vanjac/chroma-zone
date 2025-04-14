@@ -8,8 +8,6 @@ case $1 in
     echo "updates.yaml" ;;
   _site/WingEd/README.md)
     echo "winged.yaml" ;;
-  _site/WingEd/*.html)
-    echo "winged-docs.yaml" ;;
   _site/aodix-enhanced/*)
     echo "aodix-enhanced.yaml" ;;
   _site/aodix-repair/*)
