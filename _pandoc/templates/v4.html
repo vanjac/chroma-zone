@@ -16,7 +16,7 @@ $endif$
       <table>
         <tr>
 $for(nav)$
-          <td>$if(it.name)$<a href="$it.url$">$it.name$</a>$endif$</td>
+          <td$if(it.name)$><a href="$it.url$">$it.name$</a>$else$ role="none">$endif$</td>
 $endfor$
         </tr>
       </table>
