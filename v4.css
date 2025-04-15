@@ -89,6 +89,8 @@ header td {
 
 header td:empty {
   width: auto;
+  /* fix old Chrome bug: https://issues.chromium.org/issues/41127395#comment3 */
+  padding: 1px 0;
 }
 
 header a {
