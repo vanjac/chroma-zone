@@ -57,7 +57,7 @@ find _site -type f -name '*.html' | while read path; do
     navgen "$path"
     pandoc --data-dir=_pandoc --defaults=common --from=commonmark+yaml_metadata_block \
            --metadata-file=$(_pandoc/metadata-file.sh "$path") \
-           --template=v4 --defaults=_site/nav.yaml "$path" -o "$path"
+           --defaults=_site/nav.yaml "$path" -o "$path"
   fi
 done
 
@@ -78,6 +78,6 @@ find _site -type f -name '*.md' | while read path; do
     navgen "$outpath"
     pandoc --data-dir=_pandoc --defaults=common --from=gfm-autolink_bare_uris \
            --metadata-file=$(_pandoc/metadata-file.sh "$path") \
-           --template=v4 --defaults=_site/nav.yaml -M title="$title" "$path" -o "$outpath"
+           --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
 done
