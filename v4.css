@@ -103,7 +103,8 @@ header td:nth-child(1) a {
 }
 
 header a:hover {
-  background-color: canvas;
+  background-color: white; /* fallback */
+  background-color: Canvas;
   text-decoration: underline;
 }
 
