@@ -4,7 +4,7 @@ var tableCells = document.querySelectorAll('header td')
 var parts = location.pathname.split('/')
 
 var url = ''
-for (var i = 1; i < parts.length && i < tableCells.length; i++) {
+for (var i = 1; i < parts.length && i < tableCells.length - 1; i++) {
   url += '/' + parts[i]
   var text = parts[i].replace(/\.html$/, '')
   if (i < parts.length - 1) {
@@ -16,6 +16,6 @@ for (var i = 1; i < parts.length && i < tableCells.length; i++) {
     link.textContent = text
     tableCells[i].textContent = ''
     tableCells[i].appendChild(link)
-    tableCells[i].setAttribute('role', null)
+    tableCells[i].removeAttribute('role')
   }
 }
