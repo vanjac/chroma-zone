@@ -50,14 +50,18 @@ EOF
 rsync -a --delete --exclude=.* --exclude=_* ./ _site
 
 find _site -type f -name '*.html' | while read path; do
+  outpath="$path"
+  case $outpath in *.frag.html)
+    outpath="${path%.frag.html}.html"
+  esac
   firstline=$(head -n 1 "$path")
   if [ "$firstline" = "---" ]; then
-    echo "Build $path"
+    echo "Build $path as $outpath"
 
-    navgen "$path"
+    navgen "$outpath"
     pandoc --data-dir=_pandoc --defaults=common --from=commonmark+yaml_metadata_block \
            --metadata-file=$(_pandoc/metadata-file.sh "$path") \
-           --defaults=_site/nav.yaml "$path" -o "$path"
+           --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
 done
 
