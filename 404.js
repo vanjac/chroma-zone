@@ -5,10 +5,11 @@ var parts = location.pathname.split('/')
 
 var url = ''
 for (var i = 1; i < parts.length && i < tableCells.length - 1; i++) {
-  url += '/' + parts[i]
   var text = parts[i].replace(/\.html$/, '')
+  url += parts[i]
   if (i < parts.length - 1) {
     text += '/'
+    url += '/'
   }
   if (text) {
     var link = document.createElement('a')
