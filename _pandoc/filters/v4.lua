@@ -10,7 +10,9 @@ function Header(el)
 end
 
 function Meta(el)
-  if title and not el.pagetitle then
+  if title and not el.title then
     print("Detected title: " .. title)
+    el.title = title
+    return el
   end
 end

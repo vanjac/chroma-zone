@@ -69,13 +69,6 @@ find _site -type f -name '*.md' | while read path; do
   if [ ! -e "$outpath" ]; then
     echo "Build $path as $outpath"
 
-    title=
-    firstline=$(head -n 1 "$path")
-    case $firstline in \#*)
-      title=${firstline#\# }
-      echo "Using title: $title"
-    esac
-
     navgen "$outpath"
     pandoc --data-dir=_pandoc --defaults=common --from=gfm-autolink_bare_uris \
            --metadata-file=$(_pandoc/metadata-file.sh "$path") \
