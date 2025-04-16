@@ -3,7 +3,7 @@
 var tableCells = document.querySelectorAll('header td')
 var parts = location.pathname.split('/')
 
-var url = ''
+var url = '/'
 for (var i = 1; i < parts.length && i < tableCells.length - 1; i++) {
   var text = parts[i].replace(/\.html$/, '')
   url += parts[i]
