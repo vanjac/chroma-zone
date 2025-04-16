@@ -75,3 +75,5 @@ find _site -type f -name '*.md' | while read path; do
            --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
 done
+
+rm -f _site/nav.yaml
