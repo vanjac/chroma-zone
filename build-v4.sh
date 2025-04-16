@@ -49,13 +49,9 @@ EOF
 
 rsync -a --delete --exclude=.* --exclude=_* ./ _site
 
-find _site -type f -name '*.html' | while read path; do
-  outpath="$path"
-  case $outpath in *.frag.html)
-    outpath="${path%.frag.html}.html"
-  esac
-  firstline=$(head -n 1 "$path")
-  if [ "$firstline" = "---" ]; then
+find _site -type f -name '*.frag.html' | while read path; do
+  outpath="${path%.frag.html}.html"
+  if [ ! -e "$outpath" ]; then
     echo "Build $path as $outpath"
 
     navgen "$outpath"
