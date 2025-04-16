@@ -73,6 +73,7 @@ find _site -type f -name '*.md' | while read path; do
     firstline=$(head -n 1 "$path")
     case $firstline in \#*)
       title=${firstline#\# }
+      echo "Using title: $title"
     esac
 
     navgen "$outpath"
