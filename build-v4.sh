@@ -55,7 +55,7 @@ find _site -type f -name '*.frag.html' | while read path; do
     echo "Build $path as $outpath"
 
     navgen "$outpath"
-    pandoc --data-dir=_pandoc --defaults=common --from=commonmark+yaml_metadata_block \
+    pandoc --data-dir=_pandoc --defaults=common --from=commonmark \
            --metadata-file=$(_pandoc/metadata-file.sh "$path") \
            --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
