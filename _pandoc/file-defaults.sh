@@ -26,8 +26,8 @@ case $1 in
     echo "su-extensions.yaml" ;;
   _site/tapedeck/*)
     echo "tapedeck.yaml" ;;
-  _site/voxel-editor/*)
-    echo "voxel-editor.yaml" ;;
+  _site/nspace/*)
+    echo "nspace.yaml" ;;
   *)
     echo "empty.yaml" ;;
 esac
