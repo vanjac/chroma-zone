@@ -55,8 +55,8 @@ find _site -type f -name '*.frag.html' | while read path; do
     echo "Build $path as $outpath"
 
     navgen "$outpath"
-    pandoc --data-dir=_pandoc --defaults=common --from=commonmark \
-           --metadata-file=$(_pandoc/metadata-file.sh "$path") \
+    pandoc --data-dir=_pandoc --from=commonmark \
+           --defaults=common --defaults=$(_pandoc/file-defaults.sh "$path") \
            --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
 done
@@ -70,8 +70,8 @@ find _site -type f -name '*.md' | while read path; do
     echo "Build $path as $outpath"
 
     navgen "$outpath"
-    pandoc --data-dir=_pandoc --defaults=common --from=gfm-autolink_bare_uris \
-           --metadata-file=$(_pandoc/metadata-file.sh "$path") \
+    pandoc --data-dir=_pandoc --from=gfm-autolink_bare_uris \
+           --defaults=common --defaults=$(_pandoc/file-defaults.sh "$path") \
            --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
 done
