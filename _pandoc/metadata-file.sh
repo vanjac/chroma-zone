@@ -2,9 +2,9 @@
 set -eu
 
 case $1 in
-  _site/index.html)
+  _site/index.frag.html)
     echo "home.yaml" ;;
-  _site/updates.html)
+  _site/updates.frag.html)
     echo "updates.yaml" ;;
   _site/WingEd/README.md)
     echo "winged.yaml" ;;
