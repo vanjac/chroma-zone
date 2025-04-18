@@ -66,6 +66,9 @@ find _site -type f -name '*.md' | while read path; do
   case $outpath in */README.html)
     outpath="${outpath%README.html}index.html"
   esac
+  case $outpath in *.*.html)
+    outpath="${outpath%.*.html}.html"
+  esac
   if [ ! -e "$outpath" ]; then
     echo "Build $path as $outpath"
 

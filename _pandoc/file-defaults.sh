@@ -2,6 +2,8 @@
 set -eu
 
 case $1 in
+  *.redirect.md)
+    echo "redirect.yaml" ;;
   _site/index.frag.html)
     echo "home.yaml" ;;
   _site/updates.frag.html)
