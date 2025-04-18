@@ -70,7 +70,7 @@ find _site -type f -name '*.md' | while read path; do
     echo "Build $path as $outpath"
 
     navgen "$outpath"
-    pandoc --data-dir=_pandoc --from=gfm-autolink_bare_uris \
+    pandoc --data-dir=_pandoc --from=gfm \
            --defaults=common --defaults=$(_pandoc/file-defaults.sh "$path") \
            --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
