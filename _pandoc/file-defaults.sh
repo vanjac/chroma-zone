@@ -27,5 +27,5 @@ case $1 in
   _site/voxel-editor/*)
     echo "voxel-editor.yaml" ;;
   *)
-    echo "empty.yaml" ;;
+    echo "common.yaml" ;;
 esac
