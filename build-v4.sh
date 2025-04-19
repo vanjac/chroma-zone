@@ -54,7 +54,7 @@ find _site -name '*.frag.html' -o -name '*.md' | while read path; do
   outpath="$path"
   case "$path" in
     *.md)
-      from=gfm
+      from=gfm+wikilink_title_before_pipe
       outpath="${path%.md}.html"
       ;;
   esac
