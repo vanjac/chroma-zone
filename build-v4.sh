@@ -49,31 +49,27 @@ EOF
 
 rsync -a --delete --exclude=.* --exclude=_* ./ _site
 
-find _site -type f -name '*.frag.html' | while read path; do
-  outpath="${path%.frag.html}.html"
-  if [ ! -e "$outpath" ]; then
-    echo "Build $path as $outpath"
-
-    navgen "$outpath"
-    pandoc --data-dir=_pandoc --from=commonmark \
-           --defaults=common --defaults=$(_pandoc/file-defaults.sh "$path") \
-           --defaults=_site/nav.yaml "$path" -o "$outpath"
-  fi
-done
-
-find _site -type f -name '*.md' | while read path; do
-  outpath="${path%.md}.html"
-  case $outpath in */README.html)
-    outpath="${outpath%README.html}index.html"
+find _site -name '*.frag.html' -o -name '*.md' | while read path; do
+  from=commonmark
+  outpath="$path"
+  case $path in
+    *.md)
+      from=gfm
+      outpath="${path%.md}.html"
+      ;;
   esac
   case $outpath in *.*.html)
     outpath="${outpath%.*.html}.html"
   esac
+  case $outpath in */README.html)
+    outpath="${outpath%README.html}index.html"
+  esac
+
   if [ ! -e "$outpath" ]; then
     echo "Build $path as $outpath"
 
     navgen "$outpath"
-    pandoc --data-dir=_pandoc --from=gfm \
+    pandoc --data-dir=_pandoc --from="$from" \
            --defaults=common --defaults=$(_pandoc/file-defaults.sh "$path") \
            --defaults=_site/nav.yaml "$path" -o "$outpath"
   fi
