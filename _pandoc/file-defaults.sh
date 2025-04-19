@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-case $1 in
+case "$1" in
   *.redirect.md)
     echo "redirect.yaml" ;;
   _site/index.frag.html)

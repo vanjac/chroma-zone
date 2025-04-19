@@ -20,7 +20,7 @@ EOF
   IFS=/
   for part in $path;
   do
-    case $part in
+    case "$part" in
       *.html)
         url="${url}$part"
         part="${part%.html}"
@@ -52,16 +52,16 @@ rsync -a --delete --exclude=.* --exclude=_* ./ _site
 find _site -name '*.frag.html' -o -name '*.md' | while read path; do
   from=commonmark
   outpath="$path"
-  case $path in
+  case "$path" in
     *.md)
       from=gfm
       outpath="${path%.md}.html"
       ;;
   esac
-  case $outpath in *.*.html)
+  case "$outpath" in *.*.html)
     outpath="${outpath%.*.html}.html"
   esac
-  case $outpath in */README.html)
+  case "$outpath" in */README.html)
     outpath="${outpath%README.html}index.html"
   esac
 
