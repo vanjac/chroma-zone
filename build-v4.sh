@@ -47,6 +47,17 @@ EOF
   done
 }
 
+md_format=gfm
+
+pandoc_version=$(pandoc --version | head -1)
+pandoc_older=$(printf "%s\n%s\n" "$pandoc_version" "pandoc 3.0" | sort | head -1)
+if [ "$pandoc_older" = "pandoc 3.0" ]; then
+  echo "Pandoc supports wikilinks."
+  md_format="$md_format+wikilinks_title_before_pipe"
+else
+  echo "Pandoc does not support wikilinks."
+fi
+
 rsync -a --delete --exclude=.* --exclude=_* ./ _site
 
 find _site -name '*.frag.html' -o -name '*.md' | while read path; do
@@ -54,7 +65,7 @@ find _site -name '*.frag.html' -o -name '*.md' | while read path; do
   outpath="$path"
   case "$path" in
     *.md)
-      from=gfm+wikilinks_title_before_pipe
+      from="$md_format"
       outpath="${path%.md}.html"
       ;;
   esac
