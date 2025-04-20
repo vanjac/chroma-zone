@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" href="/assets/font.css">
+    <link rel="stylesheet" href="/v4.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+$if(pagetitle)$
+    <title>$pagetitle$</title>
+$endif$
+  </head>
+  <body>
+    <header>
+      <table>
+        <tr>
+$for(nav)$
+          <td$if(it.name)$><a href="$it.url$">$it.name$</a>$else$ role="none">$endif$</td>
+$endfor$
+        </tr>
+      </table>
+    </header>
+    <main>
+$if(pagetitle)$
+      <h1><span>$pagetitle$</span></h1>
+$endif$
+$body$
+    </main>
+  </body>
+</html>

@@ -18,6 +18,8 @@ case "$1" in
     echo "ar-recorder.yaml" ;;
   _site/chromafiler/README.md)
     echo "chromafiler.yaml" ;;
+  _site/chromafiler/docs/*)
+    echo "wiki.yaml" ;;
   _site/riscy-save/README.md)
     echo "riscy-save.yaml" ;;
   _site/spans/README.md)
