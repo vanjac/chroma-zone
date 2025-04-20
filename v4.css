@@ -23,7 +23,8 @@ main {
 }
 
 :target {
-  color: ActiveText;
+  color: HighlightText;
+  background-color: Highlight;
 }
 
 p {
