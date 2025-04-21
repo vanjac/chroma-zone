@@ -79,10 +79,15 @@ find _site -name '*.frag.html' -o -name '*.md' | while read path; do
   if [ ! -e "$outpath" ]; then
     echo "Build $path as $outpath"
 
+    pagetitle="${outpath##*/}" # used for wiki pages
+    pagetitle="${pagetitle%.html}"
+    pagetitle=$(printf "%s" "$pagetitle" | tr '-' ' ')
+
     navgen "$outpath"
+
     pandoc --data-dir=_pandoc --from="$from" \
            --defaults=common --defaults=$(_pandoc/file-defaults.sh "$path") \
-           --defaults=_site/nav.yaml "$path" -o "$outpath"
+           --defaults=_site/nav.yaml -M pagetitle="$pagetitle" "$path" -o "$outpath"
   fi
 done
 
