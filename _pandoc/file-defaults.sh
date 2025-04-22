@@ -4,6 +4,8 @@ set -eu
 case "$1" in
   *.redirect.md)
     echo "redirect.yaml" ;;
+  */download.md)
+    echo "wiki.yaml" ;;
   _site/index.frag.html)
     echo "home.yaml" ;;
   _site/updates.frag.html)
