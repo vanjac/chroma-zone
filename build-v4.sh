@@ -47,6 +47,11 @@ EOF
   done
 }
 
+capitalize() {
+  printf "%s" "$1" | cut -c1 | tr -d '\n' | tr [:lower:] [:upper:]
+  printf "%s" "$1" | cut -c2-
+}
+
 md_format=gfm-autolink_bare_uris
 
 pandoc_version=$(pandoc --version | head -1)
@@ -82,6 +87,7 @@ find _site -name '*.frag.html' -o -name '*.md' | while read path; do
     pagetitle="${outpath##*/}" # used for wiki pages
     pagetitle="${pagetitle%.html}"
     pagetitle=$(printf "%s" "$pagetitle" | tr '-' ' ')
+    pagetitle=$(capitalize "$pagetitle")
 
     navgen "$outpath"
 
