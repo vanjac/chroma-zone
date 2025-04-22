@@ -52,7 +52,7 @@ capitalize() {
   printf "%s" "$1" | cut -c2-
 }
 
-md_format=gfm
+md_format=gfm-autolink_bare_uris
 
 pandoc_version=$(pandoc --version | head -1)
 pandoc_older=$(printf "%s\n%s\n" "$pandoc_version" "pandoc 3.0" | sort | head -1)
