@@ -1,18 +1,18 @@
 
 @font-face {
-	font-family: 'Iosevka Aile Custom Web';
+	font-family: 'Iosevka Aile';
 	font-display: swap;
 	font-weight: 400;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('WOFF2-Unhinted/IosevkaAileCustom-Regular.woff2') format('woff2'), url('TTF-Unhinted/IosevkaAileCustom-Regular.ttf') format('truetype');
+	src: local('Iosevka Aile'), url('WOFF2-Unhinted/IosevkaAileCustom-Regular.woff2') format('woff2'), url('TTF-Unhinted/IosevkaAileCustom-Regular.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Iosevka Aile Custom Web';
+	font-family: 'Iosevka Aile';
 	font-display: swap;
 	font-weight: 700;
 	font-stretch: normal;
 	font-style: normal;
-	src: url('WOFF2-Unhinted/IosevkaAileCustom-Bold.woff2') format('woff2'), url('TTF-Unhinted/IosevkaAileCustom-Bold.ttf') format('truetype');
+	src: local('Iosevka Aile'), url('WOFF2-Unhinted/IosevkaAileCustom-Bold.woff2') format('woff2'), url('TTF-Unhinted/IosevkaAileCustom-Bold.ttf') format('truetype');
 }

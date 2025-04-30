@@ -1,6 +1,6 @@
 html {
   color-scheme: dark light;
-  font-family: 'Iosevka Aile Custom Web', 'Iosevka Aile', 'Iosevka Fixed', 'Iosevka', Consolas, Menlo, 'DejaVu Sans Mono', ui-monospace, monospace;
+  font-family: 'Iosevka Aile', 'Iosevka Fixed', Iosevka, Consolas, Menlo, 'DejaVu Sans Mono', ui-monospace, monospace;
   line-height: 1.5;
 }
 @media (prefers-reduced-motion: no-preference) {
