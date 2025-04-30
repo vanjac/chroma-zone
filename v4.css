@@ -27,7 +27,7 @@ main {
   background-color: Highlight;
 }
 
-p {
+p, li {
   overflow-wrap: break-word;
 }
 
