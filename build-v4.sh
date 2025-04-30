@@ -65,7 +65,7 @@ fi
 
 rsync -a --delete --exclude=.* --exclude=_* ./ _site
 
-find _site -name '*.frag.html' -o -name '*.md' | while read path; do
+find _site -name '*.frag.html' -o -name '*.md' -o -name '*.org' | while read path; do
   from=commonmark
   outpath="$path"
   case "$path" in
@@ -73,6 +73,9 @@ find _site -name '*.frag.html' -o -name '*.md' | while read path; do
       from="$md_format"
       outpath="${path%.md}.html"
       ;;
+    *.org)
+      from=org
+      outpath="${path%.org}.html"
   esac
   case "$outpath" in *.*.html)
     outpath="${outpath%.*.html}.html"
