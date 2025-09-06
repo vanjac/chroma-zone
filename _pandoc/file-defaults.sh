@@ -8,8 +8,6 @@ case "$1" in
     echo "wiki.yaml" ;;
   _site/index.frag.html)
     echo "home.yaml" ;;
-  _site/updates.frag.html)
-    echo "updates.yaml" ;;
   _site/winged/README.md)
     echo "winged.yaml" ;;
   _site/aodix-enhanced/README.md)
