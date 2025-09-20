@@ -30,6 +30,8 @@ case "$1" in
     echo "tapedeck.yaml" ;;
   _site/nspace/README.md)
     echo "nspace.yaml" ;;
+  _site/chromatracker/README.md)
+    echo "chromatracker.yaml" ;;
   *)
     echo "empty.yaml" ;;
 esac
