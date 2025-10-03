@@ -14,6 +14,13 @@
       <height>32</height>
     </image>
     <item>
+      <title>ChromaTracker alpha 0.0.1</title>
+      <pubDate>Thu, 02 Oct 2025 17:55:13 -0700</pubDate>
+      <link>https://chroma.zone/chromatracker/</link>
+      <guid>https://chroma.zone/chromatracker/</guid>
+      <description><![CDATA[I've published the first alpha build of a web app I'm working on called ChromaTracker. It's a <a href="https://en.wikipedia.org/wiki/MOD_(file_format)">MOD</a> music <a href="https://en.wikipedia.org/wiki/Music_tracker">tracker</a> designed to be usable on a phone/tablet. The attached page has more info and a link to try it out.]]></description>
+    </item>
+    <item>
       <title>N-Space version 1.4.1</title>
       <pubDate>Tue, 15 Oct 2024 19:03:25 PDT</pubDate>
       <link>https://github.com/vanjac/voxel-editor/releases/tag/v1.4.1</link>
