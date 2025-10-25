@@ -52,17 +52,6 @@ capitalize() {
   printf "%s" "$1" | cut -c2-
 }
 
-md_format=gfm-autolink_bare_uris
-
-pandoc_version=$(pandoc --version | head -1)
-pandoc_older=$(printf "%s\n%s\n" "$pandoc_version" "pandoc 3.0" | sort | head -1)
-if [ "$pandoc_older" = "pandoc 3.0" ]; then
-  echo "Pandoc supports wikilinks."
-  md_format="$md_format+wikilinks_title_before_pipe"
-else
-  echo "Pandoc does not support wikilinks."
-fi
-
 rsync -a --delete --exclude=.* --exclude=_* ./ _site
 
 find _site -name '*.frag.html' -o -name '*.md' -o -name '*.org' | while read path; do
@@ -70,7 +59,7 @@ find _site -name '*.frag.html' -o -name '*.md' -o -name '*.org' | while read pat
   outpath="$path"
   case "$path" in
     *.md)
-      from="$md_format"
+      from=gfm-autolink_bare_uris+wikilinks_title_before_pipe
       outpath="${path%.md}.html"
       ;;
     *.org)
